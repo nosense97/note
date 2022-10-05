@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+
+    <link href="https//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Oxygen:300' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+    <title>Chartist.js - Simple line chart</title>
+
+</head>
+
+<body>
+    <div class="ct-chart1"></div>
+    <div class="ct-chart2"></div>
+    <div class="ct-chart3"></div>
+    <!-- <div class="ct-chart ct-perfect-fourth"></div> -->
+    <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <script>
+        new Chartist.Bar('.ct-chart1', {
+            labels: ['XS', 'S', 'M', 'L', 'XL', 'XXL', 'XXXL'],
+            series: [20, 60, 120, 200, 180, 20, 10]
+        }, {
+            distributeSeries: true
+        });
+
+        // --------------------
+
+        var data = {
+            labels: ['Bananas', 'Apples', 'Grapes'],
+            series: [20, 15, 40]
+        };
+
+        var options = {
+            labelInterpolationFnc: function(value) {
+                return value[0]
+            }
+        };
+
+        var responsiveOptions = [
+            ['screen and (min-width: 640px)', {
+                chartPadding: 30,
+                labelOffset: 100,
+                labelDirection: 'explode',
+                labelInterpolationFnc: function(value) {
+                    return value;
+                }
+            }],
+            ['screen and (min-width: 1024px)', {
+                labelOffset: 80,
+                chartPadding: 20
+            }]
+        ];
+
+        new Chartist.Pie('.ct-chart2', data, options, responsiveOptions);
+
+        // --------
+        var data = {
+            // labels: ['Bananas', 'Apples', 'Grapes'],
+            series: [5, 3, 4]
+        };
+
+        var sum = function(a, b) {
+            return a + b
+        };
+
+        var options = {
+            labelInterpolationFnc: function(value) {
+                return value[0]
+            }
+        };
+
+        var responsiveOptions = [
+            ['screen and (min-width: 640px)', {
+                chartPadding: 30,
+                labelOffset: 100,
+                labelDirection: 'explode',
+                labelInterpolationFnc: function(value) {
+                    return value;
+                }
+            }],
+            ['screen and (min-width: 1024px)', {
+                labelOffset: 80,
+                chartPadding: 20
+            }]
+        ];
+
+        new Chartist.Pie('.ct-chart3', data, {
+                labelInterpolationFnc: function(value) {
+                    return Math.round(value / data.series.reduce(sum) * 100) + '%';
+                }
+            }
+
+            // , options, responsiveOptions
+        );
+    </script>
+</body>
+
+</html>
