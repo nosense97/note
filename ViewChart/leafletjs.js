@@ -1,4 +1,4 @@
-var map = L.map('map').setView([20.996491, 105.802082], 19);
+var map = L.map('map').setView([20.996491, 105.802082], 10);
 // var map = L.map('map').setView([100, 100], 100);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -7,81 +7,146 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 
-var locationList = [{
-        "locationCode": "location_10000",
-        "lat": 41.51560981024413,
-        "lng": 38.92986112010347,
-        "lTypes": ["CUSTOMER"]
+locationList =  [
+    {
+      "locationCode": "location_10000",
+      "lat": 21.056932818831946,
+      "lng": 105.92016033466976,
+      "lTypes": [
+        "SATELLITE"
+      ]
     },
     {
-        "locationCode": "location_10001",
-        "lat": 76.87769871486262,
-        "lng": 69.57919451585865,
-        "lTypes": ["DEPOT"]
+      "locationCode": "location_10001",
+      "lat": 21.02927015950773,
+      "lng": 105.90052185576928,
+      "lTypes": [
+        "SATELLITE"
+      ]
     },
     {
-        "locationCode": "location_10002",
-        "lat": 10.843985340004783,
-        "lng": 77.26617511016022,
-        "lTypes": ["HUB"]
+      "locationCode": "location_10002",
+      "lat": 20.96568951648247,
+      "lng": 105.92542733129305,
+      "lTypes": [
+        "CUSTOMER"
+      ]
     },
     {
-        "locationCode": "location_10003",
-        "lat": 1.8159249187183721,
-        "lng": 44.86292953130218,
-        "lTypes": ["SATELLITE"]
+      "locationCode": "location_10003",
+      "lat": 21.063566391084528,
+      "lng": 105.82522561502218,
+      "lTypes": [
+        "DEPOT"
+      ]
     },
     {
-        "locationCode": "location_10004",
-        "lat": 41.52163837389688,
-        "lng": 81.8060533773322,
-        "lTypes": ["CUSTOMER"]
+      "locationCode": "location_10004",
+      "lat": 21.03324228464198,
+      "lng": 105.86910693050348,
+      "lTypes": [
+        "STATION"
+      ]
     },
     {
-        "locationCode": "location_10005",
-        "lat": 91.54452721994956,
-        "lng": 24.613298382929162,
-        "lTypes": ["DEPOT"]
+      "locationCode": "location_10005",
+      "lat": 21.078499010023087,
+      "lng": 105.91153635042572,
+      "lTypes": [
+        "STATION"
+      ]
     },
     {
-        "locationCode": "location_10006",
-        "lat": 52.60980419448727,
-        "lng": 74.9865894676886,
-        "lTypes": ["STATION"]
+      "locationCode": "location_10006",
+      "lat": 21.021475827408935,
+      "lng": 105.79584943178537,
+      "lTypes": [
+        "DEPOT"
+      ]
     },
     {
-        "locationCode": "location_10007",
-        "lat": 82.63691886641728,
-        "lng": 21.666686581896585,
-        "lTypes": ["STATION"]
+      "locationCode": "location_10007",
+      "lat": 21.06080173100339,
+      "lng": 105.85519185674526,
+      "lTypes": [
+        "CUSTOMER"
+      ]
     },
     {
-        "locationCode": "location_10008",
-        "lat": 41.73634539860883,
-        "lng": 75.57655186463657,
-        "lTypes": ["CUSTOMER"]
+      "locationCode": "location_10008",
+      "lat": 21.063226136377832,
+      "lng": 105.93031915041541,
+      "lTypes": [
+        "CUSTOMER"
+      ]
     },
     {
-        "locationCode": "location_10009",
-        "lat": 84.8383765993445,
-        "lng": 77.13648674916266,
-        "lTypes": ["CUSTOMER"]
+      "locationCode": "location_10009",
+      "lat": 21.058560919322943,
+      "lng": 105.89683896541482,
+      "lTypes": [
+        "STATION"
+      ]
     },
     {
-        "locationCode": "location_100010",
-        "lat": 84.40826681809678,
-        "lng": 41.058661586547025,
-        "lTypes": ["SATELLITE"]
+      "locationCode": "location_100010",
+      "lat": 21.073220732939518,
+      "lng": 105.85223010125316,
+      "lTypes": [
+        "STATION"
+      ]
     },
     {
-        "locationCode": "location_100011",
-        "lat": 95.83542435089909,
-        "lng": 51.746432685065926,
-        "lTypes": ["SATELLITE"]
+      "locationCode": "location_100011",
+      "lat": 21.039358806478297,
+      "lng": 105.84935427270068,
+      "lTypes": [
+        "CUSTOMER"
+      ]
+    },
+    {
+      "locationCode": "location_100012",
+      "lat": 20.99346392367603,
+      "lng": 105.84633837555602,
+      "lTypes": [
+        "DEPOT"
+      ]
+    },
+    {
+      "locationCode": "location_100013",
+      "lat": 21.101249153063875,
+      "lng": 105.90278035144733,
+      "lTypes": [
+        "DEPOT"
+      ]
+    },
+    {
+      "locationCode": "location_100014",
+      "lat": 21.06055754680064,
+      "lng": 105.80547959577393,
+      "lTypes": [
+        "STATION"
+      ]
+    },
+    {
+      "locationCode": "location_100015",
+      "lat": 21.10714062069393,
+      "lng": 105.78044214433598,
+      "lTypes": [
+        "STATION"
+      ]
+    },
+    {
+      "locationCode": "location_100016",
+      "lat": 21.013489471936932,
+      "lng": 105.82777107949349,
+      "lTypes": [
+        "HUB"
+      ]
     }
-]
+  ]
 
-var viewMap = (locationList) => {
+var viewMapWithLeaflet = (locationList) => {
     locationList.forEach(location => {
         let marker = L.marker([location.lat, location.lng]).addTo(map);
         let concatLocationType = ''
@@ -93,4 +158,4 @@ var viewMap = (locationList) => {
     });
 }
 
-viewMap(locationList)
+viewMapWithLeaflet(locationList)
