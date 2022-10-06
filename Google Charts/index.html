@@ -12,53 +12,20 @@
 <body>
     <div id="bieu_do_cot"> </div>
 
-    <div id="bieu_do_tron" style="width: 900px; height: 500px;"></div>
+    <div>
+        <div>
+            <div>
+                <div>
+                    <div id="bieu_do_tron" style="width: 900px; height: 500px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+
+
+    <script src="./column.js"></script>
     <script>
-        // ----
-        google.charts.load("current", {
-            packages: ['corechart']
-        });
-        google.charts.setOnLoadCallback(drawChart1);
-
-        function drawChart1() {
-            var data = google.visualization.arrayToDataTable([
-                ["Element", "Density", {
-                    role: "style"
-                }],
-                ["Vehicle", 8.94, "#b87333"],
-                ["Depot", 10.49, "silver"],
-                ["Hub", 4.49, "silver"],
-                ["Customer", 19.30, "gold"],
-                ["Location", 21.45, "color: #e5e4e2"]
-            ]);
-
-            var view = new google.visualization.DataView(data);
-            view.setColumns([0, 1, {
-                    calc: "stringify",
-                    sourceColumn: 1,
-                    type: "string",
-                    role: "annotation"
-                },
-                2
-            ]);
-
-            var options = {
-                title: "Density of Precious Metals, in g/cm^3",
-                width: 600,
-                height: 400,
-                bar: {
-                    groupWidth: "95%"
-                },
-                legend: {
-                    position: "none"
-                },
-            };
-            var chart0 = new google.visualization.ColumnChart(document.getElementById("bieu_do_cot"));
-            chart0.draw(view, options);
-        }
-
-
         // ----
         google.charts.load("current", {
             packages: ["corechart"]
