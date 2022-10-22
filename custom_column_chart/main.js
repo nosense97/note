@@ -34,7 +34,6 @@ var getDepot = () => {
             }
         }
     }
-
     return result
 }
 
@@ -57,19 +56,37 @@ var getFirstPointList = (depotList, distanceMatrix) => {
     }
 
     let getFirstPoint = (minDistanceList) => {
+
+        let resultTempList = []
+        let deleteIndex = -1
+
         for (let i = 0; i < minDistanceList.length; i++) {
             const listIndex = minDistanceList[i]
             let key = listIndex[i].id
             let value = listIndex[i].value
-                // console.log('obj', key, '', value)
             for (let j = 0; j < distanceMatrix.length; j++) {
-                // console.log('a', distanceMatrix[j])
                 if (key === distanceMatrix[j].srcCode && value === distanceMatrix[j].distance) {
-                    console.log('a', distanceMatrix[j])
-                        // đẩy vào 1 mảng và loại bỏ phần tử giống nhau
+                    resultTempList.push(distanceMatrix[j])
                 }
             }
         }
+
+        for (let i = 0; i < resultTempList.length; i++) {
+            for (let j = i + 1; j < resultTempList.length; j++) {
+                if (resultTempList[i].srcCode === resultTempList[j].srcCode && resultTempList[i].destCode === resultTempList[j].destCode) {
+                    deleteIndex = resultTempList[i]
+                }
+            }
+        }
+
+        let arrayRemove = (arr, value) => {
+            return arr.filter(function(ele) {
+                return ele != value;
+            });
+        }
+
+        let result = arrayRemove(resultTempList, deleteIndex);
+        return result
     }
 
     let distanceList = []
@@ -79,40 +96,47 @@ var getFirstPointList = (depotList, distanceMatrix) => {
         distanceList.push(tempDistanceList)
     }
     console.log('distanceObject', distanceList)
-    getFirstPoint(distanceList)
+    return getFirstPoint(distanceList)
 }
 
 var depotList = getDepot()
-getFirstPointList(depotList, distances)
+var depotAndFirstPointList = getFirstPointList(depotList, distances)
+    // lấy ra được điểm depot và điểm gần nhất của nó, quãng đường và thời gian đi từ depot tới điểm gần nhất 
+console.log('a', a)
 
 
 var getDataModel = () => {
-    for (let index = 0; index < vehicles.length; index++) {
 
-        const element = vehicles[index];
-        if (element.breakTimes.length === 1) {
-            let vehicleCode = element.vehicleCode
-            let morningBreakTime = parseFloat(element.workingTime['start'].substring(11, 16).replace(':', '.'))
-            let morningOperatingTime = 0
-            let lunchBreakTime = 0
-            let lunchBreakTimeEnd = 0
-            let afternoonOperatingTime = parseFloat(element.workingTime['end'].substring(11, 16).replace(':', '.')) - lunchBreakTimeEnd
-            let dinnerBreakTime = 24 - (morningBreakTime + morningOperatingTime + lunchBreakTime + afternoonOperatingTime)
-            let timelineFirstPoint = 0 // thời gian đi từ điểm depot tới điểm gần nhất của nó 
-                // tìm khoảng cách điểm gần nhất depot theo matrix distance
-                // tính ra thời gian dựa trên quãng đường
-            let timelineReturnDepot = 0
+    // xác nhận lại việc datamodel nhận các giá trị thời gian của depot hay vehicle?
+    // vẽ thêm 1 đường thẳng biểu thị thời gian bắt đầu di chuyển của veh từ depot đi
+    // đề xuất lấy hết data bên depot
 
-            console.log(element)
+    // for (let index = 0; index < vehicles.length; index++) {
 
-            for (let j = 0; j < element.breakTimes.length; j++) {
-                const temp = element.breakTimes[j];
-                lunchBreakTimeEnd = parseFloat(temp['end'].substring(11, 16).replace(':', '.'))
-                lunchBreakTime = parseFloat(temp['end'].substring(11, 16).replace(':', '.')) - parseFloat(temp['start'].substring(11, 16).replace(':', '.'))
-            }
-        }
-        // dataTable.push([element.vehicleCode])
-    }
+    //     const element = vehicles[index];
+    //     if (element.breakTimes.length === 1) {
+    //         let vehicleCode = element.vehicleCode
+    //         let morningBreakTime = parseFloat(element.workingTime['start'].substring(11, 16).replace(':', '.'))
+    //         let morningOperatingTime = 0
+    //         let lunchBreakTime = 0
+    //         let lunchBreakTimeEnd = 0
+    //         let afternoonOperatingTime = parseFloat(element.workingTime['end'].substring(11, 16).replace(':', '.')) - lunchBreakTimeEnd
+    //         let dinnerBreakTime = 24 - (morningBreakTime + morningOperatingTime + lunchBreakTime + afternoonOperatingTime)
+    //         let timelineFirstPoint = 0 // thời gian đi từ điểm depot tới điểm gần nhất của nó 
+    //             // tìm khoảng cách điểm gần nhất depot theo matrix distance
+    //             // tính ra thời gian dựa trên quãng đường
+    //         let timelineReturnDepot = 0
+
+    //         console.log(element)
+
+    //         for (let j = 0; j < element.breakTimes.length; j++) {
+    //             const temp = element.breakTimes[j];
+    //             lunchBreakTimeEnd = parseFloat(temp['end'].substring(11, 16).replace(':', '.'))
+    //             lunchBreakTime = parseFloat(temp['end'].substring(11, 16).replace(':', '.')) - parseFloat(temp['start'].substring(11, 16).replace(':', '.'))
+    //         }
+    //     }
+    //     // dataTable.push([element.vehicleCode])
+    // }
 }
 
 // getDataModel()
