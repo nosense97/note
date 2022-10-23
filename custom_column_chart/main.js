@@ -95,48 +95,72 @@ var getFirstPointList = (depotList, distanceMatrix) => {
         let tempDistanceList = minDistanceOfDepot(depotIndex, distanceMatrix, i)
         distanceList.push(tempDistanceList)
     }
-    console.log('distanceObject', distanceList)
     return getFirstPoint(distanceList)
 }
 
 var depotList = getDepot()
 var depotAndFirstPointList = getFirstPointList(depotList, distances)
     // lấy ra được điểm depot và điểm gần nhất của nó, quãng đường và thời gian đi từ depot tới điểm gần nhất 
-console.log('a', a)
 
 
-var getDataModel = () => {
+var getDataModel = (depotsList, depotAndFirstPointList, dataTable) => {
 
-    // xác nhận lại việc datamodel nhận các giá trị thời gian của depot hay vehicle?
+    // xác nhận lại việc data model nhận các giá trị thời gian của depot hay vehicle?
     // vẽ thêm 1 đường thẳng biểu thị thời gian bắt đầu di chuyển của veh từ depot đi
     // đề xuất lấy hết data bên depot
 
-    // for (let index = 0; index < vehicles.length; index++) {
+    // console.log('depotsList', depotsList)
+    // console.log('depotAndFirstPointList', depotAndFirstPointList)
 
-    //     const element = vehicles[index];
-    //     if (element.breakTimes.length === 1) {
-    //         let vehicleCode = element.vehicleCode
-    //         let morningBreakTime = parseFloat(element.workingTime['start'].substring(11, 16).replace(':', '.'))
-    //         let morningOperatingTime = 0
-    //         let lunchBreakTime = 0
-    //         let lunchBreakTimeEnd = 0
-    //         let afternoonOperatingTime = parseFloat(element.workingTime['end'].substring(11, 16).replace(':', '.')) - lunchBreakTimeEnd
-    //         let dinnerBreakTime = 24 - (morningBreakTime + morningOperatingTime + lunchBreakTime + afternoonOperatingTime)
-    //         let timelineFirstPoint = 0 // thời gian đi từ điểm depot tới điểm gần nhất của nó 
-    //             // tìm khoảng cách điểm gần nhất depot theo matrix distance
-    //             // tính ra thời gian dựa trên quãng đường
-    //         let timelineReturnDepot = 0
+    for (let index = 0; index < depotsList.length; index++) {
 
-    //         console.log(element)
+        const element = depotsList[index];
+        if (element.breakTimes.length === 1) {
 
-    //         for (let j = 0; j < element.breakTimes.length; j++) {
-    //             const temp = element.breakTimes[j];
-    //             lunchBreakTimeEnd = parseFloat(temp['end'].substring(11, 16).replace(':', '.'))
-    //             lunchBreakTime = parseFloat(temp['end'].substring(11, 16).replace(':', '.')) - parseFloat(temp['start'].substring(11, 16).replace(':', '.'))
-    //         }
-    //     }
-    //     // dataTable.push([element.vehicleCode])
-    // }
+            let timelineStartFirstPoint = -1
+            let timelineFirstPoint = -1
+            let timelineReturnDepot = -1
+            let depotCode = element.depotCode
+            let locationCode = element.locationCode
+            let morningBreakTime = parseFloat(element.workingTime['start'].substring(11, 16).replace(':', '.'))
+            let morningOperatingTime = 0
+            let lunchBreakTime = 0
+            let lunchBreakTimeEnd = 0
+            let afternoonOperatingTime = parseFloat(element.workingTime['end'].substring(11, 16).replace(':', '.')) - lunchBreakTimeEnd
+            let dinnerBreakTime = 24 - (morningBreakTime + morningOperatingTime + lunchBreakTime + afternoonOperatingTime)
+
+            for (let j = 0; j < depotAndFirstPointList.length; j++) {
+                const DAPList = depotAndFirstPointList[j];
+                if (locationCode === DAPList.srcCode) {
+                    // console.log('DAP', DAPList)
+                    timelineStartFirstPoint = morningBreakTime
+                    timelineFirstPoint = morningBreakTime + DAPList.travelTime
+                    timelineReturnDepot = timelineFirstPoint + DAPList.travelTime
+                }
+
+            }
+
+            for (let j = 0; j < element.breakTimes.length; j++) {
+                const temp = element.breakTimes[j];
+                lunchBreakTimeEnd = parseFloat(temp['end'].substring(11, 16).replace(':', '.'))
+                lunchBreakTime = parseFloat(temp['end'].substring(11, 16).replace(':', '.')) - parseFloat(temp['start'].substring(11, 16).replace(':', '.'))
+            }
+
+            dataTable.push([
+                depotCode,
+                morningBreakTime,
+                timelineStartFirstPoint,
+                morningOperatingTime,
+                lunchBreakTime,
+                timelineFirstPoint,
+                afternoonOperatingTime,
+                timelineReturnDepot,
+                dinnerBreakTime,
+                ''
+            ])
+        }
+    }
 }
 
-// getDataModel()
+getDataModel(depots, depotAndFirstPointList, dataTable)
+console.log('data model', dataTable)
