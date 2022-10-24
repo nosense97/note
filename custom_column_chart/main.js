@@ -61,12 +61,10 @@ var getFirstPointList = (depotList, distanceMatrix) => {
             const listIndex = minDistanceList[i]
             let key = listIndex[i].id
             let value = listIndex[i].value
-                // console.log('obj', key, '', value)
             for (let j = 0; j < distanceMatrix.length; j++) {
-                // console.log('a', distanceMatrix[j])
                 if (key === distanceMatrix[j].srcCode && value === distanceMatrix[j].distance) {
                     console.log('a', distanceMatrix[j])
-                        // đẩy vào 1 mảng và loại bỏ phần tử giống nhau
+                        // đẩy vào 1 mảng và loại bỏ phần tử giống nhau là xong
                 }
             }
         }
