@@ -31,18 +31,24 @@
             div: '#chart_div',
             dataTable: [
                 [
-                    'Genre', 'Thời gian nghỉ sáng', 'Thời gian hoạt động sáng', 'Thời gian nghỉ trưa',
-                    'Mốc thời gian tới điểm đầu tiên', 'Thời gian hoạt động chiều',
-                    'Mốc thời gian quay trở lại kho', ' Thời gian nghỉ tối', {
+                    'Genre',
+                    'Thời gian Depot nghỉ sáng',
+                    'Vehicle xuất phát từ kho',
+                    'Thời gian Depot hoạt động sáng',
+                    'Thời gian Depot nghỉ trưa',
+                    'Vehicle tới điểm đầu tiên',
+                    'Thời gian Depot hoạt động chiều',
+                    'Vehicle trở lại kho',
+                    'Thời gian Depot nghỉ tối', {
                         role: 'annotation'
                     }
                 ],
-                ['Depot 1', 7, 4, 2, 8, 5, 15, 6, ''],
-                ['Depot 2', 9, 5, 0, 11, 2, 18, 8, ''],
-                ['Depot 3', 7, 4.5, 1.5, 10, 5, 22, 6, '']
+                ['Depot 1', 7, 7, 4, 2, 8, 5, 15, 6, ''],
+                ['Depot 2', 9, 9, 5, 0, 11, 2, 18, 8, ''],
+                ['Depot 3', 7, 7, 4.5, 1.5, 10, 5, 22, 6, '']
             ],
             options: {
-                width: 1000,
+                width: 1200,
                 height: 600,
                 legend: {
                     position: 'right',
@@ -52,7 +58,7 @@
                     groupWidth: '30%'
                 },
                 isStacked: true,
-                title: 'Thời gian hoạt động của xe khi chạy tới 1 điểm gần nhất',
+                title: 'Thời gian chạy của xe từ depot tham lam tới 1 điểm gần nhất',
                 vAxis: {
                     title: 'Thời gian 1 ngày'
                 },
@@ -65,23 +71,27 @@
                         color: '#D3D3D3'
                     },
                     1: {
-                        color: '#1E90FF'
+                        color: 'red',
+                        type: 'line'
                     },
                     2: {
-                        color: '#D3D3D3'
-                    },
-                    3: {
-                        color: 'red',
-                        type: 'line'
-                    },
-                    4: {
                         color: '#1E90FF'
                     },
-                    5: {
+                    3: {
+                        color: '#D3D3D3'
+                    },
+                    4: {
                         color: 'red',
                         type: 'line'
                     },
+                    5: {
+                        color: '#1E90FF'
+                    },
                     6: {
+                        color: 'red',
+                        type: 'line'
+                    },
+                    7: {
                         color: '#D3D3D3'
                     },
                 }
