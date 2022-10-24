@@ -7,100 +7,130 @@
 <body>
     <div id="chart_div"></div>
 
-    <script type="text/javascript">
-        var BuildChart = (params) => {
 
-            let divElememt = document.querySelector(params.div)
-            if (divElememt) {
+    <script>
+        function loadHQCharts() {
+            // CHART #1 
+            google.load('visualization', '1', {
+                'packages': ['corechart'],
+                callback: drawChartDishMix
+            });
+            // CHART #2 
+            google.load('visualization', '1', {
+                'packages': ['corechart'],
+                callback: drawChartMenuMix
+            });
+            // CHART #3 
+            google.load('visualization', '1', {
+                'packages': ['corechart'],
+                callback: drawChartStoreMix
+            });
+        };
 
-                google.charts.load('current', {
-                    'packages': ['corechart']
-                });
-                google.charts.setOnLoadCallback(drawVisualization);
+        function drawChartStoreMix() {
 
-                function drawVisualization() {
+            var url = window.location.origin + '/tce-php/getdata.php?var=HQLOADMMS';
 
-                    var data = google.visualization.arrayToDataTable(params.dataTable);
-                    var chart = new google.visualization.ComboChart(divElememt);
-                    chart.draw(data, params.options);
-                }
-            }
-        }
+            jQuery.getJSON(url, function(json) {
 
-        BuildChart({
-            div: '#chart_div',
-            dataTable: [
-                [
-                    'Genre',
-                    'Thời gian Depot nghỉ sáng',
-                    'Vehicle xuất phát từ kho',
-                    'Thời gian Depot hoạt động sáng',
-                    'Thời gian Depot nghỉ trưa',
-                    'Vehicle tới điểm đầu tiên',
-                    'Thời gian Depot hoạt động chiều',
-                    'Vehicle trở lại kho',
-                    'Thời gian Depot nghỉ tối', {
-                        role: 'annotation'
-                    }
-                ],
-                ['Depot 1', 7, 7, 4, 2, 8, 5, 15, 6, ''],
-                ['Depot 2', 9, 9, 5, 0, 11, 2, 18, 8, ''],
-                ['Depot 3', 7, 7, 4.5, 1.5, 10, 5, 22, 6, '']
-            ],
-            options: {
-                width: 1200,
-                height: 600,
-                legend: {
-                    position: 'right',
-                    maxLines: 10
-                },
-                bar: {
-                    groupWidth: '30%'
-                },
-                isStacked: true,
-                title: 'Thời gian chạy của xe từ depot tham lam tới 1 điểm gần nhất',
-                vAxis: {
-                    title: 'Thời gian 1 ngày'
-                },
-                hAxis: {
-                    title: 'Điểm Depot'
-                },
-                seriesType: 'bars',
-                series: {
-                    0: {
-                        color: '#D3D3D3'
-                    },
-                    1: {
-                        color: 'red',
-                        type: 'line'
-                    },
-                    2: {
-                        color: '#1E90FF'
-                    },
-                    3: {
-                        color: '#D3D3D3'
-                    },
-                    4: {
-                        color: 'red',
-                        type: 'line'
-                    },
-                    5: {
-                        color: '#1E90FF'
-                    },
-                    6: {
-                        color: 'red',
-                        type: 'line'
-                    },
-                    7: {
-                        color: '#D3D3D3'
-                    },
-                }
-            }
-        })
+                    // convert JSON to chart required format
+                    var stores = _.chain(json).pluck("store_name").sort().uniq(true).value();
+
+                    var tempHTML = "";
+                    jQuery('#store_list').empty();
+
+                    stores.forEach(function(entry) {
+                        tempHTML = tempHTML + '<option value="' + entry + '">' + entry + '</option>';
+                    });
+
+                    /*** Load data into drop down lists here ***/
+                    var store_selector = document.getElementById('store_list');
+                    store_selector.insertAdjacentHTML('beforeend', tempHTML);
+                    /*** Load default selections for top of drop down lists here ***/
+                    store_selector.insertAdjacentHTML('afterbegin', '<option selected="selected" value="ALL">All Stores...</option>');
+
+                    var header = _.chain(json).pluck("dish_menu").sort().uniq(true).value();
+                    header.unshift("Menus");
+
+                    var rows = _.chain(json)
+                        .groupBy(function(item) {
+                            return item.store_name;
+                        })
+                        .map(function(group, key) {
+                            var result = [key];
+                            _.each(group, function(item) {
+                                result[_.indexOf(header, item.dish_menu)] = parseInt(item.dish_count);
+                            });
+                            return result;
+                        })
+                        .value();
+
+                    var jsonData = [header].concat(rows);
+                    var data = google.visualization.arrayToDataTable(jsonData);
+
+                    // Set chart options
+                    var options = {
+                        title: 'Menu Mix By Store',
+                        titleTextStyle: {
+                            color: '#747474',
+                            fontSize: '15',
+                            bold: false
+                        },
+                        isStacked: true,
+                        chartArea: {
+                            left: '55',
+                            top: '50',
+                            width: '88%',
+                            height: '65%'
+                        },
+                        is3D: true,
+                        legend: {
+                            position: 'top'
+                        },
+                        legendTextStyle: {
+                            color: '#747474',
+                            fontSize: '11',
+                            bold: false
+                        },
+                        bar: {
+                            groupWidth: '75%'
+                        },
+                        vAxis: {
+                            title: '',
+                            textStyle: {
+                                color: '#747474',
+                                fontSize: '11',
+                                paddingRight: '0',
+                                marginRight: '0'
+                            }
+                        },
+                        hAxis: {
+                            title: '',
+                            textStyle: {
+                                color: '#747474',
+                                fontSize: '11',
+                                paddingRight: '0',
+                                marginRight: '0'
+                            }
+                        }
+                        //          vAxis: {title: '# Dishes'},
+                        //          hAxis: {title: 'Stores'}                
+                        //          legend: {position: 'none'},
+                    };
+
+                    // Instantiate and draw our chart, passing in some options.
+                    var chart = new google.visualization.ColumnChart(document.getElementById('fran_mix'));
+                    chart.draw(data, options);
+
+                })
+                .done(function() {})
+                .fail(function() {});
+        };
     </script>
 
     <!-- <script src="./const.js"></script> -->
     <script type="module" src="./main.js"></script>
+    <script type="module" src="./const.js"></script>
 </body>
 
 </html>
