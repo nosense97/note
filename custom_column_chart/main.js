@@ -31,6 +31,18 @@ var BuildChart = (params) => {
 
 BuildChart.DataModel = () => {
 
+    var convertTimeToMinutes = (time) => {
+
+        time = time.split(":")
+        let hours = String(parseInt(time[0]))
+        let minutes = String((parseInt(time[1])))
+        let result = -1
+
+        if (parseInt(hours) > 0) result = (parseInt(hours) * 60) + parseInt(minutes)
+        else result = parseInt(minutes)
+        return result
+    }
+
     var getDepot = () => {
 
         let result = []
@@ -212,14 +224,13 @@ BuildChart.DataModel = () => {
 
                 dataTable.push([
                     depotCode, // 'Genre'
-                    morningBreakTime, // 'Thời gian Depot nghỉ sáng'
-                    timelineStartFirstPoint, // 'Vehicle xuất phát từ kho'
-                    morningOperatingTime, // 'Thời gian Depot hoạt động sáng'
-                    lunchBreakTime, // 'Thời gian Depot nghỉ trưa'
-                    timelineFirstPoint, // 'Vehicle tới điểm đầu tiên',
-                    afternoonOperatingTime, // 'Thời gian Depot hoạt động chiều',
-                    timelineReturnDepot, // 'Vehicle trở lại kho',
-                    dinnerBreakTime, // 'Thời gian Depot nghỉ tối',
+                    convertTimeToMinutes(morningBreakTime), // 'Thời gian Depot nghỉ sáng' = Thời gian kho mở cửa (workingTimeStart)
+                    convertTimeToMinutes(morningOperatingTime), // 'Thời gian Depot hoạt động sáng' = Thời gian lunchBreakTimeStart - workingTimeStart
+                    convertTimeToMinutes(lunchBreakTime), // 'Thời gian Depot nghỉ trưa'
+                    convertTimeToMinutes(timelineFirstPoint), // 'Vehicle tới điểm đầu tiên',
+                    convertTimeToMinutes(afternoonOperatingTime), // 'Thời gian Depot hoạt động chiều',
+                    convertTimeToMinutes(timelineReturnDepot), // 'Vehicle trở lại kho',
+                    convertTimeToMinutes(dinnerBreakTime), // 'Thời gian Depot nghỉ tối',
                     ''
                 ])
             }
@@ -229,9 +240,14 @@ BuildChart.DataModel = () => {
     // ========================================
     var dataTable = []
     dataTable.push([
-        'Genre', 'Thời gian nghỉ sáng', 'Thời gian hoạt động sáng', 'Thời gian nghỉ trưa',
-        'Mốc thời gian tới điểm đầu tiên', 'Thời gian hoạt động chiều',
-        'Mốc thời gian quay trở lại kho', ' Thời gian nghỉ tối', {
+        'Genre',
+        'Thời gian Depot nghỉ sáng',
+        'Thời gian Depot hoạt động sáng',
+        'Thời gian Depot nghỉ trưa',
+        'Vehicle tới điểm đầu tiên',
+        'Thời gian Depot hoạt động chiều',
+        'Vehicle trở lại kho',
+        'Thời gian Depot nghỉ tối', {
             role: 'annotation'
         }
     ])
@@ -243,6 +259,10 @@ BuildChart.DataModel = () => {
 }
 
 console.log(BuildChart.DataModel())
+
+// thêm constraint không được hoạt động vào thời gian buổi trưa
+// đặt khoảng time nghỉ trưa, nếu thời gian quay lại depot / tới điểm đầu tiên của veh chạm phải vùng này
+// thì lấy điểm đó trừ đi time break start ra số phút, cộng lại số phút đó vào điểm quay lại depot / tới first point
 
 // ==========================================
 BuildChart({
@@ -261,38 +281,34 @@ BuildChart({
         isStacked: true,
         title: 'Thời gian chạy của xe từ depot tham lam tới 1 điểm gần nhất',
         vAxis: {
-            title: 'Thời gian 1 ngày'
+            title: 'Thời gian 1 ngày',
         },
         hAxis: {
             title: 'Điểm Depot'
         },
         seriesType: 'bars',
         series: {
-            0: {
+            0: { //'Thời gian Depot nghỉ sáng',
                 color: '#D3D3D3'
             },
             1: {
-                color: 'red',
-                type: 'line'
+                color: '#1E90FF'
             },
             2: {
-                color: '#1E90FF'
-            },
-            3: {
                 color: '#D3D3D3'
             },
-            4: {
+            3: {
                 color: 'red',
                 type: 'line'
             },
-            5: {
+            4: {
                 color: '#1E90FF'
             },
-            6: {
+            5: {
                 color: 'red',
                 type: 'line'
             },
-            7: {
+            6: {
                 color: '#D3D3D3'
             },
         }
