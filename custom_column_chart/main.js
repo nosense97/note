@@ -1,3 +1,4 @@
+// lấy biến từ file const.js
 import {
     vehicles,
     locations,
@@ -10,6 +11,16 @@ import {
 } from './const.js';
 
 
+/*
+    Constraint V-D: Thời gian chạy của xe từ Depot tham lam tới 1 điểm gần nhất.
+    kiểm tra xem điểm gần nhất đối với depot đó, với 1 xe bất kì sẽ chạy 1 trip đi về có phù hợp với thời gian hoạt động của kho không
+        - y: Thời gian 1 ngày (phút)
+        - x: Depot (location)
+        - column: Cột chồng các khung thời gian hoạt động/nghỉ của depot
+        - line: 
+            - 1: Thời gian tới điểm gần nhất
+            - 2: Mốc thời gian quay lại Depot
+*/
 var BuildChart = (params) => {
 
     let divElememt = document.querySelector(params.div)
@@ -31,6 +42,7 @@ var BuildChart = (params) => {
 
 BuildChart.DataModel = () => {
 
+    // chuyển thời gian dạng 'hh:mm' sang số phút
     var convertTimeToMinutes = (time) => {
 
         time = time.split(":")
@@ -43,6 +55,33 @@ BuildChart.DataModel = () => {
         return result
     }
 
+
+    /*
+        xe không được chạy trong khoảng thời gian nghỉ trưa
+        - điểm tới vào khung nghỉ trưa => bắt đầu vào đầu giờ chiều + số giờ đã lấn vào khung nghỉ trưa
+        - không vào khung nghỉ trưa => time ban đầu
+    */
+    var constraintVehicleLunchBreak = (lunchBreakTimeStart, lunchBreakTimeEnd, vehicleRunTime) => {
+
+        let convertParams = (params) => {
+            if (typeof(params) === 'string') return convertTimeToMinutes(params)
+            else return 'can\'t convert ' + params
+        }
+
+        // convert to minute
+        lunchBreakTimeStart = convertParams(lunchBreakTimeStart)
+        lunchBreakTimeEnd = convertParams(lunchBreakTimeEnd)
+        vehicleRunTime = convertParams(vehicleRunTime)
+
+        if ((vehicleRunTime >= lunchBreakTimeStart) && (vehicleRunTime < lunchBreakTimeEnd)) {
+            return vehicleRunTime + (lunchBreakTimeEnd - lunchBreakTimeStart)
+        } else {
+            return vehicleRunTime
+        }
+    }
+
+
+    // lấy ra Depot List từ Location List
     var getDepot = () => {
 
         let result = []
@@ -60,6 +99,8 @@ BuildChart.DataModel = () => {
         return result
     }
 
+
+    // lấy danh sách điểm gần nhất của Depot từ Depot List và DistanceMatrix
     var getFirstPointList = (depotList, distanceMatrix) => {
 
         let minDistanceOfDepot = (depotIndex, distanceMatrix, indexList) => {
@@ -122,6 +163,8 @@ BuildChart.DataModel = () => {
         return getFirstPoint(distanceList)
     }
 
+
+    // cộng 2 mốc thời gian
     var sumTime = (start, end) => {
 
         start = start.split(":");
@@ -142,12 +185,12 @@ BuildChart.DataModel = () => {
         }
 
         if (parseInt(hours) < 10) hours = '0'.concat(hours)
-
         if (parseInt(minutes) < 10) minutes = '0'.concat(minutes)
-
         return hours.concat(":", minutes)
     }
 
+
+    // trừ 2 mốc thời gian end - start
     var caculateTime = (start, end) => {
 
         start = start.split(":");
@@ -160,11 +203,16 @@ BuildChart.DataModel = () => {
         let minutes = Math.floor(diff / 1000 / 60);
 
         if (hours < 0) hours = hours + 24;
-
         return (hours <= 9 ? "0" : "") + hours + ":" + (minutes <= 9 ? "0" : "") + minutes;
     }
 
-    // đơn vị thời gian: giờ
+
+    /*
+        chuyển đổi thời gian di chuyển giữa 2 điểm sang giờ 
+        docs: https://docs.google.com/spreadsheets/d/1qlfM2PVeQxMbp1JLYKIfSf9Ytq0Vk6X_9KRH5QSaryk/edit#gid=938694669
+        input: 0.7073194313603591 (% giờ)
+        output: 01:18 (giờ)
+    */
     var convertTimeToHours = (travelTime) => {
 
         let result = ((travelTime * 100) / 60).toFixed(2)
@@ -173,20 +221,18 @@ BuildChart.DataModel = () => {
         let minutes = String((parseInt(time[1])))
 
         if (parseInt(hours) < 10) hours = '0'.concat(hours)
-
         if (parseInt(minutes) < 10) minutes = '0'.concat(minutes)
-
         return hours.concat(":", minutes)
     }
 
-    var getDataModel = (depotsList, depotAndFirstPointList, dataTable) => {
 
-        for (let index = 0; index < depotsList.length; index++) {
+    var getDataModel = (depotList, depotAndFirstPointList, dataTable) => {
 
-            const element = depotsList[index];
+        for (let index = 0; index < depotList.length; index++) {
+
+            const element = depotList[index];
             if (element.breakTimes.length === 1) {
 
-                let timelineStartFirstPoint = -1
                 let timelineFirstPoint = -1
                 let timelineReturnDepot = -1
                 let depotCode = element.depotCode
@@ -201,17 +247,7 @@ BuildChart.DataModel = () => {
                 let afternoonOperatingTime = 0
                 let dinnerBreakTime = 0
 
-                for (let j = 0; j < depotAndFirstPointList.length; j++) {
-                    const DAPList = depotAndFirstPointList[j];
-                    if (locationCode === DAPList.srcCode) {
-                        timelineStartFirstPoint = morningBreakTime
-                        timelineFirstPoint = sumTime(morningBreakTime, String(convertTimeToHours(DAPList.travelTime)))
-                        timelineReturnDepot = sumTime(timelineFirstPoint, convertTimeToHours(DAPList.travelTime))
-                    }
-                }
-
                 for (let j = 0; j < element.breakTimes.length; j++) {
-
                     const temp = element.breakTimes[j];
                     lunchBreakTimeStart = temp['start'].substring(11, 16)
                     lunchBreakTimeEnd = temp['end'].substring(11, 16)
@@ -219,6 +255,17 @@ BuildChart.DataModel = () => {
                     morningOperatingTime = caculateTime(morningBreakTime, lunchBreakTimeStart)
                     afternoonOperatingTime = caculateTime(lunchBreakTimeEnd, workingTimeEnd)
                 }
+
+                for (let j = 0; j < depotAndFirstPointList.length; j++) {
+                    const DAPList = depotAndFirstPointList[j];
+                    if (locationCode === DAPList.srcCode) {
+                        let tempTimelineFirstPoint = sumTime(morningBreakTime, String(convertTimeToHours(DAPList.travelTime)))
+                        let tempTimelineReturnDepot = sumTime(tempTimelineFirstPoint, String(convertTimeToHours(DAPList.travelTime)))
+                        timelineFirstPoint = constraintVehicleLunchBreak(lunchBreakTimeStart, lunchBreakTimeEnd, tempTimelineFirstPoint)
+                        timelineReturnDepot = constraintVehicleLunchBreak(lunchBreakTimeStart, lunchBreakTimeEnd, tempTimelineReturnDepot)
+                    }
+                }
+
                 let sumTimes = sumTime(sumTime(sumTime(morningBreakTime, morningOperatingTime), lunchBreakTime), afternoonOperatingTime)
                 dinnerBreakTime = caculateTime(sumTimes, '24:00')
 
@@ -227,9 +274,9 @@ BuildChart.DataModel = () => {
                     convertTimeToMinutes(morningBreakTime), // 'Thời gian Depot nghỉ sáng' = Thời gian kho mở cửa (workingTimeStart)
                     convertTimeToMinutes(morningOperatingTime), // 'Thời gian Depot hoạt động sáng' = Thời gian lunchBreakTimeStart - workingTimeStart
                     convertTimeToMinutes(lunchBreakTime), // 'Thời gian Depot nghỉ trưa'
-                    convertTimeToMinutes(timelineFirstPoint), // 'Vehicle tới điểm đầu tiên',
+                    timelineFirstPoint, // 'Vehicle tới điểm đầu tiên',
                     convertTimeToMinutes(afternoonOperatingTime), // 'Thời gian Depot hoạt động chiều',
-                    convertTimeToMinutes(timelineReturnDepot), // 'Vehicle trở lại kho',
+                    timelineReturnDepot, // 'Vehicle trở lại kho',
                     convertTimeToMinutes(dinnerBreakTime), // 'Thời gian Depot nghỉ tối',
                     ''
                 ])
@@ -258,11 +305,8 @@ BuildChart.DataModel = () => {
     return dataTable
 }
 
-console.log(BuildChart.DataModel())
+console.log('datamodel', BuildChart.DataModel())
 
-// thêm constraint không được hoạt động vào thời gian buổi trưa
-// đặt khoảng time nghỉ trưa, nếu thời gian quay lại depot / tới điểm đầu tiên của veh chạm phải vùng này
-// thì lấy điểm đó trừ đi time break start ra số phút, cộng lại số phút đó vào điểm quay lại depot / tới first point
 
 // ==========================================
 BuildChart({
@@ -288,7 +332,7 @@ BuildChart({
         },
         seriesType: 'bars',
         series: {
-            0: { //'Thời gian Depot nghỉ sáng',
+            0: {
                 color: '#D3D3D3'
             },
             1: {
