@@ -9,12 +9,79 @@ import {
     algoParams,
 
     drawPieCharts,
-    drawStackedColumnCharts
+    drawStackedColumnCharts,
+    drawMaterialColumnCharts,
 } from '../model/model.js';
 
 
 
-export const StackedColumnChart1 = () => {
+export const PieChart1 = (div) => {
+
+    var dataTable = []
+    var getDataModel = (locations, dataTable) => {
+        let getLocationTypeList = () => {
+
+            let numberOfCustomer = 0
+            let numberOfDepot = 0
+            let numberOfStation = 0
+            let numberOfHub = 0
+            let numberOfSatellife = 0
+
+            for (let i = 0; i < locations.length; i++) {
+                const locationType = locations[i].lTypes;
+                for (let j = 0; j < locationType.length; j++) {
+                    const type = locationType[j];
+
+                    switch (type) {
+                        case "HUB":
+                            numberOfHub += 1
+                            break;
+                        case "DEPOT":
+                            numberOfDepot += 1
+                            break;
+                        case "STATION":
+                            numberOfStation += 1
+                            break;
+                        case "CUSTOMER":
+                            numberOfCustomer += 1
+                            break;
+                        case "SATELLITE":
+                            numberOfSatellife += 1
+                            break;
+                    }
+                }
+            }
+
+            return [
+                { key: 'Customer', value: numberOfCustomer },
+                { key: 'Depot', value: numberOfDepot },
+                { key: 'Station', value: numberOfStation },
+                { key: 'Hub', value: numberOfHub },
+                { key: 'Satellife', value: numberOfSatellife },
+            ]
+        }
+
+        let locationTypeList = getLocationTypeList()
+        for (let i = 0; i < locationTypeList.length; i++) {
+            const listIndex = locationTypeList[i];
+            dataTable.push([listIndex.key, listIndex.value])
+        }
+    }
+
+    dataTable.push(['Task', 'Hours per Day'])
+    getDataModel(locations, dataTable)
+
+    var options = {
+        width: 1200,
+        height: 600,
+        title: 'Tỷ lệ các loại điểm trong Location list',
+        pieHole: 0.4,
+    }
+
+    drawPieCharts(div, dataTable, options)
+}
+
+export const StackedColumnChart1 = (div) => {
     var dataTable = []
     var getDataModel = (vehicles, dataTable) => {
 
@@ -163,71 +230,45 @@ export const StackedColumnChart1 = () => {
         }
     }
 
-    drawStackedColumnCharts('#chart_1', dataTable, options)
+    drawStackedColumnCharts(div, dataTable, options)
 }
 
-export const PieChart1 = () => {
+export const MaterialColumnChart1 = (div) => {
+    // var dataTable = []
+    // var getDataModel = () => {
+    //     dataTable.push()
+    // }
 
-    var dataTable = []
-    var getDataModel = (locations, dataTable) => {
-        let getLocationTypeList = () => {
-
-            let numberOfCustomer = 0
-            let numberOfDepot = 0
-            let numberOfStation = 0
-            let numberOfHub = 0
-            let numberOfSatellife = 0
-
-            for (let i = 0; i < locations.length; i++) {
-                const locationType = locations[i].lTypes;
-                for (let j = 0; j < locationType.length; j++) {
-                    const type = locationType[j];
-
-                    switch (type) {
-                        case "HUB":
-                            numberOfHub += 1
-                            break;
-                        case "DEPOT":
-                            numberOfDepot += 1
-                            break;
-                        case "STATION":
-                            numberOfStation += 1
-                            break;
-                        case "CUSTOMER":
-                            numberOfCustomer += 1
-                            break;
-                        case "SATELLITE":
-                            numberOfSatellife += 1
-                            break;
-                    }
-                }
-            }
-
-            return [
-                { key: 'Customer', value: numberOfCustomer },
-                { key: 'Depot', value: numberOfDepot },
-                { key: 'Station', value: numberOfStation },
-                { key: 'Hub', value: numberOfHub },
-                { key: 'Satellife', value: numberOfSatellife },
-            ]
-        }
-
-        let locationTypeList = getLocationTypeList()
-        for (let i = 0; i < locationTypeList.length; i++) {
-            const listIndex = locationTypeList[i];
-            dataTable.push([listIndex.key, listIndex.value])
-        }
-    }
-
-    dataTable.push(['Task', 'Hours per Day'])
-    getDataModel(locations, dataTable)
+    // dataTable.push(['Task', 'Hours per Day'])
+    // getDataModel(locations, dataTable)
 
     var options = {
         width: 1200,
         height: 600,
-        title: 'Tỷ lệ các loại điểm trong Location list',
-        pieHole: 0.4,
+        chart: {
+            title: 'Nearby galaxies',
+            subtitle: 'distance on the left, brightness on the right'
+        },
+        series: {
+            0: { axis: 'distance' }, // Bind series 0 to an axis named 'distance'.
+            1: { axis: 'brightness' } // Bind series 1 to an axis named 'brightness'.
+        },
+        axes: {
+            y: {
+                distance: { label: 'parsecs' }, // Left y-axis.
+                brightness: { side: 'right', label: 'apparent magnitude' } // Right y-axis.
+            }
+        }
     }
 
-    drawPieCharts('#chart_div', dataTable, options)
+    var data_test = [
+        ['Galaxy', 'Distance', 'Brightness'],
+        ['Canis Major Dwarf', 8000, 23.3],
+        ['Sagittarius Dwarf', 24000, 4.5],
+        ['Ursa Major II Dwarf', 30000, 14.3],
+        ['Lg. Magellanic Cloud', 50000, 0.9],
+        ['Bootes I', 60000, 13.1]
+    ]
+
+    drawMaterialColumnCharts(div, data_test, options)
 }
