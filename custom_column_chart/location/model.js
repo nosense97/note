@@ -11,7 +11,7 @@ export const requests = data['requests']
 export const matrixConfig = data['matrixConfig']
 export const algoParams = data['algoParams']
 
-export var drawPieCharts = (container_div, model, option) => {
+export const drawPieCharts = (container_div, model, option) => {
 
     var BuildChart = (params) => {
 
@@ -45,7 +45,7 @@ export var drawPieCharts = (container_div, model, option) => {
     })
 }
 
-export var drawStackedColumnCharts = (container_div, model, option) => {
+export const drawStackedColumnCharts = (container_div, model, option) => {
 
     var BuildChart = (params) => {
 
