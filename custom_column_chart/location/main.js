@@ -7,78 +7,21 @@ import {
     distances,
     requests,
     matrixConfig,
-    algoParams
+    algoParams,
+
+    drawPieCharts,
+    drawStackedColumnCharts
 } from './const.js';
 
-var drawPieCharts = (container_div, model, option) => {
 
-    var BuildChart = (params) => {
+// -----------------------
 
-        let divElememt = document.querySelector(params.div)
-        if (divElememt) {
-
-            google.charts.load('current', {
-                'packages': ['corechart']
-            });
-            google.charts.setOnLoadCallback(drawVisualization);
-
-            function drawVisualization() {
-
-                var data = google.visualization.arrayToDataTable(params.dataTable);
-                var chart = new google.visualization.PieChart(divElememt);
-                chart.draw(data, params.options);
-            }
-        } else {
-            console.log('error divElememt', divElememt)
-        }
-    }
-
-    BuildChart.DataModel = () => { return model }
-
-    BuildChart.Setting = () => { return option }
-
-    BuildChart({
-        div: container_div, //'#chart_div',
-        dataTable: BuildChart.DataModel(),
-        options: BuildChart.Setting(),
-    })
-}
-
-var Vehicle = () => {
-
-    /*
-    Constraint V-D: Thời gian chạy của xe từ Depot tham lam tới 1 điểm gần nhất.
-    kiểm tra xem điểm gần nhất đối với depot đó, với 1 xe bất kì sẽ chạy 1 trip đi về có phù hợp với thời gian hoạt động của kho không
-        - y: Thời gian 1 ngày (phút)
-        - x: Depot (location)
-        - column: Cột chồng các khung thời gian hoạt động/nghỉ của depot
-        - line: 
-            - 1: Thời gian tới điểm gần nhất
-            - 2: Mốc thời gian quay lại Depot
-    */
-    var BuildChart = (params) => {
-
-        let divElememt = document.querySelector(params.div)
-        if (divElememt) {
-
-            google.charts.load('current', {
-                'packages': ['corechart']
-            });
-            google.charts.setOnLoadCallback(drawVisualization);
-
-            function drawVisualization() {
-
-                var data = google.visualization.arrayToDataTable(params.dataTable);
-                var chart = new google.visualization.ComboChart(divElememt);
-                chart.draw(data, params.options);
-            }
-        }
-    }
-
-    BuildChart.DataModel = () => {
+var StackedColumnChart1 = () => {
+    var dataTable = []
+    var getDataModel = (vehicles, dataTable) => {
 
         // chuyển thời gian dạng 'hh:mm' sang số phút
-        var convertTimeToMinutes = (time) => {
+        let convertTimeToMinutes = (time) => {
 
             time = time.split(":")
             let hours = String(parseInt(time[0]))
@@ -90,9 +33,8 @@ var Vehicle = () => {
             return result
         }
 
-
         // cộng 2 mốc thời gian
-        var sumTime = (start, end) => {
+        let sumTime = (start, end) => {
 
             start = start.split(":");
             end = end.split(":");
@@ -116,9 +58,8 @@ var Vehicle = () => {
             return hours.concat(":", minutes)
         }
 
-
         // trừ 2 mốc thời gian end - start
-        var caculateTime = (start, end) => {
+        let caculateTime = (start, end) => {
 
             start = start.split(":");
             end = end.split(":");
@@ -133,126 +74,101 @@ var Vehicle = () => {
             return (hours <= 9 ? "0" : "") + hours + ":" + (minutes <= 9 ? "0" : "") + minutes;
         }
 
+        for (let index = 0; index < vehicles.length; index++) {
 
-        var getDataModel = (vehicleList, dataTable) => {
+            const element = vehicles[index];
+            if (element.breakTimes.length === 1) {
 
-            for (let index = 0; index < vehicleList.length; index++) {
+                let vehicleCode = element.vehicleCode
+                let workingTimeStart = element.workingTime['start'].substring(11, 16)
+                let workingTimeEnd = element.workingTime['end'].substring(11, 16)
+                let morningBreakTime = workingTimeStart
+                let morningOperatingTime = 0
+                let lunchBreakTime = 0
+                let lunchBreakTimeStart = 0
+                let lunchBreakTimeEnd = 0
+                let afternoonOperatingTime = 0
+                let dinnerBreakTime = 0
 
-                const element = vehicleList[index];
-                if (element.breakTimes.length === 1) {
-
-                    let vehicleCode = element.vehicleCode
-                    let workingTimeStart = element.workingTime['start'].substring(11, 16)
-                    let workingTimeEnd = element.workingTime['end'].substring(11, 16)
-                    let morningBreakTime = workingTimeStart
-                    let morningOperatingTime = 0
-                    let lunchBreakTime = 0
-                    let lunchBreakTimeStart = 0
-                    let lunchBreakTimeEnd = 0
-                    let afternoonOperatingTime = 0
-                    let dinnerBreakTime = 0
-
-                    for (let j = 0; j < element.breakTimes.length; j++) {
-                        const temp = element.breakTimes[j];
-                        lunchBreakTimeStart = temp['start'].substring(11, 16)
-                        lunchBreakTimeEnd = temp['end'].substring(11, 16)
-                        lunchBreakTime = caculateTime(lunchBreakTimeStart, lunchBreakTimeEnd)
-                        morningOperatingTime = caculateTime(morningBreakTime, lunchBreakTimeStart)
-                        afternoonOperatingTime = caculateTime(lunchBreakTimeEnd, workingTimeEnd)
-                    }
-
-                    let sumTimes = sumTime(sumTime(sumTime(morningBreakTime, morningOperatingTime), lunchBreakTime), afternoonOperatingTime)
-                    dinnerBreakTime = caculateTime(sumTimes, '24:00')
-
-                    dataTable.push([
-                        vehicleCode, // 'Genre'
-                        convertTimeToMinutes(morningBreakTime), // 'Thời gian Depot nghỉ sáng' = Thời gian kho mở cửa (workingTimeStart)
-                        convertTimeToMinutes(morningOperatingTime), // 'Thời gian Depot hoạt động sáng' = Thời gian lunchBreakTimeStart - workingTimeStart
-                        convertTimeToMinutes(lunchBreakTime), // 'Thời gian Depot nghỉ trưa'
-                        convertTimeToMinutes(afternoonOperatingTime), // 'Thời gian Depot hoạt động chiều',
-                        convertTimeToMinutes(dinnerBreakTime), // 'Thời gian Depot nghỉ tối',
-                        ''
-                    ])
+                for (let j = 0; j < element.breakTimes.length; j++) {
+                    const temp = element.breakTimes[j];
+                    lunchBreakTimeStart = temp['start'].substring(11, 16)
+                    lunchBreakTimeEnd = temp['end'].substring(11, 16)
+                    lunchBreakTime = caculateTime(lunchBreakTimeStart, lunchBreakTimeEnd)
+                    morningOperatingTime = caculateTime(morningBreakTime, lunchBreakTimeStart)
+                    afternoonOperatingTime = caculateTime(lunchBreakTimeEnd, workingTimeEnd)
                 }
+
+                let sumTimes = sumTime(sumTime(sumTime(morningBreakTime, morningOperatingTime), lunchBreakTime), afternoonOperatingTime)
+                dinnerBreakTime = caculateTime(sumTimes, '24:00')
+
+                dataTable.push([
+                    vehicleCode,
+                    convertTimeToMinutes(morningBreakTime),
+                    convertTimeToMinutes(morningOperatingTime),
+                    convertTimeToMinutes(lunchBreakTime),
+                    convertTimeToMinutes(afternoonOperatingTime),
+                    convertTimeToMinutes(dinnerBreakTime),
+                    ''
+                ])
             }
         }
-
-        // ========================================
-        var dataTable = []
-        dataTable.push([
-            'Genre',
-            'Thời gian Vehicle nghỉ sáng',
-            'Thời gian Vehicle hoạt động sáng',
-            'Thời gian Vehicle nghỉ trưa',
-            'Thời gian Vehicle hoạt động chiều',
-            'Thời gian Vehicle nghỉ tối', {
-                role: 'annotation'
-            }
-        ])
-        getDataModel(vehicles, dataTable)
-
-        return dataTable
     }
 
-    BuildChart({
-        div: '#chart_1',
-        dataTable: BuildChart.DataModel(),
-        options: {
-            width: 1200,
-            height: 600,
-            legend: {
-                position: 'right',
-                maxLines: 10
-            },
-            bar: {
-                groupWidth: '30%'
-            },
-            isStacked: true,
-            title: 'Thời gian hoạt động/nghỉ của Vehicle',
-            vAxis: {
-                title: 'Thời gian 1 ngày (theo phút)',
-            },
-            hAxis: {
-                title: 'Phương tiện vận chuyển'
-            },
-            seriesType: 'bars',
-            series: {
-                0: {
-                    color: '#D3D3D3'
-                },
-                1: {
-                    color: '#1E90FF'
-                },
-                2: {
-                    color: '#D3D3D3'
-                },
-                3: {
-                    color: '#1E90FF'
-                },
-                4: {
-                    color: '#D3D3D3'
-                },
-            }
+    dataTable.push([
+        'Genre',
+        'Thời gian Vehicle nghỉ sáng',
+        'Thời gian Vehicle hoạt động sáng',
+        'Thời gian Vehicle nghỉ trưa',
+        'Thời gian Vehicle hoạt động chiều',
+        'Thời gian Vehicle nghỉ tối', {
+            role: 'annotation'
         }
-    })
+    ])
+    getDataModel(vehicles, dataTable)
 
+    var options = {
+        width: 1200,
+        height: 600,
+        legend: {
+            position: 'right',
+            maxLines: 10
+        },
+        bar: {
+            groupWidth: '30%'
+        },
+        isStacked: true,
+        title: 'Thời gian hoạt động/nghỉ của Vehicle',
+        vAxis: {
+            title: 'Thời gian 1 ngày (theo phút)',
+        },
+        hAxis: {
+            title: 'Phương tiện vận chuyển'
+        },
+        seriesType: 'bars',
+        series: {
+            0: {
+                color: '#D3D3D3'
+            },
+            1: {
+                color: '#1E90FF'
+            },
+            2: {
+                color: '#D3D3D3'
+            },
+            3: {
+                color: '#1E90FF'
+            },
+            4: {
+                color: '#D3D3D3'
+            },
+        }
+    }
 
-
-
-
+    drawStackedColumnCharts('#chart_1', dataTable, options)
 }
 
-
-
-
-
-// -----------------------
-
 var PieChart1 = () => {
-
-    /*
-    Biểu đồ tròn: Tỷ lệ các thành phần trong Location
-    */
 
     var dataTable = []
     var getDataModel = (locations, dataTable) => {
@@ -318,4 +234,11 @@ var PieChart1 = () => {
     drawPieCharts('#chart_div', dataTable, options)
 }
 
+
+// -----------------------
+
+// Biểu đồ tròn: Tỷ lệ các thành phần trong Location
 PieChart1()
+
+// Biểu đồ cột chồng: 
+StackedColumnChart1()
