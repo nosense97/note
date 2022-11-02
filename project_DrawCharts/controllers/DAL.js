@@ -10,7 +10,7 @@ import {
 
     drawPieCharts,
     drawStackedColumnCharts
-} from './model.js';
+} from '../model/model.js';
 
 
 
