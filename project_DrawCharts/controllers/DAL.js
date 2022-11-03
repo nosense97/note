@@ -234,41 +234,44 @@ export const StackedColumnChart1 = (div) => {
 }
 
 export const MaterialColumnChart1 = (div) => {
-    // var dataTable = []
-    // var getDataModel = () => {
-    //     dataTable.push()
-    // }
+    var dataTable = []
+    var getDataModel = () => {
 
-    // dataTable.push(['Task', 'Hours per Day'])
-    // getDataModel(locations, dataTable)
+        let vehicleCode = -1
+        let vehicleCBM = -1
+        let vehicleCapacity = -1
+
+        for (let i = 0; i < vehicles.length; i++) {
+            const listIndex = vehicles[i];
+            console.log(listIndex)
+            vehicleCode = listIndex.vehicleCode
+            vehicleCBM = listIndex.cbm
+            vehicleCapacity = listIndex.capacity
+            dataTable.push([String(vehicleCode), parseInt(vehicleCBM), parseInt(vehicleCapacity)])
+        }
+    }
+
+    dataTable.push(['Vehicle', 'CBM', 'Capacity'])
+    getDataModel(locations, dataTable)
 
     var options = {
         width: 1200,
         height: 600,
         chart: {
-            title: 'Nearby galaxies',
-            subtitle: 'distance on the left, brightness on the right'
+            title: 'Trọng tải của phương tiện di chuyển',
+            subtitle: 'CBM ở bên trái, Capacity ở bên phải'
         },
         series: {
-            0: { axis: 'distance' }, // Bind series 0 to an axis named 'distance'.
-            1: { axis: 'brightness' } // Bind series 1 to an axis named 'brightness'.
+            0: { axis: 'CBM' }, // Bind series 0 to an axis named 'distance'.
+            1: { axis: 'Capacity' } // Bind series 1 to an axis named 'brightness'.
         },
         axes: {
             y: {
-                distance: { label: 'parsecs' }, // Left y-axis.
-                brightness: { side: 'right', label: 'apparent magnitude' } // Right y-axis.
+                CBM: { label: 'CBM (cm3)' }, // Left y-axis.
+                Capacity: { side: 'right', label: 'Capacity (gram)' } // Right y-axis.
             }
         }
     }
 
-    var data_test = [
-        ['Galaxy', 'Distance', 'Brightness'],
-        ['Canis Major Dwarf', 8000, 23.3],
-        ['Sagittarius Dwarf', 24000, 4.5],
-        ['Ursa Major II Dwarf', 30000, 14.3],
-        ['Lg. Magellanic Cloud', 50000, 0.9],
-        ['Bootes I', 60000, 13.1]
-    ]
-
-    drawMaterialColumnCharts(div, data_test, options)
+    drawMaterialColumnCharts(div, dataTable, options)
 }
