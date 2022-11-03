@@ -111,6 +111,7 @@ export const drawMaterialColumnCharts = (container_div, model, option) => {
     })
 }
 
+// Combo Chart dual axis chart
 export const drawComboCharts = (container_div, model, option) => {
 
     var BuildChart = (params) => {
@@ -118,14 +119,48 @@ export const drawComboCharts = (container_div, model, option) => {
         let divElememt = document.querySelector(params.div)
         if (divElememt) {
 
-            google.charts.load('current', { 'packages': ['bar'] });
+            google.charts.load('current', { 'packages': ['corechart'] });
             google.charts.setOnLoadCallback(drawVisualization);
 
             function drawVisualization() {
 
                 let data = google.visualization.arrayToDataTable(params.dataTable)
-                let chart = new google.charts.Bar(divElememt);
-                chart.draw(data, google.charts.Bar.convertOptions(params.options))
+                let chart = new google.visualization.ComboChart(divElememt);
+                chart.draw(data, params.options);
+            }
+        } else {
+            console.log('error divElememt', divElememt)
+        }
+    }
+
+    BuildChart.DataModel = () => { return model }
+
+    BuildChart.Setting = () => { return option }
+
+    BuildChart({
+        div: container_div,
+        dataTable: BuildChart.DataModel(),
+        options: BuildChart.Setting(),
+    })
+}
+
+
+export const drawComboChartsWithStackedColumn = (container_div, model, option) => {
+    var BuildChart = (params) => {
+
+        let divElememt = document.querySelector(params.div)
+        if (divElememt) {
+
+            google.charts.load('current', {
+                'packages': ['corechart']
+            });
+            google.charts.setOnLoadCallback(drawVisualization);
+
+            function drawVisualization() {
+
+                var data = google.visualization.arrayToDataTable(params.dataTable);
+                var chart = new google.visualization.ComboChart(divElememt);
+                chart.draw(data, params.options);
             }
         } else {
             console.log('error divElememt', divElememt)
