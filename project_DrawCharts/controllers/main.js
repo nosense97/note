@@ -1,10 +1,12 @@
 import {
     StackedColumnChart1,
+    StackedColumnChart2,
     PieChart1,
     MaterialColumnChart1,
     ComboChart1,
     ComboChart2,
     ComboChart3,
+    ComboChart4,
     ComboChartsWithStackedColumn1,
 } from './DAL.js';
 
@@ -28,5 +30,11 @@ ComboChart2("#ComboChart2")
 // Biểu đồ cột: Unload time per Ton/Capacity với Fixed Unload Time của Customer
 ComboChart3("#ComboChart3")
 
-// Biểu đồ cột chồng: Thời gian hoạt động/nghỉ của Customer
+// Thời gian chạy của xe từ depot tham lam tới 1 điểm gần nhất
 ComboChartsWithStackedColumn1('#ComboChartsWithStackedColumn1')
+
+// Biểu đồ cột chồng: Thời gian hoạt động/nghỉ của Customer
+StackedColumnChart2("#StackedColumnChart2")
+
+// Biểu đồ kết hợp: Time and fixed time with Depots
+ComboChart4("#ComboChart4")
