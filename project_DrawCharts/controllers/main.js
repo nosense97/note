@@ -7,6 +7,7 @@ import {
     ComboChart2,
     ComboChart3,
     ComboChart4,
+    ComboChart5,
     ComboChartsWithStackedColumn1,
 } from './DAL.js';
 
@@ -38,3 +39,6 @@ StackedColumnChart2("#StackedColumnChart2")
 
 // Biểu đồ kết hợp: Time and fixed time with Depots
 ComboChart4("#ComboChart4")
+
+// Biểu đồ cột đường kết hợp: tổng weight và cbm, số item và số lượng từng item
+ComboChart5("#ComboChart5")

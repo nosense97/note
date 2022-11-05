@@ -1124,3 +1124,72 @@ export const ComboChart4 = (div) => {
 
     drawComboCharts(div, dataTable, options)
 }
+
+export const ComboChart5 = (div) => {
+    var dataTable = []
+    var getDataModel = () => {
+
+        let orderCode = -1
+        let numberOfItem = -1
+        let itemList = []
+        let quantity = -1
+        let weight = -1
+        let cbm = -1
+
+        for (let i = 0; i < requests.length; i++) {
+            const listIndex = requests[i];
+            orderCode = listIndex.orderCode
+            itemList = listIndex.items
+            numberOfItem = listIndex.items.length
+            for (let j = 0; j < itemList.length; j++) {
+                const itemIndex = itemList[j];
+                // console.log(j, itemIndex)
+                quantity = itemIndex.quantity
+                weight = itemIndex.weight
+                cbm = itemIndex.cbm
+            }
+            dataTable.push([String(orderCode), parseInt(quantity), parseInt(weight), parseInt(cbm)])
+        }
+    }
+
+    dataTable.push(['Requests', 'Quantity', 'Weight', 'CBM'])
+    getDataModel(locations, dataTable)
+
+    var options = {
+        width: 3300,
+        height: 600,
+        title: 'Tổng CBM, weight và số lượng Đơn hàng',
+        vAxes: [{
+            title: 'CBM (...)',
+            minValue: 0,
+            maxValue: 60
+        }, {
+            title: 'Weight (...)',
+            minValue: 0,
+            maxValue: 60
+        }],
+        curveType: 'function',
+        hAxis: {
+            title: "Items"
+        },
+        series: {
+            0: {
+                type: "line",
+                targetAxisIndex: 0,
+                color: "red"
+            },
+            1: {
+                type: "bars",
+                targetAxisIndex: 0,
+                color: "green"
+            },
+            2: {
+                type: "bars",
+                targetAxisIndex: 0,
+                color: "yellow"
+            },
+        }
+    }
+
+    drawComboCharts(div, dataTable, options)
+}
