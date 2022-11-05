@@ -144,7 +144,6 @@ export const drawComboCharts = (container_div, model, option) => {
     })
 }
 
-
 export const drawComboChartsWithStackedColumn = (container_div, model, option) => {
     var BuildChart = (params) => {
 
@@ -160,6 +159,40 @@ export const drawComboChartsWithStackedColumn = (container_div, model, option) =
 
                 var data = google.visualization.arrayToDataTable(params.dataTable);
                 var chart = new google.visualization.ComboChart(divElememt);
+                chart.draw(data, params.options);
+            }
+        } else {
+            console.log('error divElememt', divElememt)
+        }
+    }
+
+    BuildChart.DataModel = () => { return model }
+
+    BuildChart.Setting = () => { return option }
+
+    BuildChart({
+        div: container_div,
+        dataTable: BuildChart.DataModel(),
+        options: BuildChart.Setting(),
+    })
+}
+
+export const drawColumnCharts = (container_div, model, option) => {
+
+    var BuildChart = (params) => {
+
+        let divElememt = document.querySelector(params.div)
+        if (divElememt) {
+
+            google.charts.load('current', {
+                'packages': ['corechart']
+            });
+            google.charts.setOnLoadCallback(drawVisualization);
+
+            function drawVisualization() {
+
+                var data = google.visualization.arrayToDataTable(params.dataTable);
+                var chart = new google.visualiszation.ColumnChart(divElememt);
                 chart.draw(data, params.options);
             }
         } else {

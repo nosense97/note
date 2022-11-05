@@ -1,6 +1,7 @@
 import {
     StackedColumnChart1,
     StackedColumnChart2,
+    StackedColumnChart3,
     PieChart1,
     MaterialColumnChart1,
     ComboChart1,
@@ -8,6 +9,7 @@ import {
     ComboChart3,
     ComboChart4,
     ComboChart5,
+    ComboChart6,
     ComboChartsWithStackedColumn1,
 } from './DAL.js';
 
@@ -37,8 +39,14 @@ ComboChartsWithStackedColumn1('#ComboChartsWithStackedColumn1')
 // Biểu đồ cột chồng: Thời gian hoạt động/nghỉ của Customer
 StackedColumnChart2("#StackedColumnChart2")
 
+// Biểu đồ cột chồng: Thời gian hoạt động/nghỉ của Depot
+StackedColumnChart3("#StackedColumnChart3")
+
 // Biểu đồ kết hợp: Time and fixed time with Depots
 ComboChart4("#ComboChart4")
 
-// Biểu đồ cột đường kết hợp: tổng weight và cbm, số item và số lượng từng item
+// Biểu đồ cột đường kết hợp: Tổng weight và cbm, số item và số lượng từng item
 ComboChart5("#ComboChart5")
+
+// Biểu đồ cột đường: Quãng đường và thời gian của từng đơn hàng
+ComboChart6("#ComboChart6")

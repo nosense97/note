@@ -13,7 +13,10 @@ import {
     drawMaterialColumnCharts,
     drawComboCharts,
     drawComboChartsWithStackedColumn,
+    drawColumnCharts,
 } from '../model/model.js';
+
+import * as CONSTANTS from './const.js';
 
 
 
@@ -84,6 +87,7 @@ export const PieChart1 = (div) => {
 }
 
 export const StackedColumnChart1 = (div) => {
+
     var dataTable = []
     var getDataModel = (vehicles, dataTable) => {
 
@@ -236,6 +240,7 @@ export const StackedColumnChart1 = (div) => {
 }
 
 export const MaterialColumnChart1 = (div) => {
+
     var dataTable = []
     var getDataModel = () => {
 
@@ -278,6 +283,7 @@ export const MaterialColumnChart1 = (div) => {
 }
 
 export const ComboChart1 = (div) => {
+
     var dataTable = []
     var getDataModel = () => {
 
@@ -339,6 +345,7 @@ export const ComboChart1 = (div) => {
 }
 
 export const ComboChart2 = (div) => {
+
     var dataTable = []
     var getDataModel = () => {
 
@@ -401,6 +408,7 @@ export const ComboChart2 = (div) => {
 }
 
 export const ComboChart3 = (div) => {
+
     var dataTable = []
     var getDataModel = () => {
 
@@ -463,183 +471,6 @@ export const ComboChart3 = (div) => {
 
 export const ComboChartsWithStackedColumn1 = (div) => {
 
-    // chuyển thời gian dạng 'hh:mm' sang số phút
-    var convertTimeToMinutes = (time) => {
-
-        time = time.split(":")
-        let hours = String(parseInt(time[0]))
-        let minutes = String((parseInt(time[1])))
-        let result = -1
-
-        if (parseInt(hours) > 0) result = (parseInt(hours) * 60) + parseInt(minutes)
-        else result = parseInt(minutes)
-        return result
-    }
-
-    /*
-        xe không được chạy trong khoảng thời gian nghỉ trưa
-        - điểm tới vào khung nghỉ trưa => bắt đầu vào đầu giờ chiều + số giờ đã lấn vào khung nghỉ trưa
-        - không vào khung nghỉ trưa => time ban đầu
-    */
-    var constraintVehicleLunchBreak = (lunchBreakTimeStart, lunchBreakTimeEnd, vehicleRunTime) => {
-
-        let convertParams = (params) => {
-            if (typeof(params) === 'string') return convertTimeToMinutes(params)
-            else return 'can\'t convert ' + params
-        }
-
-        // convert to minute
-        lunchBreakTimeStart = convertParams(lunchBreakTimeStart)
-        lunchBreakTimeEnd = convertParams(lunchBreakTimeEnd)
-        vehicleRunTime = convertParams(vehicleRunTime)
-
-        if ((vehicleRunTime >= lunchBreakTimeStart) && (vehicleRunTime < lunchBreakTimeEnd)) {
-            return vehicleRunTime + (lunchBreakTimeEnd - lunchBreakTimeStart)
-        } else {
-            return vehicleRunTime
-        }
-    }
-
-    // lấy ra Depot List từ Location List
-    var getDepot = () => {
-
-        let result = []
-        for (let i = 0; i < locations.length; i++) {
-
-            let locationIndex = locations[i];
-            for (let j = 0; j < locationIndex.lTypes.length; j++) {
-
-                let locationType = locationIndex.lTypes[j];
-                if (locationType === 'DEPOT') {
-                    result.push(locationIndex.locationCode)
-                }
-            }
-        }
-        return result
-    }
-
-    // lấy danh sách điểm gần nhất của Depot từ Depot List và DistanceMatrix
-    var getFirstPointList = (depotList, distanceMatrix) => {
-
-        let minDistanceOfDepot = (depotIndex, distanceMatrix, indexList) => {
-            let minDistanceList = []
-            let result = {}
-
-            for (let i = 0; i < distanceMatrix.length; i++) {
-                const distanceIndex = distanceMatrix[i]
-                    // thêm điều kiện điểm gần nhất của depot không thể là depot
-                if (depotIndex === distanceIndex.srcCode && depotIndex != distanceIndex.destCode) {
-                    minDistanceList.push(distanceIndex.distance)
-                }
-            }
-
-            let minInNumber = Math.min.apply(Math, minDistanceList)
-            result[indexList] = { 'id': depotIndex, 'value': minInNumber }
-            return result
-        }
-
-        let getFirstPoint = (minDistanceList) => {
-
-            let resultTempList = []
-            let deleteIndex = -1
-
-            for (let i = 0; i < minDistanceList.length; i++) {
-                const listIndex = minDistanceList[i]
-                let key = listIndex[i].id
-                let value = listIndex[i].value
-                for (let j = 0; j < distanceMatrix.length; j++) {
-                    if (key === distanceMatrix[j].srcCode && value === distanceMatrix[j].distance) {
-                        resultTempList.push(distanceMatrix[j])
-                    }
-                }
-            }
-
-            for (let i = 0; i < resultTempList.length; i++) {
-                for (let j = i + 1; j < resultTempList.length; j++) {
-                    if (resultTempList[i].srcCode === resultTempList[j].srcCode && resultTempList[i].destCode === resultTempList[j].destCode) {
-                        deleteIndex = resultTempList[i]
-                    }
-                }
-            }
-
-            let arrayRemove = (arr, value) => {
-                return arr.filter(function(ele) {
-                    return ele != value;
-                });
-            }
-
-            let result = arrayRemove(resultTempList, deleteIndex);
-            return result
-        }
-
-        let distanceList = []
-        for (let i = 0; i < depotList.length; i++) {
-            const depotIndex = depotList[i]
-            let tempDistanceList = minDistanceOfDepot(depotIndex, distanceMatrix, i)
-            distanceList.push(tempDistanceList)
-        }
-        return getFirstPoint(distanceList)
-    }
-
-    // cộng 2 mốc thời gian
-    var sumTime = (start, end) => {
-
-        start = start.split(":");
-        end = end.split(":");
-        let hours = -1
-        let minutes = -1
-        let sumMinutes = parseInt(start[1]) + parseInt(end[1])
-
-        if (sumMinutes > 60) {
-            hours = String(parseInt(start[0]) + parseInt(end[0]) + 1)
-            minutes = String((parseInt(start[1]) + parseInt(end[1])) % 60)
-        } else if (sumMinutes == 60) {
-            hours = String(parseInt(start[0]) + parseInt(end[0]) + 1)
-            minutes = '00'
-        } else {
-            hours = String(parseInt(start[0]) + parseInt(end[0]))
-            minutes = String(parseInt(start[1]) + parseInt(end[1]))
-        }
-
-        if (parseInt(hours) < 10) hours = '0'.concat(hours)
-        if (parseInt(minutes) < 10) minutes = '0'.concat(minutes)
-        return hours.concat(":", minutes)
-    }
-
-    // trừ 2 mốc thời gian end - start
-    var caculateTime = (start, end) => {
-
-        start = start.split(":");
-        end = end.split(":");
-        let startDate = new Date(0, 0, 0, start[0], start[1], 0);
-        let endDate = new Date(0, 0, 0, end[0], end[1], 0);
-        let diff = endDate.getTime() - startDate.getTime();
-        let hours = Math.floor(diff / 1000 / 60 / 60);
-        diff -= hours * 1000 * 60 * 60;
-        let minutes = Math.floor(diff / 1000 / 60);
-
-        if (hours < 0) hours = hours + 24;
-        return (hours <= 9 ? "0" : "") + hours + ":" + (minutes <= 9 ? "0" : "") + minutes;
-    }
-
-    /*
-        chuyển đổi thời gian di chuyển giữa 2 điểm sang giờ 
-        docs: https://docs.google.com/spreadsheets/d/1qlfM2PVeQxMbp1JLYKIfSf9Ytq0Vk6X_9KRH5QSaryk/edit#gid=938694669
-        input: 0.7073194313603591 (% giờ)
-        output: 01:18 (giờ)
-    */
-    var convertTimeToHours = (travelTime) => {
-
-        let result = ((travelTime * 100) / 60).toFixed(2)
-        let time = result.split(".")
-        let hours = String(parseInt(time[0]))
-        let minutes = String((parseInt(time[1])))
-
-        if (parseInt(hours) < 10) hours = '0'.concat(hours)
-        if (parseInt(minutes) < 10) minutes = '0'.concat(minutes)
-        return hours.concat(":", minutes)
-    }
-
     var getDataModel = (depotList, depotAndFirstPointList, dataTable) => {
 
         for (let index = 0; index < depotList.length; index++) {
@@ -665,33 +496,33 @@ export const ComboChartsWithStackedColumn1 = (div) => {
                     const temp = element.breakTimes[j];
                     lunchBreakTimeStart = temp['start'].substring(11, 16)
                     lunchBreakTimeEnd = temp['end'].substring(11, 16)
-                    lunchBreakTime = caculateTime(lunchBreakTimeStart, lunchBreakTimeEnd)
-                    morningOperatingTime = caculateTime(morningBreakTime, lunchBreakTimeStart)
-                    afternoonOperatingTime = caculateTime(lunchBreakTimeEnd, workingTimeEnd)
+                    lunchBreakTime = CONSTANTS.caculateTime(lunchBreakTimeStart, lunchBreakTimeEnd)
+                    morningOperatingTime = CONSTANTS.caculateTime(morningBreakTime, lunchBreakTimeStart)
+                    afternoonOperatingTime = CONSTANTS.caculateTime(lunchBreakTimeEnd, workingTimeEnd)
                 }
 
                 for (let j = 0; j < depotAndFirstPointList.length; j++) {
                     const DAPList = depotAndFirstPointList[j];
                     if (locationCode === DAPList.srcCode) {
-                        let tempTimelineFirstPoint = sumTime(morningBreakTime, String(convertTimeToHours(DAPList.travelTime)))
-                        let tempTimelineReturnDepot = sumTime(tempTimelineFirstPoint, String(convertTimeToHours(DAPList.travelTime)))
-                        timelineFirstPoint = constraintVehicleLunchBreak(lunchBreakTimeStart, lunchBreakTimeEnd, tempTimelineFirstPoint)
-                        timelineReturnDepot = constraintVehicleLunchBreak(lunchBreakTimeStart, lunchBreakTimeEnd, tempTimelineReturnDepot)
+                        let tempTimelineFirstPoint = CONSTANTS.sumTime(morningBreakTime, String(CONSTANTS.convertTimeToHours(DAPList.travelTime)))
+                        let tempTimelineReturnDepot = CONSTANTS.sumTime(tempTimelineFirstPoint, String(CONSTANTS.convertTimeToHours(DAPList.travelTime)))
+                        timelineFirstPoint = CONSTANTS.constraintVehicleLunchBreak(lunchBreakTimeStart, lunchBreakTimeEnd, tempTimelineFirstPoint)
+                        timelineReturnDepot = CONSTANTS.constraintVehicleLunchBreak(lunchBreakTimeStart, lunchBreakTimeEnd, tempTimelineReturnDepot)
                     }
                 }
 
-                let sumTimes = sumTime(sumTime(sumTime(morningBreakTime, morningOperatingTime), lunchBreakTime), afternoonOperatingTime)
-                dinnerBreakTime = caculateTime(sumTimes, '24:00')
+                let sumTimes = CONSTANTS.sumTime(CONSTANTS.sumTime(CONSTANTS.sumTime(morningBreakTime, morningOperatingTime), lunchBreakTime), afternoonOperatingTime)
+                dinnerBreakTime = CONSTANTS.caculateTime(sumTimes, '24:00')
 
                 dataTable.push([
                     depotCode, // 'Genre'
-                    convertTimeToMinutes(morningBreakTime), // 'Thời gian Depot nghỉ sáng' = Thời gian kho mở cửa (workingTimeStart)
-                    convertTimeToMinutes(morningOperatingTime), // 'Thời gian Depot hoạt động sáng' = Thời gian lunchBreakTimeStart - workingTimeStart
-                    convertTimeToMinutes(lunchBreakTime), // 'Thời gian Depot nghỉ trưa'
+                    CONSTANTS.convertTimeToMinutes(morningBreakTime), // 'Thời gian Depot nghỉ sáng' = Thời gian kho mở cửa (workingTimeStart)
+                    CONSTANTS.convertTimeToMinutes(morningOperatingTime), // 'Thời gian Depot hoạt động sáng' = Thời gian lunchBreakTimeStart - workingTimeStart
+                    CONSTANTS.convertTimeToMinutes(lunchBreakTime), // 'Thời gian Depot nghỉ trưa'
                     timelineFirstPoint, // 'Vehicle tới điểm đầu tiên',
-                    convertTimeToMinutes(afternoonOperatingTime), // 'Thời gian Depot hoạt động chiều',
+                    CONSTANTS.convertTimeToMinutes(afternoonOperatingTime), // 'Thời gian Depot hoạt động chiều',
                     timelineReturnDepot, // 'Vehicle trở lại kho',
-                    convertTimeToMinutes(dinnerBreakTime), // 'Thời gian Depot nghỉ tối',
+                    CONSTANTS.convertTimeToMinutes(dinnerBreakTime), // 'Thời gian Depot nghỉ tối',
                     ''
                 ])
             }
@@ -711,8 +542,8 @@ export const ComboChartsWithStackedColumn1 = (div) => {
             role: 'annotation'
         }
     ])
-    var depotList = getDepot()
-    var depotAndFirstPointList = getFirstPointList(depotList, distances)
+    var depotList = CONSTANTS.getDepot()
+    var depotAndFirstPointList = CONSTANTS.getFirstPointList(depotList, distances)
     getDataModel(depots, depotAndFirstPointList, dataTable)
 
     var options = {
@@ -765,62 +596,9 @@ export const ComboChartsWithStackedColumn1 = (div) => {
 }
 
 export const StackedColumnChart2 = (div) => {
+
     var dataTable = []
     var getDataModel = (customers, dataTable) => {
-
-        // chuyển thời gian dạng 'hh:mm' sang số phút
-        let convertTimeToMinutes = (time) => {
-
-            time = time.split(":")
-            let hours = String(parseInt(time[0]))
-            let minutes = String((parseInt(time[1])))
-            let result = -1
-
-            if (parseInt(hours) > 0) result = (parseInt(hours) * 60) + parseInt(minutes)
-            else result = parseInt(minutes)
-            return result
-        }
-
-        // cộng 2 mốc thời gian
-        let sumTime = (start, end) => {
-
-            start = start.split(":");
-            end = end.split(":");
-            let hours = -1
-            let minutes = -1
-            let sumMinutes = parseInt(start[1]) + parseInt(end[1])
-
-            if (sumMinutes > 60) {
-                hours = String(parseInt(start[0]) + parseInt(end[0]) + 1)
-                minutes = String((parseInt(start[1]) + parseInt(end[1])) % 60)
-            } else if (sumMinutes == 60) {
-                hours = String(parseInt(start[0]) + parseInt(end[0]) + 1)
-                minutes = '00'
-            } else {
-                hours = String(parseInt(start[0]) + parseInt(end[0]))
-                minutes = String(parseInt(start[1]) + parseInt(end[1]))
-            }
-
-            if (parseInt(hours) < 10) hours = '0'.concat(hours)
-            if (parseInt(minutes) < 10) minutes = '0'.concat(minutes)
-            return hours.concat(":", minutes)
-        }
-
-        // trừ 2 mốc thời gian end - start
-        let caculateTime = (start, end) => {
-
-            start = start.split(":");
-            end = end.split(":");
-            let startDate = new Date(0, 0, 0, start[0], start[1], 0);
-            let endDate = new Date(0, 0, 0, end[0], end[1], 0);
-            let diff = endDate.getTime() - startDate.getTime();
-            let hours = Math.floor(diff / 1000 / 60 / 60);
-            diff -= hours * 1000 * 60 * 60;
-            let minutes = Math.floor(diff / 1000 / 60);
-
-            if (hours < 0) hours = hours + 24;
-            return (hours <= 9 ? "0" : "") + hours + ":" + (minutes <= 9 ? "0" : "") + minutes;
-        }
 
         for (let index = 0; index < customers.length; index++) {
 
@@ -842,21 +620,21 @@ export const StackedColumnChart2 = (div) => {
                     const temp = element.breakTimes[j];
                     lunchBreakTimeStart = temp['start'].substring(11, 16)
                     lunchBreakTimeEnd = temp['end'].substring(11, 16)
-                    lunchBreakTime = caculateTime(lunchBreakTimeStart, lunchBreakTimeEnd)
-                    morningOperatingTime = caculateTime(morningBreakTime, lunchBreakTimeStart)
-                    afternoonOperatingTime = caculateTime(lunchBreakTimeEnd, workingTimeEnd)
+                    lunchBreakTime = CONSTANTS.caculateTime(lunchBreakTimeStart, lunchBreakTimeEnd)
+                    morningOperatingTime = CONSTANTS.caculateTime(morningBreakTime, lunchBreakTimeStart)
+                    afternoonOperatingTime = CONSTANTS.caculateTime(lunchBreakTimeEnd, workingTimeEnd)
                 }
 
-                let sumTimes = sumTime(sumTime(sumTime(morningBreakTime, morningOperatingTime), lunchBreakTime), afternoonOperatingTime)
-                dinnerBreakTime = caculateTime(sumTimes, '24:00')
+                let sumTimes = CONSTANTS.sumTime(CONSTANTS.sumTime(CONSTANTS.sumTime(morningBreakTime, morningOperatingTime), lunchBreakTime), afternoonOperatingTime)
+                dinnerBreakTime = CONSTANTS.caculateTime(sumTimes, '24:00')
 
                 dataTable.push([
                     customerCode,
-                    convertTimeToMinutes(morningBreakTime),
-                    convertTimeToMinutes(morningOperatingTime),
-                    convertTimeToMinutes(lunchBreakTime),
-                    convertTimeToMinutes(afternoonOperatingTime),
-                    convertTimeToMinutes(dinnerBreakTime),
+                    CONSTANTS.convertTimeToMinutes(morningBreakTime),
+                    CONSTANTS.convertTimeToMinutes(morningOperatingTime),
+                    CONSTANTS.convertTimeToMinutes(lunchBreakTime),
+                    CONSTANTS.convertTimeToMinutes(afternoonOperatingTime),
+                    CONSTANTS.convertTimeToMinutes(dinnerBreakTime),
                     ''
                 ])
             }
@@ -920,60 +698,6 @@ export const StackedColumnChart3 = (div) => {
     var dataTable = []
     var getDataModel = (depots, dataTable) => {
 
-        // chuyển thời gian dạng 'hh:mm' sang số phút
-        let convertTimeToMinutes = (time) => {
-
-            time = time.split(":")
-            let hours = String(parseInt(time[0]))
-            let minutes = String((parseInt(time[1])))
-            let result = -1
-
-            if (parseInt(hours) > 0) result = (parseInt(hours) * 60) + parseInt(minutes)
-            else result = parseInt(minutes)
-            return result
-        }
-
-        // cộng 2 mốc thời gian
-        let sumTime = (start, end) => {
-
-            start = start.split(":");
-            end = end.split(":");
-            let hours = -1
-            let minutes = -1
-            let sumMinutes = parseInt(start[1]) + parseInt(end[1])
-
-            if (sumMinutes > 60) {
-                hours = String(parseInt(start[0]) + parseInt(end[0]) + 1)
-                minutes = String((parseInt(start[1]) + parseInt(end[1])) % 60)
-            } else if (sumMinutes == 60) {
-                hours = String(parseInt(start[0]) + parseInt(end[0]) + 1)
-                minutes = '00'
-            } else {
-                hours = String(parseInt(start[0]) + parseInt(end[0]))
-                minutes = String(parseInt(start[1]) + parseInt(end[1]))
-            }
-
-            if (parseInt(hours) < 10) hours = '0'.concat(hours)
-            if (parseInt(minutes) < 10) minutes = '0'.concat(minutes)
-            return hours.concat(":", minutes)
-        }
-
-        // trừ 2 mốc thời gian end - start
-        let caculateTime = (start, end) => {
-
-            start = start.split(":");
-            end = end.split(":");
-            let startDate = new Date(0, 0, 0, start[0], start[1], 0);
-            let endDate = new Date(0, 0, 0, end[0], end[1], 0);
-            let diff = endDate.getTime() - startDate.getTime();
-            let hours = Math.floor(diff / 1000 / 60 / 60);
-            diff -= hours * 1000 * 60 * 60;
-            let minutes = Math.floor(diff / 1000 / 60);
-
-            if (hours < 0) hours = hours + 24;
-            return (hours <= 9 ? "0" : "") + hours + ":" + (minutes <= 9 ? "0" : "") + minutes;
-        }
-
         for (let index = 0; index < depots.length; index++) {
 
             const element = depots[index];
@@ -994,21 +718,21 @@ export const StackedColumnChart3 = (div) => {
                     const temp = element.breakTimes[j];
                     lunchBreakTimeStart = temp['start'].substring(11, 16)
                     lunchBreakTimeEnd = temp['end'].substring(11, 16)
-                    lunchBreakTime = caculateTime(lunchBreakTimeStart, lunchBreakTimeEnd)
-                    morningOperatingTime = caculateTime(morningBreakTime, lunchBreakTimeStart)
-                    afternoonOperatingTime = caculateTime(lunchBreakTimeEnd, workingTimeEnd)
+                    lunchBreakTime = CONSTANTS.caculateTime(lunchBreakTimeStart, lunchBreakTimeEnd)
+                    morningOperatingTime = CONSTANTS.caculateTime(morningBreakTime, lunchBreakTimeStart)
+                    afternoonOperatingTime = CONSTANTS.caculateTime(lunchBreakTimeEnd, workingTimeEnd)
                 }
 
-                let sumTimes = sumTime(sumTime(sumTime(morningBreakTime, morningOperatingTime), lunchBreakTime), afternoonOperatingTime)
-                dinnerBreakTime = caculateTime(sumTimes, '24:00')
+                let sumTimes = CONSTANTS.sumTime(CONSTANTS.sumTime(CONSTANTS.sumTime(morningBreakTime, morningOperatingTime), lunchBreakTime), afternoonOperatingTime)
+                dinnerBreakTime = CONSTANTS.caculateTime(sumTimes, '24:00')
 
                 dataTable.push([
                     customerCode,
-                    convertTimeToMinutes(morningBreakTime),
-                    convertTimeToMinutes(morningOperatingTime),
-                    convertTimeToMinutes(lunchBreakTime),
-                    convertTimeToMinutes(afternoonOperatingTime),
-                    convertTimeToMinutes(dinnerBreakTime),
+                    CONSTANTS.convertTimeToMinutes(morningBreakTime),
+                    CONSTANTS.convertTimeToMinutes(morningOperatingTime),
+                    CONSTANTS.convertTimeToMinutes(lunchBreakTime),
+                    CONSTANTS.convertTimeToMinutes(afternoonOperatingTime),
+                    CONSTANTS.convertTimeToMinutes(dinnerBreakTime),
                     ''
                 ])
             }
@@ -1069,6 +793,7 @@ export const StackedColumnChart3 = (div) => {
 }
 
 export const ComboChart4 = (div) => {
+
     var dataTable = []
     var getDataModel = () => {
 
@@ -1126,6 +851,7 @@ export const ComboChart4 = (div) => {
 }
 
 export const ComboChart5 = (div) => {
+
     var dataTable = []
     var getDataModel = () => {
 
@@ -1143,53 +869,125 @@ export const ComboChart5 = (div) => {
             numberOfItem = listIndex.items.length
             for (let j = 0; j < itemList.length; j++) {
                 const itemIndex = itemList[j];
-                // console.log(j, itemIndex)
                 quantity = itemIndex.quantity
                 weight = itemIndex.weight
                 cbm = itemIndex.cbm
             }
-            dataTable.push([String(orderCode), parseInt(quantity), parseInt(weight), parseInt(cbm)])
+            dataTable.push([String(orderCode), parseInt(weight), parseInt(cbm), parseInt(quantity)])
         }
     }
 
-    dataTable.push(['Requests', 'Quantity', 'Weight', 'CBM'])
+    dataTable.push(['Requests', 'Weight', 'CBM', 'Quantity'])
     getDataModel(locations, dataTable)
 
     var options = {
-        width: 3300,
+        width: 4000,
         height: 600,
-        title: 'Tổng CBM, weight và số lượng Đơn hàng',
+        title: 'Weight và CBM của đơn hàng',
         vAxes: [{
-            title: 'CBM (...)',
+            title: 'Weight (gram)',
             minValue: 0,
-            maxValue: 60
+            maxValue: 120
         }, {
-            title: 'Weight (...)',
+            title: 'CBM (cm3)',
             minValue: 0,
             maxValue: 60
         }],
         curveType: 'function',
         hAxis: {
-            title: "Items"
+            title: "Requests"
         },
         series: {
             0: {
-                type: "line",
+                type: "bars",
                 targetAxisIndex: 0,
-                color: "red"
+                color: "blue"
             },
             1: {
                 type: "bars",
-                targetAxisIndex: 0,
+                targetAxisIndex: 1,
                 color: "green"
             },
             2: {
-                type: "bars",
-                targetAxisIndex: 0,
-                color: "yellow"
+                type: "line",
+                targetAxisIndex: 1,
+                color: "red"
             },
         }
     }
 
     drawComboCharts(div, dataTable, options)
 }
+
+export const ComboChart6 = (div) => {
+
+    var dataTable = []
+    var getDataModel = () => {
+
+        let orderCode = -1
+        let deliveryLocationCode = -1
+        let pickupLocationCode = -1
+        let srcCode = -1
+        let destCode = -1
+        let distance = -1
+        let travelTime = -1
+
+        for (let i = 0; i < requests.length; i++) {
+            const listIndex = requests[i]
+            orderCode = listIndex.orderCode
+            deliveryLocationCode = listIndex.deliveryLocationCode
+            pickupLocationCode = listIndex.pickupLocationCode
+
+            for (let j = 0; j < distances.length; j++) {
+                const distanceIndex = distances[j];
+                srcCode = distanceIndex.srcCode
+                destCode = distanceIndex.destCode
+                distance = distanceIndex.distance
+                travelTime = CONSTANTS.convertTimeToHours(distanceIndex.travelTime)
+
+                if ((srcCode === pickupLocationCode) && (destCode === deliveryLocationCode)) {
+                    dataTable.push([String(orderCode), parseFloat(distance), parseFloat(travelTime)])
+                }
+            }
+        }
+    }
+
+    dataTable.push(['Request', 'Distance', 'Travel Time'])
+    getDataModel(locations, dataTable)
+
+    var options = {
+        height: 600,
+        width: 4000,
+        title: 'Distance and Travel Time of Requests',
+        vAxes: [{
+            title: 'Distance (km)',
+            minValue: 0,
+            maxValue: 100
+        }, {
+            title: 'Travel Time (h)',
+            minValue: 0,
+            maxValue: 24
+        }],
+        curveType: 'function',
+        hAxis: {
+            title: "Vehicle"
+        },
+        series: {
+            0: {
+                type: "bars",
+                targetAxisIndex: 0,
+                color: "blue"
+            },
+            1: {
+                type: "line",
+                targetAxisIndex: 1,
+                color: "red"
+            },
+        }
+    }
+
+    drawComboCharts(div, dataTable, options)
+}
+
+
+// xem lại hàm CONSTANTS.convertTimeToHours
