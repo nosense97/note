@@ -991,3 +991,75 @@ export const ComboChart6 = (div) => {
 
 
 // xem lại hàm CONSTANTS.convertTimeToHours
+
+export const PieChart2 = (div) => {
+
+    var dataTable = []
+    var getDataModel = (requests, dataTable) => {
+
+        for (let i = 0; i < requests.length; i++) {
+            const requestIndex = requests[i].pickupLocationCode;
+            // console.log("ee", requestIndex)
+        }
+
+        let getLocationTypeList = (requestIndex) => {
+
+            let numberOfCustomer = 0
+            let numberOfDepot = 0
+            let numberOfStation = 0
+            let numberOfHub = 0
+            let numberOfSatellife = 0
+
+            for (let i = 0; i < locations.length; i++) {
+                const locationType = locations[i].lTypes;
+                for (let j = 0; j < locationType.length; j++) {
+                    const type = locationType[j];
+
+                    switch (type) {
+                        case "HUB":
+                            numberOfHub += 1
+                            break;
+                        case "DEPOT":
+                            numberOfDepot += 1
+                            break;
+                        case "STATION":
+                            numberOfStation += 1
+                            break;
+                        case "CUSTOMER":
+                            numberOfCustomer += 1
+                            break;
+                        case "SATELLITE":
+                            numberOfSatellife += 1
+                            break;
+                    }
+                }
+            }
+
+            return [
+                { key: 'Customer', value: numberOfCustomer },
+                { key: 'Depot', value: numberOfDepot },
+                { key: 'Station', value: numberOfStation },
+                { key: 'Hub', value: numberOfHub },
+                { key: 'Satellife', value: numberOfSatellife },
+            ]
+        }
+
+        // let locationTypeList = getLocationTypeList()
+        // for (let i = 0; i < locationTypeList.length; i++) {
+        //     const listIndex = locationTypeList[i];
+        //     dataTable.push([listIndex.key, listIndex.value])
+        // }
+    }
+
+    dataTable.push(['Task', 'Hours per Day'])
+    getDataModel(requests, dataTable)
+
+    var options = {
+        width: 1200,
+        height: 600,
+        title: 'Tỷ lệ các loại điểm pickup point trong Requests',
+        pieHole: 0.4,
+    }
+
+    drawPieCharts(div, dataTable, options)
+}

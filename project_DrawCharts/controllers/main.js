@@ -3,6 +3,7 @@ import {
     StackedColumnChart2,
     StackedColumnChart3,
     PieChart1,
+    PieChart2,
     MaterialColumnChart1,
     ComboChart1,
     ComboChart2,
@@ -50,3 +51,6 @@ ComboChart5("#ComboChart5")
 
 // Biểu đồ cột đường: Quãng đường và thời gian của từng đơn hàng
 ComboChart6("#ComboChart6")
+
+
+PieChart2("#PieChart2")
