@@ -4,6 +4,7 @@ import {
     StackedColumnChart3,
     PieChart1,
     PieChart2,
+    PieChart3,
     MaterialColumnChart1,
     ComboChart1,
     ComboChart2,
@@ -54,3 +55,4 @@ ComboChart6("#ComboChart6")
 
 
 PieChart2("#PieChart2")
+PieChart3("#PieChart3")
