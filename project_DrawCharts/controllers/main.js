@@ -53,6 +53,11 @@ ComboChart5("#ComboChart5")
 // Biểu đồ cột đường: Quãng đường và thời gian của từng đơn hàng
 ComboChart6("#ComboChart6")
 
-
+// Biểu đồ tròn: Các loại điểm pickup point trong request
 PieChart2("#PieChart2")
+
+// Biểu đồ tròn: Các loại điểm delivery point trong request
 PieChart3("#PieChart3")
+
+// khai thác Type trong các loại chủ thế
+// biểu đồ cột thể hiện các loại type
