@@ -5,10 +5,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Document</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
 </head>
 
 <body>
+
+    <div>
+        <form action="">
+            <table style="width:100%">
+                <tr>
+                    <td rowspan="5">Location</td>
+                    <td rowspan="1">Quantity</td>
+                    <td>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="">Number Of Location</label>
+                                <input type="text" class="form-control" id="numberOfLocation" placeholder="Number Of Location" required>
+                                <div class="feedback"></div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="1">Geographical location</td>
+                    <td>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="">Location Lat</label>
+                                <input type="text" class="form-control" id="locationLat" placeholder="Lat">
+                                <div class="feedback"></div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="">Location Lng</label>
+                                <input type="text" class="form-control" id="locationLng" placeholder="Long">
+                                <div class="feedback"></div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+
+            </table>
+        </form>
+    </div>
 
     <script src="./main.js"></script>
 
