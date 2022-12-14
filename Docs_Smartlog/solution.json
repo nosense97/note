@@ -1,0 +1,1907 @@
+{
+  "solutions": [
+    {
+      "routes": [
+        {
+          "vehicle_code": "61C-34783",
+          "vehicle_weight": 1000000,
+          "vehicle_cbm": 8000,
+          "total_weight_load": 989600,
+          "total_cbm_load": 0,
+          "total_duration": 28807,
+          "total_distance": 45563,
+          "elements": [
+            {
+              "location_code": "4000",
+              "cd_code": "4000",
+              "distance": 0,
+              "weight_load": 0,
+              "cbm_load": 0,
+              "arrival_time": "2022-11-18 06:00:01",
+              "leaving_time": "2022-11-18 06:00:01",
+              "location_type": "STATION",
+              "items": [
+
+              ]
+            },
+            {
+              "location_code": "4000",
+              "cd_code": "4000",
+              "distance": 0,
+              "weight_load": 989600,
+              "cbm_load": 0,
+              "arrival_time": "2022-11-18 06:00:01",
+              "leaving_time": "2022-11-18 06:29:43",
+              "location_type": "DEPOT",
+              "items": [
+                {
+                  "item_code": "5037",
+                  "quantity": 40,
+                  "weight": 989600,
+                  "cbm": 0,
+                  "size": {
+                    "length": 39.7,
+                    "width": 26.7,
+                    "height": 21.8
+                  }
+                }
+              ]
+            },
+            {
+              "location_code": "0001000554",
+              "cd_code": "0001000554",
+              "distance": 26735,
+              "weight_load": 0,
+              "cbm_load": 0,
+              "arrival_time": "2022-11-18 07:12:56",
+              "leaving_time": "2022-11-18 07:27:47",
+              "location_type": "CUSTOMER",
+              "items": [
+                {
+                  "item_code": "5037",
+                  "quantity": 40,
+                  "weight": 989600,
+                  "cbm": 0,
+                  "size": {
+                    "length": 39.7,
+                    "width": 26.7,
+                    "height": 21.8
+                  }
+                }
+              ]
+            },
+            {
+              "location_code": "4000",
+              "cd_code": "4000",
+              "distance": 45563,
+              "weight_load": 0,
+              "cbm_load": 0,
+              "arrival_time": "2022-11-18 08:00:07",
+              "leaving_time": "2022-11-18 08:00:07",
+              "location_type": "STATION",
+              "items": [
+
+              ]
+            }
+          ]
+        },
+        {
+          "vehicle_code": "61C-34783",
+          "vehicle_weight": 1000000,
+          "vehicle_cbm": 8000,
+          "total_weight_load": 995480,
+          "total_cbm_load": 0,
+          "total_duration": 36784,
+          "total_distance": 49629,
+          "elements": [
+            {
+              "location_code": "4000",
+              "cd_code": "4000",
+              "distance": 0,
+              "weight_load": 0,
+              "cbm_load": 0,
+              "arrival_time": "2022-11-18 08:00:07",
+              "leaving_time": "2022-11-18 08:00:07",
+              "location_type": "STATION",
+              "items": [
+
+              ]
+            },
+            {
+              "location_code": "4000",
+              "cd_code": "4000",
+              "distance": 0,
+              "weight_load": 995480,
+              "cbm_load": 0,
+              "arrival_time": "2022-11-18 08:00:07",
+              "leaving_time": "2022-11-18 08:29:59",
+              "location_type": "DEPOT",
+              "items": [
+                {
+                  "item_code": "4972",
+                  "quantity": 82,
+                  "weight": 995480,
+                  "cbm": 0,
+                  "size": {
+                    "length": 39.7,
+                    "width": 26.7,
+                    "height": 21.8
+                  }
+                }
+              ]
+            },
+            {
+              "location_code": "0003000441",
+              "cd_code": "0001002472",
+              "distance": 26338,
+              "weight_load": 0,
+              "cbm_load": 0,
+              "arrival_time": "2022-11-18 09:14:29",
+              "leaving_time": "2022-11-18 09:29:25",
+              "location_type": "CUSTOMER",
+              "items": [
+                {
+                  "item_code": "4972",
+                  "quantity": 82,
+                  "weight": 995480,
+                  "cbm": 0,
+                  "size": {
+                    "length": 39.7,
+                    "width": 26.7,
+                    "height": 21.8
+                  }
+                }
+              ]
+            },
+            {
+              "location_code": "4000",
+              "cd_code": "4000",
+              "distance": 49629,
+              "weight_load": 0,
+              "cbm_load": 0,
+              "arrival_time": "2022-11-18 10:13:04",
+              "leaving_time": "2022-11-18 10:13:04",
+              "location_type": "STATION",
+              "items": [
+
+              ]
+            }
+          ]
+        },
+        {
+          "vehicle_code": "61C-34871",
+          "vehicle_weight": 1000000,
+          "vehicle_cbm": 10000000,
+          "total_weight_load": 871800,
+          "total_cbm_load": 0,
+          "total_duration": 29274,
+          "total_distance": 45563,
+          "elements": [
+            {
+              "location_code": "4000",
+              "cd_code": "4000",
+              "distance": 0,
+              "weight_load": 0,
+              "cbm_load": 0,
+              "arrival_time": "2022-11-18 06:00:01",
+              "leaving_time": "2022-11-18 06:00:01",
+              "location_type": "STATION",
+              "items": [
+
+              ]
+            },
+            {
+              "location_code": "4000",
+              "cd_code": "4000",
+              "distance": 0,
+              "weight_load": 871800,
+              "cbm_load": 0,
+              "arrival_time": "2022-11-18 06:00:01",
+              "leaving_time": "2022-11-18 06:26:11",
+              "location_type": "DEPOT",
+              "items": [
+                {
+                  "item_code": "5277",
+                  "quantity": 40,
+                  "weight": 494800,
+                  "cbm": 0,
+                  "size": {
+                    "length": 39.7,
+                    "width": 26.7,
+                    "height": 21.8
+                  }
+                },
+                {
+                  "item_code": "5278",
+                  "quantity": 50,
+                  "weight": 377000,
+                  "cbm": 0,
+                  "size": {
+                    "length": 35.1,
+                    "width": 23.5,
+                    "height": 17.7
+                  }
+                }
+              ]
+            },
+            {
+              "location_code": "0001000554",
+              "cd_code": "0001000554",
+              "distance": 26735,
+              "weight_load": 0,
+              "cbm_load": 0,
+              "arrival_time": "2022-11-18 07:09:24",
+              "leaving_time": "2022-11-18 07:35:34",
+              "location_type": "CUSTOMER",
+              "items": [
+                {
+                  "item_code": "5277",
+                  "quantity": 40,
+                  "weight": 494800,
+                  "cbm": 0,
+                  "size": {
+                    "length": 39.7,
+                    "width": 26.7,
+                    "height": 21.8
+                  }
+                },
+                {
+                  "item_code": "5278",
+                  "quantity": 50,
+                  "weight": 377000,
+                  "cbm": 0,
+                  "size": {
+                    "length": 35.1,
+                    "width": 23.5,
+                    "height": 17.7
+                  }
+                }
+              ]
+            },
+            {
+              "location_code": "4000",
+              "cd_code": "4000",
+              "distance": 45563,
+              "weight_load": 0,
+              "cbm_load": 0,
+              "arrival_time": "2022-11-18 08:07:54",
+              "leaving_time": "2022-11-18 08:07:54",
+              "location_type": "STATION",
+              "items": [
+
+              ]
+            }
+          ]
+        },
+        {
+          "vehicle_code": "61C-34871",
+          "vehicle_weight": 1000000,
+          "vehicle_cbm": 10000000,
+          "total_weight_load": 998960,
+          "total_cbm_load": 0,
+          "total_duration": 46800,
+          "total_distance": 132277,
+          "elements": [
+            {
+              "location_code": "4000",
+              "cd_code": "4000",
+              "distance": 0,
+              "weight_load": 0,
+              "cbm_load": 0,
+              "arrival_time": "2022-11-18 08:07:54",
+              "leaving_time": "2022-11-18 08:07:54",
+              "location_type": "STATION",
+              "items": [
+
+              ]
+            },
+            {
+              "location_code": "4000",
+              "cd_code": "4000",
+              "distance": 0,
+              "weight_load": 998960,
+              "cbm_load": 0,
+              "arrival_time": "2022-11-18 08:07:54",
+              "leaving_time": "2022-11-18 08:37:53",
+              "location_type": "DEPOT",
+              "items": [
+                {
+                  "item_code": "5145",
+                  "quantity": 16,
+                  "weight": 294560,
+                  "cbm": 0,
+                  "size": {
+                    "length": 39.7,
+                    "width": 26.7,
+                    "height": 21.8
+                  }
+                },
+                {
+                  "item_code": "5147",
+                  "quantity": 1,
+                  "weight": 81620,
+                  "cbm": 0,
+                  "size": {
+                    "length": 35.1,
+                    "width": 23.5,
+                    "height": 17.7
+                  }
+                },
+                {
+                  "item_code": "5149",
+                  "quantity": 20,
+                  "weight": 315600,
+                  "cbm": 0,
+                  "size": {
+                    "length": 37.3,
+                    "width": 24.7,
+                    "height": 19.2
+                  }
+                },
+                {
+                  "item_code": "5151",
+                  "quantity": 20,
+                  "weight": 307180,
+                  "cbm": 0,
+                  "size": {
+                    "length": 37.3,
+                    "width": 24.7,
+                    "height": 19.2
+                  }
+                }
+              ]
+            },
+            {
+              "location_code": "0001004448",
+              "cd_code": "0001004448",
+              "distance": 65283,
+              "weight_load": 0,
+              "cbm_load": 0,
+              "arrival_time": "2022-11-18 10:21:18",
+              "leaving_time": "2022-11-18 10:51:17",
+              "location_type": "CUSTOMER",
+              "items": [
+                {
+                  "item_code": "5145",
+                  "quantity": 16,
+                  "weight": 294560,
+                  "cbm": 0,
+                  "size": {
+                    "length": 39.7,
+                    "width": 26.7,
+                    "height": 21.8
+                  }
+                },
+                {
+                  "item_code": "5147",
+                  "quantity": 1,
+                  "weight": 81620,
+                  "cbm": 0,
+                  "size": {
+                    "length": 35.1,
+                    "width": 23.5,
+                    "height": 17.7
+                  }
+                },
+                {
+                  "item_code": "5149",
+                  "quantity": 20,
+                  "weight": 315600,
+                  "cbm": 0,
+                  "size": {
+                    "length": 37.3,
+                    "width": 24.7,
+                    "height": 19.2
+                  }
+                },
+                {
+                  "item_code": "5151",
+                  "quantity": 20,
+                  "weight": 307180,
+                  "cbm": 0,
+                  "size": {
+                    "length": 37.3,
+                    "width": 24.7,
+                    "height": 19.2
+                  }
+                }
+              ]
+            },
+            {
+              "location_code": "4000",
+              "cd_code": "4000",
+              "distance": 132277,
+              "weight_load": 0,
+              "cbm_load": 0,
+              "arrival_time": "2022-11-18 13:00:00",
+              "leaving_time": "2022-11-18 13:00:00",
+              "location_type": "STATION",
+              "items": [
+
+              ]
+            }
+          ]
+        },
+        {
+          "vehicle_code": "61C-34871",
+          "vehicle_weight": 1000000,
+          "vehicle_cbm": 10000000,
+          "total_weight_load": 989600,
+          "total_cbm_load": 0,
+          "total_duration": 55653,
+          "total_distance": 49629,
+          "elements": [
+            {
+              "location_code": "4000",
+              "cd_code": "4000",
+              "distance": 0,
+              "weight_load": 0,
+              "cbm_load": 0,
+              "arrival_time": "2022-11-18 13:00:00",
+              "leaving_time": "2022-11-18 13:00:00",
+              "location_type": "STATION",
+              "items": [
+
+              ]
+            },
+            {
+              "location_code": "4000",
+              "cd_code": "4000",
+              "distance": 0,
+              "weight_load": 989600,
+              "cbm_load": 0,
+              "arrival_time": "2022-11-18 13:00:00",
+              "leaving_time": "2022-11-18 13:29:42",
+              "location_type": "DEPOT",
+              "items": [
+                {
+                  "item_code": "4973",
+                  "quantity": 40,
+                  "weight": 989600,
+                  "cbm": 0,
+                  "size": {
+                    "length": 39.7,
+                    "width": 26.7,
+                    "height": 21.8
+                  }
+                }
+              ]
+            },
+            {
+              "location_code": "0003000441",
+              "cd_code": "0001002472",
+              "distance": 26338,
+              "weight_load": 0,
+              "cbm_load": 0,
+              "arrival_time": "2022-11-18 14:14:12",
+              "leaving_time": "2022-11-18 14:43:54",
+              "location_type": "CUSTOMER",
+              "items": [
+                {
+                  "item_code": "4973",
+                  "quantity": 40,
+                  "weight": 989600,
+                  "cbm": 0,
+                  "size": {
+                    "length": 39.7,
+                    "width": 26.7,
+                    "height": 21.8
+                  }
+                }
+              ]
+            },
+            {
+              "location_code": "4000",
+              "cd_code": "4000",
+              "distance": 49629,
+              "weight_load": 0,
+              "cbm_load": 0,
+              "arrival_time": "2022-11-18 15:27:33",
+              "leaving_time": "2022-11-18 15:27:33",
+              "location_type": "STATION",
+              "items": [
+
+              ]
+            }
+          ]
+        },
+        {
+          "vehicle_code": "61C-34891",
+          "vehicle_weight": 3500000,
+          "vehicle_cbm": 60000000,
+          "total_weight_load": 3379412,
+          "total_cbm_load": 0,
+          "total_duration": 47150,
+          "total_distance": 169921,
+          "elements": [
+            {
+              "location_code": "4000",
+              "cd_code": "4000",
+              "distance": 0,
+              "weight_load": 0,
+              "cbm_load": 0,
+              "arrival_time": "2022-11-18 06:00:01",
+              "leaving_time": "2022-11-18 06:00:01",
+              "location_type": "STATION",
+              "items": [
+
+              ]
+            },
+            {
+              "location_code": "4000",
+              "cd_code": "4000",
+              "distance": 0,
+              "weight_load": 3379412,
+              "cbm_load": 0,
+              "arrival_time": "2022-11-18 06:00:01",
+              "leaving_time": "2022-11-18 07:41:24",
+              "location_type": "DEPOT",
+              "items": [
+                {
+                  "item_code": "4783",
+                  "quantity": 30,
+                  "weight": 460770,
+                  "cbm": 0,
+                  "size": {
+                    "length": 37.3,
+                    "width": 24.7,
+                    "height": 19.2
+                  }
+                },
+                {
+                  "item_code": "4784",
+                  "quantity": 48,
+                  "weight": 757440,
+                  "cbm": 0,
+                  "size": {
+                    "length": 37.3,
+                    "width": 24.7,
+                    "height": 19.2
+                  }
+                },
+                {
+                  "item_code": "4785",
+                  "quantity": 14,
+                  "weight": 220920,
+                  "cbm": 0,
+                  "size": {
+                    "length": 37.3,
+                    "width": 24.7,
+                    "height": 19.2
+                  }
+                },
+                {
+                  "item_code": "4786",
+                  "quantity": 14,
+                  "weight": 257740,
+                  "cbm": 0,
+                  "size": {
+                    "length": 39.7,
+                    "width": 26.7,
+                    "height": 21.8
+                  }
+                },
+                {
+                  "item_code": "4791",
+                  "quantity": 1,
+                  "weight": 12140,
+                  "cbm": 0,
+                  "size": {
+                    "length": 39.7,
+                    "width": 26.7,
+                    "height": 21.8
+                  }
+                },
+                {
+                  "item_code": "5157",
+                  "quantity": 28,
+                  "weight": 430052,
+                  "cbm": 0,
+                  "size": {
+                    "length": 37.3,
+                    "width": 24.7,
+                    "height": 19.2
+                  }
+                },
+                {
+                  "item_code": "5159",
+                  "quantity": 52,
+                  "weight": 820560,
+                  "cbm": 0,
+                  "size": {
+                    "length": 37.3,
+                    "width": 24.7,
+                    "height": 19.2
+                  }
+                },
+                {
+                  "item_code": "5160",
+                  "quantity": 12,
+                  "weight": 189360,
+                  "cbm": 0,
+                  "size": {
+                    "length": 37.3,
+                    "width": 24.7,
+                    "height": 19.2
+                  }
+                },
+                {
+                  "item_code": "5162",
+                  "quantity": 12,
+                  "weight": 220920,
+                  "cbm": 0,
+                  "size": {
+                    "length": 39.7,
+                    "width": 26.7,
+                    "height": 21.8
+                  }
+                },
+                {
+                  "item_code": "5165",
+                  "quantity": 1,
+                  "weight": 9510,
+                  "cbm": 0,
+                  "size": {
+                    "length": 37.3,
+                    "width": 24.7,
+                    "height": 19.2
+                  }
+                }
+              ]
+            },
+            {
+              "location_code": "0001004238",
+              "cd_code": "0001004238",
+              "distance": 84099,
+              "weight_load": 0,
+              "cbm_load": 0,
+              "arrival_time": "2022-11-18 09:57:22",
+              "leaving_time": "2022-11-18 10:48:04",
+              "location_type": "CUSTOMER",
+              "items": [
+                {
+                  "item_code": "4783",
+                  "quantity": 30,
+                  "weight": 460770,
+                  "cbm": 0,
+                  "size": {
+                    "length": 37.3,
+                    "width": 24.7,
+                    "height": 19.2
+                  }
+                },
+                {
+                  "item_code": "4784",
+                  "quantity": 48,
+                  "weight": 757440,
+                  "cbm": 0,
+                  "size": {
+                    "length": 37.3,
+                    "width": 24.7,
+                    "height": 19.2
+                  }
+                },
+                {
+                  "item_code": "4785",
+                  "quantity": 14,
+                  "weight": 220920,
+                  "cbm": 0,
+                  "size": {
+                    "length": 37.3,
+                    "width": 24.7,
+                    "height": 19.2
+                  }
+                },
+                {
+                  "item_code": "4786",
+                  "quantity": 14,
+                  "weight": 257740,
+                  "cbm": 0,
+                  "size": {
+                    "length": 39.7,
+                    "width": 26.7,
+                    "height": 21.8
+                  }
+                },
+                {
+                  "item_code": "4791",
+                  "quantity": 1,
+                  "weight": 12140,
+                  "cbm": 0,
+                  "size": {
+                    "length": 39.7,
+                    "width": 26.7,
+                    "height": 21.8
+                  }
+                },
+                {
+                  "item_code": "5157",
+                  "quantity": 28,
+                  "weight": 430052,
+                  "cbm": 0,
+                  "size": {
+                    "length": 37.3,
+                    "width": 24.7,
+                    "height": 19.2
+                  }
+                },
+                {
+                  "item_code": "5159",
+                  "quantity": 52,
+                  "weight": 820560,
+                  "cbm": 0,
+                  "size": {
+                    "length": 37.3,
+                    "width": 24.7,
+                    "height": 19.2
+                  }
+                },
+                {
+                  "item_code": "5160",
+                  "quantity": 12,
+                  "weight": 189360,
+                  "cbm": 0,
+                  "size": {
+                    "length": 37.3,
+                    "width": 24.7,
+                    "height": 19.2
+                  }
+                },
+                {
+                  "item_code": "5162",
+                  "quantity": 12,
+                  "weight": 220920,
+                  "cbm": 0,
+                  "size": {
+                    "length": 39.7,
+                    "width": 26.7,
+                    "height": 21.8
+                  }
+                },
+                {
+                  "item_code": "5165",
+                  "quantity": 1,
+                  "weight": 9510,
+                  "cbm": 0,
+                  "size": {
+                    "length": 37.3,
+                    "width": 24.7,
+                    "height": 19.2
+                  }
+                }
+              ]
+            },
+            {
+              "location_code": "4000",
+              "cd_code": "4000",
+              "distance": 169921,
+              "weight_load": 0,
+              "cbm_load": 0,
+              "arrival_time": "2022-11-18 13:05:50",
+              "leaving_time": "2022-11-18 13:05:50",
+              "location_type": "STATION",
+              "items": [
+
+              ]
+            }
+          ]
+        },
+        {
+          "vehicle_code": "61C-34891",
+          "vehicle_weight": 3500000,
+          "vehicle_cbm": 60000000,
+          "total_weight_load": 3362300,
+          "total_cbm_load": 0,
+          "total_duration": 63288,
+          "total_distance": 53321,
+          "elements": [
+            {
+              "location_code": "4000",
+              "cd_code": "4000",
+              "distance": 0,
+              "weight_load": 0,
+              "cbm_load": 0,
+              "arrival_time": "2022-11-18 13:05:50",
+              "leaving_time": "2022-11-18 13:05:50",
+              "location_type": "STATION",
+              "items": [
+
+              ]
+            },
+            {
+              "location_code": "4000",
+              "cd_code": "4000",
+              "distance": 0,
+              "weight_load": 3362300,
+              "cbm_load": 0,
+              "arrival_time": "2022-11-18 13:05:50",
+              "leaving_time": "2022-11-18 14:46:43",
+              "location_type": "DEPOT",
+              "items": [
+                {
+                  "item_code": "5089",
+                  "quantity": 100,
+                  "weight": 1835300,
+                  "cbm": 0,
+                  "size": {
+                    "length": 39.7,
+                    "width": 26.7,
+                    "height": 21.8
+                  }
+                },
+                {
+                  "item_code": "5091",
+                  "quantity": 100,
+                  "weight": 1527000,
+                  "cbm": 0,
+                  "size": {
+                    "length": 42,
+                    "width": 28.1,
+                    "height": 27
+                  }
+                }
+              ]
+            },
+            {
+              "location_code": "0003000430",
+              "cd_code": "0001003008",
+              "distance": 25201,
+              "weight_load": 0,
+              "cbm_load": 0,
+              "arrival_time": "2022-11-18 15:45:25",
+              "leaving_time": "2022-11-18 16:35:52",
+              "location_type": "CUSTOMER",
+              "items": [
+                {
+                  "item_code": "5089",
+                  "quantity": 100,
+                  "weight": 1835300,
+                  "cbm": 0,
+                  "size": {
+                    "length": 39.7,
+                    "width": 26.7,
+                    "height": 21.8
+                  }
+                },
+                {
+                  "item_code": "5091",
+                  "quantity": 100,
+                  "weight": 1527000,
+                  "cbm": 0,
+                  "size": {
+                    "length": 42,
+                    "width": 28.1,
+                    "height": 27
+                  }
+                }
+              ]
+            },
+            {
+              "location_code": "4000",
+              "cd_code": "4000",
+              "distance": 53321,
+              "weight_load": 0,
+              "cbm_load": 0,
+              "arrival_time": "2022-11-18 17:34:48",
+              "leaving_time": "2022-11-18 17:34:48",
+              "location_type": "STATION",
+              "items": [
+
+              ]
+            }
+          ]
+        },
+        {
+          "vehicle_code": "61C-34758",
+          "vehicle_weight": 1000000,
+          "vehicle_cbm": 60000000,
+          "total_weight_load": 993980,
+          "total_cbm_load": 20000000,
+          "total_duration": 26082,
+          "total_distance": 37071,
+          "elements": [
+            {
+              "location_code": "4000",
+              "cd_code": "4000",
+              "distance": 0,
+              "weight_load": 0,
+              "cbm_load": 0,
+              "arrival_time": "2022-11-18 06:00:01",
+              "leaving_time": "2022-11-18 06:00:01",
+              "location_type": "STATION",
+              "items": [
+
+              ]
+            },
+            {
+              "location_code": "4000",
+              "cd_code": "4000",
+              "distance": 0,
+              "weight_load": 993980,
+              "cbm_load": 20000000,
+              "arrival_time": "2022-11-18 06:00:01",
+              "leaving_time": "2022-11-18 06:00:01",
+              "location_type": "DEPOT",
+              "items": [
+                {
+                  "item_code": "5056",
+                  "quantity": 100,
+                  "weight": 627000,
+                  "cbm": 6000000,
+                  "size": {
+                    "length": 40,
+                    "width": 25,
+                    "height": 35
+                  }
+                },
+                {
+                  "item_code": "5057",
+                  "quantity": 4,
+                  "weight": 25080,
+                  "cbm": 2000000,
+                  "size": {
+                    "length": 40,
+                    "width": 25,
+                    "height": 35
+                  }
+                },
+                {
+                  "item_code": "5058",
+                  "quantity": 10,
+                  "weight": 121400,
+                  "cbm": 5000000,
+                  "size": {
+                    "length": 39.7,
+                    "width": 26.7,
+                    "height": 21.8
+                  }
+                },
+                {
+                  "item_code": "5060",
+                  "quantity": 10,
+                  "weight": 95100,
+                  "cbm": 5000000,
+                  "size": {
+                    "length": 37.3,
+                    "width": 24.7,
+                    "height": 19.2
+                  }
+                },
+                {
+                  "item_code": "5061",
+                  "quantity": 20,
+                  "weight": 125400,
+                  "cbm": 2000000,
+                  "size": {
+                    "length": 40,
+                    "width": 25,
+                    "height": 35
+                  }
+                }
+              ]
+            },
+            {
+              "location_code": "0001004440",
+              "cd_code": "0001004440",
+              "distance": 18383,
+              "weight_load": 0,
+              "cbm_load": 0,
+              "arrival_time": "2022-11-18 06:37:46",
+              "leaving_time": "2022-11-18 06:37:46",
+              "location_type": "CUSTOMER",
+              "items": [
+                {
+                  "item_code": "5056",
+                  "quantity": 100,
+                  "weight": 627000,
+                  "cbm": 6000000,
+                  "size": {
+                    "length": 40,
+                    "width": 25,
+                    "height": 35
+                  }
+                },
+                {
+                  "item_code": "5057",
+                  "quantity": 4,
+                  "weight": 25080,
+                  "cbm": 2000000,
+                  "size": {
+                    "length": 40,
+                    "width": 25,
+                    "height": 35
+                  }
+                },
+                {
+                  "item_code": "5058",
+                  "quantity": 10,
+                  "weight": 121400,
+                  "cbm": 5000000,
+                  "size": {
+                    "length": 39.7,
+                    "width": 26.7,
+                    "height": 21.8
+                  }
+                },
+                {
+                  "item_code": "5060",
+                  "quantity": 10,
+                  "weight": 95100,
+                  "cbm": 5000000,
+                  "size": {
+                    "length": 37.3,
+                    "width": 24.7,
+                    "height": 19.2
+                  }
+                },
+                {
+                  "item_code": "5061",
+                  "quantity": 20,
+                  "weight": 125400,
+                  "cbm": 2000000,
+                  "size": {
+                    "length": 40,
+                    "width": 25,
+                    "height": 35
+                  }
+                }
+              ]
+            },
+            {
+              "location_code": "4000",
+              "cd_code": "4000",
+              "distance": 37071,
+              "weight_load": 0,
+              "cbm_load": 0,
+              "arrival_time": "2022-11-18 07:14:42",
+              "leaving_time": "2022-11-18 07:14:42",
+              "location_type": "STATION",
+              "items": [
+
+              ]
+            }
+          ]
+        },
+        {
+          "vehicle_code": "61C-34758",
+          "vehicle_weight": 1000000,
+          "vehicle_cbm": 60000000,
+          "total_weight_load": 901610,
+          "total_cbm_load": 12000000,
+          "total_duration": 49147,
+          "total_distance": 70693,
+          "elements": [
+            {
+              "location_code": "4000",
+              "cd_code": "4000",
+              "distance": 0,
+              "weight_load": 0,
+              "cbm_load": 0,
+              "arrival_time": "2022-11-18 07:14:42",
+              "leaving_time": "2022-11-18 07:14:42",
+              "location_type": "STATION",
+              "items": [
+
+              ]
+            },
+            {
+              "location_code": "4000",
+              "cd_code": "4000",
+              "distance": 0,
+              "weight_load": 901610,
+              "cbm_load": 12000000,
+              "arrival_time": "2022-11-18 07:14:42",
+              "leaving_time": "2022-11-18 07:14:42",
+              "location_type": "DEPOT",
+              "items": [
+                {
+                  "item_code": "4972",
+                  "quantity": 18,
+                  "weight": 218520,
+                  "cbm": 0,
+                  "size": {
+                    "length": 39.7,
+                    "width": 26.7,
+                    "height": 21.8
+                  }
+                },
+                {
+                  "item_code": "4973",
+                  "quantity": 10,
+                  "weight": 247400,
+                  "cbm": 0,
+                  "size": {
+                    "length": 39.7,
+                    "width": 26.7,
+                    "height": 21.8
+                  }
+                },
+                {
+                  "item_code": "5057",
+                  "quantity": 6,
+                  "weight": 37620,
+                  "cbm": 3000000,
+                  "size": {
+                    "length": 40,
+                    "width": 25,
+                    "height": 35
+                  }
+                },
+                {
+                  "item_code": "5059",
+                  "quantity": 10,
+                  "weight": 62700,
+                  "cbm": 5000000,
+                  "size": {
+                    "length": 40,
+                    "width": 25,
+                    "height": 35
+                  }
+                },
+                {
+                  "item_code": "5061",
+                  "quantity": 10,
+                  "weight": 62700,
+                  "cbm": 1000000,
+                  "size": {
+                    "length": 40,
+                    "width": 25,
+                    "height": 35
+                  }
+                },
+                {
+                  "item_code": "5062",
+                  "quantity": 30,
+                  "weight": 272670,
+                  "cbm": 3000000,
+                  "size": {
+                    "length": 37.3,
+                    "width": 24.7,
+                    "height": 19.2
+                  }
+                }
+              ]
+            },
+            {
+              "location_code": "0003000441",
+              "cd_code": "0001002472",
+              "distance": 26338,
+              "weight_load": 435690,
+              "cbm_load": 12000000,
+              "arrival_time": "2022-11-18 07:59:12",
+              "leaving_time": "2022-11-18 08:13:11",
+              "location_type": "CUSTOMER",
+              "items": [
+                {
+                  "item_code": "4972",
+                  "quantity": 18,
+                  "weight": 218520,
+                  "cbm": 0,
+                  "size": {
+                    "length": 39.7,
+                    "width": 26.7,
+                    "height": 21.8
+                  }
+                },
+                {
+                  "item_code": "4973",
+                  "quantity": 10,
+                  "weight": 247400,
+                  "cbm": 0,
+                  "size": {
+                    "length": 39.7,
+                    "width": 26.7,
+                    "height": 21.8
+                  }
+                }
+              ]
+            },
+            {
+              "location_code": "0001004440",
+              "cd_code": "0001004440",
+              "distance": 52005,
+              "weight_load": 0,
+              "cbm_load": 0,
+              "arrival_time": "2022-11-18 09:02:11",
+              "leaving_time": "2022-11-18 13:02:11",
+              "location_type": "CUSTOMER",
+              "items": [
+                {
+                  "item_code": "5057",
+                  "quantity": 6,
+                  "weight": 37620,
+                  "cbm": 3000000,
+                  "size": {
+                    "length": 40,
+                    "width": 25,
+                    "height": 35
+                  }
+                },
+                {
+                  "item_code": "5059",
+                  "quantity": 10,
+                  "weight": 62700,
+                  "cbm": 5000000,
+                  "size": {
+                    "length": 40,
+                    "width": 25,
+                    "height": 35
+                  }
+                },
+                {
+                  "item_code": "5061",
+                  "quantity": 10,
+                  "weight": 62700,
+                  "cbm": 1000000,
+                  "size": {
+                    "length": 40,
+                    "width": 25,
+                    "height": 35
+                  }
+                },
+                {
+                  "item_code": "5062",
+                  "quantity": 30,
+                  "weight": 272670,
+                  "cbm": 3000000,
+                  "size": {
+                    "length": 37.3,
+                    "width": 24.7,
+                    "height": 19.2
+                  }
+                }
+              ]
+            },
+            {
+              "location_code": "4000",
+              "cd_code": "4000",
+              "distance": 70693,
+              "weight_load": 0,
+              "cbm_load": 0,
+              "arrival_time": "2022-11-18 13:39:07",
+              "leaving_time": "2022-11-18 13:39:07",
+              "location_type": "STATION",
+              "items": [
+
+              ]
+            }
+          ]
+        },
+        {
+          "vehicle_code": "54S-2514",
+          "vehicle_weight": 5000000,
+          "vehicle_cbm": 12000000,
+          "total_weight_load": 4688088,
+          "total_cbm_load": 1200000,
+          "total_duration": 13315,
+          "total_distance": 37772,
+          "elements": [
+            {
+              "location_code": "4000",
+              "cd_code": "4000",
+              "distance": 0,
+              "weight_load": 0,
+              "cbm_load": 0,
+              "arrival_time": "2022-11-18 00:01:01",
+              "leaving_time": "2022-11-18 00:01:01",
+              "location_type": "STATION",
+              "items": [
+
+              ]
+            },
+            {
+              "location_code": "4000",
+              "cd_code": "4000",
+              "distance": 0,
+              "weight_load": 4688088,
+              "cbm_load": 1200000,
+              "arrival_time": "2022-11-18 00:01:01",
+              "leaving_time": "2022-11-18 00:01:01",
+              "location_type": "DEPOT",
+              "items": [
+                {
+                  "item_code": "5000",
+                  "quantity": 100,
+                  "weight": 1835300,
+                  "cbm": 0,
+                  "size": {
+                    "length": 39.7,
+                    "width": 26.7,
+                    "height": 21.8
+                  }
+                },
+                {
+                  "item_code": "5002",
+                  "quantity": 50,
+                  "weight": 445000,
+                  "cbm": 0,
+                  "size": {
+                    "length": 37.3,
+                    "width": 24.7,
+                    "height": 19.2
+                  }
+                },
+                {
+                  "item_code": "5003",
+                  "quantity": 50,
+                  "weight": 377000,
+                  "cbm": 0,
+                  "size": {
+                    "length": 35.1,
+                    "width": 23.5,
+                    "height": 17.7
+                  }
+                },
+                {
+                  "item_code": "5070",
+                  "quantity": 30,
+                  "weight": 463680,
+                  "cbm": 1200000,
+                  "size": {
+                    "length": 42,
+                    "width": 28.1,
+                    "height": 27
+                  }
+                },
+                {
+                  "item_code": "5074",
+                  "quantity": 6,
+                  "weight": 91620,
+                  "cbm": 0,
+                  "size": {
+                    "length": 42,
+                    "width": 28.1,
+                    "height": 27
+                  }
+                },
+                {
+                  "item_code": "5078",
+                  "quantity": 12,
+                  "weight": 144960,
+                  "cbm": 0,
+                  "size": {
+                    "length": 39.7,
+                    "width": 26.7,
+                    "height": 21.8
+                  }
+                },
+                {
+                  "item_code": "5080",
+                  "quantity": 20,
+                  "weight": 242800,
+                  "cbm": 0,
+                  "size": {
+                    "length": 39.7,
+                    "width": 26.7,
+                    "height": 21.8
+                  }
+                },
+                {
+                  "item_code": "5082",
+                  "quantity": 16,
+                  "weight": 145424,
+                  "cbm": 0,
+                  "size": {
+                    "length": 37.3,
+                    "width": 24.7,
+                    "height": 19.2
+                  }
+                },
+                {
+                  "item_code": "5188",
+                  "quantity": 2,
+                  "weight": 160040,
+                  "cbm": 0,
+                  "size": {
+                    "length": 39.7,
+                    "width": 26.7,
+                    "height": 21.8
+                  }
+                },
+                {
+                  "item_code": "5190",
+                  "quantity": 24,
+                  "weight": 441840,
+                  "cbm": 0,
+                  "size": {
+                    "length": 39.7,
+                    "width": 26.7,
+                    "height": 21.8
+                  }
+                },
+                {
+                  "item_code": "5192",
+                  "quantity": 16,
+                  "weight": 245744,
+                  "cbm": 0,
+                  "size": {
+                    "length": 37.3,
+                    "width": 24.7,
+                    "height": 19.2
+                  }
+                },
+                {
+                  "item_code": "5194",
+                  "quantity": 6,
+                  "weight": 94680,
+                  "cbm": 0,
+                  "size": {
+                    "length": 37.3,
+                    "width": 24.7,
+                    "height": 19.2
+                  }
+                }
+              ]
+            },
+            {
+              "location_code": "0001004624",
+              "cd_code": "0001004624",
+              "distance": 17377,
+              "weight_load": 2657300,
+              "cbm_load": 0,
+              "arrival_time": "2022-11-18 00:40:59",
+              "leaving_time": "2022-11-18 01:41:55",
+              "location_type": "CUSTOMER",
+              "items": [
+                {
+                  "item_code": "5070",
+                  "quantity": 30,
+                  "weight": 463680,
+                  "cbm": 1200000,
+                  "size": {
+                    "length": 42,
+                    "width": 28.1,
+                    "height": 27
+                  }
+                },
+                {
+                  "item_code": "5074",
+                  "quantity": 6,
+                  "weight": 91620,
+                  "cbm": 0,
+                  "size": {
+                    "length": 42,
+                    "width": 28.1,
+                    "height": 27
+                  }
+                },
+                {
+                  "item_code": "5078",
+                  "quantity": 12,
+                  "weight": 144960,
+                  "cbm": 0,
+                  "size": {
+                    "length": 39.7,
+                    "width": 26.7,
+                    "height": 21.8
+                  }
+                },
+                {
+                  "item_code": "5080",
+                  "quantity": 20,
+                  "weight": 242800,
+                  "cbm": 0,
+                  "size": {
+                    "length": 39.7,
+                    "width": 26.7,
+                    "height": 21.8
+                  }
+                },
+                {
+                  "item_code": "5082",
+                  "quantity": 16,
+                  "weight": 145424,
+                  "cbm": 0,
+                  "size": {
+                    "length": 37.3,
+                    "width": 24.7,
+                    "height": 19.2
+                  }
+                },
+                {
+                  "item_code": "5188",
+                  "quantity": 2,
+                  "weight": 160040,
+                  "cbm": 0,
+                  "size": {
+                    "length": 39.7,
+                    "width": 26.7,
+                    "height": 21.8
+                  }
+                },
+                {
+                  "item_code": "5190",
+                  "quantity": 24,
+                  "weight": 441840,
+                  "cbm": 0,
+                  "size": {
+                    "length": 39.7,
+                    "width": 26.7,
+                    "height": 21.8
+                  }
+                },
+                {
+                  "item_code": "5192",
+                  "quantity": 16,
+                  "weight": 245744,
+                  "cbm": 0,
+                  "size": {
+                    "length": 37.3,
+                    "width": 24.7,
+                    "height": 19.2
+                  }
+                },
+                {
+                  "item_code": "5194",
+                  "quantity": 6,
+                  "weight": 94680,
+                  "cbm": 0,
+                  "size": {
+                    "length": 37.3,
+                    "width": 24.7,
+                    "height": 19.2
+                  }
+                }
+              ]
+            },
+            {
+              "location_code": "0001003008",
+              "cd_code": "0001003008",
+              "distance": 17445,
+              "weight_load": 0,
+              "cbm_load": 0,
+              "arrival_time": "2022-11-18 01:42:09",
+              "leaving_time": "2022-11-18 03:01:53",
+              "location_type": "CUSTOMER",
+              "items": [
+                {
+                  "item_code": "5000",
+                  "quantity": 100,
+                  "weight": 1835300,
+                  "cbm": 0,
+                  "size": {
+                    "length": 39.7,
+                    "width": 26.7,
+                    "height": 21.8
+                  }
+                },
+                {
+                  "item_code": "5002",
+                  "quantity": 50,
+                  "weight": 445000,
+                  "cbm": 0,
+                  "size": {
+                    "length": 37.3,
+                    "width": 24.7,
+                    "height": 19.2
+                  }
+                },
+                {
+                  "item_code": "5003",
+                  "quantity": 50,
+                  "weight": 377000,
+                  "cbm": 0,
+                  "size": {
+                    "length": 35.1,
+                    "width": 23.5,
+                    "height": 17.7
+                  }
+                }
+              ]
+            },
+            {
+              "location_code": "4000",
+              "cd_code": "4000",
+              "distance": 37772,
+              "weight_load": 0,
+              "cbm_load": 0,
+              "arrival_time": "2022-11-18 03:41:55",
+              "leaving_time": "2022-11-18 03:41:55",
+              "location_type": "STATION",
+              "items": [
+
+              ]
+            }
+          ]
+        },
+        {
+          "vehicle_code": "54S-2514",
+          "vehicle_weight": 5000000,
+          "vehicle_cbm": 12000000,
+          "total_weight_load": 4913200,
+          "total_cbm_load": 0,
+          "total_duration": 79319,
+          "total_distance": 580950,
+          "elements": [
+            {
+              "location_code": "4000",
+              "cd_code": "4000",
+              "distance": 0,
+              "weight_load": 0,
+              "cbm_load": 0,
+              "arrival_time": "2022-11-18 03:41:55",
+              "leaving_time": "2022-11-18 03:41:55",
+              "location_type": "STATION",
+              "items": [
+
+              ]
+            },
+            {
+              "location_code": "4000",
+              "cd_code": "4000",
+              "distance": 0,
+              "weight_load": 4913200,
+              "cbm_load": 0,
+              "arrival_time": "2022-11-18 03:41:55",
+              "leaving_time": "2022-11-18 06:09:19",
+              "location_type": "DEPOT",
+              "items": [
+                {
+                  "item_code": "5218",
+                  "quantity": 100,
+                  "weight": 4913200,
+                  "cbm": 0,
+                  "size": {
+                    "length": 39.7,
+                    "width": 26.7,
+                    "height": 21.8
+                  }
+                }
+              ]
+            },
+            {
+              "location_code": "0001000116",
+              "cd_code": "0001000116",
+              "distance": 290462,
+              "weight_load": 0,
+              "cbm_load": 0,
+              "arrival_time": "2022-11-18 13:00:00",
+              "leaving_time": "2022-11-18 15:27:24",
+              "location_type": "CUSTOMER",
+              "items": [
+                {
+                  "item_code": "5218",
+                  "quantity": 100,
+                  "weight": 4913200,
+                  "cbm": 0,
+                  "size": {
+                    "length": 39.7,
+                    "width": 26.7,
+                    "height": 21.8
+                  }
+                }
+              ]
+            },
+            {
+              "location_code": "4000",
+              "cd_code": "4000",
+              "distance": 580950,
+              "weight_load": 0,
+              "cbm_load": 0,
+              "arrival_time": "2022-11-18 22:01:59",
+              "leaving_time": "2022-11-18 22:01:59",
+              "location_type": "STATION",
+              "items": [
+
+              ]
+            }
+          ]
+        }
+      ],
+      "additional_locations": [
+
+      ],
+      "unscheduled_requests": [
+        {
+          "order_code": "0000989211",
+          "depot_code": "4000",
+          "pickup_location_code": "4000",
+          "customer_code": "0001004448",
+          "delivery_location_code": "0001004448",
+          "items": [
+            {
+              "item_code": "4792",
+              "quantity": 1,
+              "weight": 60940,
+              "cbm": 0,
+              "size": {
+                "length": 37.3,
+                "width": 24.7,
+                "height": 19.2
+              }
+            },
+            {
+              "item_code": "4794",
+              "quantity": 1,
+              "weight": 111330,
+              "cbm": 0,
+              "size": {
+                "length": 39.7,
+                "width": 26.7,
+                "height": 21.8
+              }
+            },
+            {
+              "item_code": "4796",
+              "quantity": 22,
+              "weight": 405020,
+              "cbm": 0,
+              "size": {
+                "length": 39.7,
+                "width": 26.7,
+                "height": 21.8
+              }
+            },
+            {
+              "item_code": "4798",
+              "quantity": 30,
+              "weight": 473400,
+              "cbm": 0,
+              "size": {
+                "length": 37.3,
+                "width": 24.7,
+                "height": 19.2
+              }
+            },
+            {
+              "item_code": "4800",
+              "quantity": 30,
+              "weight": 460770,
+              "cbm": 0,
+              "size": {
+                "length": 37.3,
+                "width": 24.7,
+                "height": 19.2
+              }
+            },
+            {
+              "item_code": "5141",
+              "quantity": 1,
+              "weight": 60940,
+              "cbm": 0,
+              "size": {
+                "length": 37.3,
+                "width": 24.7,
+                "height": 19.2
+              }
+            },
+            {
+              "item_code": "5143",
+              "quantity": 1,
+              "weight": 111330,
+              "cbm": 0,
+              "size": {
+                "length": 39.7,
+                "width": 26.7,
+                "height": 21.8
+              }
+            },
+            {
+              "item_code": "5153",
+              "quantity": 24,
+              "weight": 378720,
+              "cbm": 0,
+              "size": {
+                "length": 37.3,
+                "width": 24.7,
+                "height": 19.2
+              }
+            }
+          ],
+          "weight": 2062450,
+          "cbm": 0
+        },
+        {
+          "order_code": "0000834313",
+          "depot_code": "4000",
+          "pickup_location_code": "4000",
+          "customer_code": "0001000554",
+          "delivery_location_code": "0001000554",
+          "items": [
+            {
+              "item_code": "5035",
+              "quantity": 60,
+              "weight": 728400,
+              "cbm": 0,
+              "size": {
+                "length": 39.7,
+                "width": 26.7,
+                "height": 21.8
+              }
+            },
+            {
+              "item_code": "5036",
+              "quantity": 40,
+              "weight": 301600,
+              "cbm": 0,
+              "size": {
+                "length": 35.1,
+                "width": 23.5,
+                "height": 17.7
+              }
+            },
+            {
+              "item_code": "5279",
+              "quantity": 100,
+              "weight": 1214000,
+              "cbm": 0,
+              "size": {
+                "length": 39.7,
+                "width": 26.7,
+                "height": 21.8
+              }
+            }
+          ],
+          "weight": 2244000,
+          "cbm": 0
+        },
+        {
+          "order_code": "0000834341",
+          "depot_code": "4000",
+          "pickup_location_code": "4000",
+          "customer_code": "0001000116",
+          "delivery_location_code": "0001000116",
+          "items": [
+            {
+              "item_code": "5087",
+              "quantity": 25,
+              "weight": 7945650,
+              "cbm": 0,
+              "size": {
+                "length": 42,
+                "width": 28.1,
+                "height": 27
+              }
+            },
+            {
+              "item_code": "5088",
+              "quantity": 300,
+              "weight": 2262000,
+              "cbm": 0,
+              "size": {
+                "length": 35.1,
+                "width": 23.5,
+                "height": 17.7
+              }
+            },
+            {
+              "item_code": "5206",
+              "quantity": 100,
+              "weight": 3699200,
+              "cbm": 0,
+              "size": {
+                "length": 39.7,
+                "width": 26.7,
+                "height": 21.8
+              }
+            },
+            {
+              "item_code": "5208",
+              "quantity": 15,
+              "weight": 4674195,
+              "cbm": 0,
+              "size": {
+                "length": 42,
+                "width": 28.1,
+                "height": 27
+              }
+            },
+            {
+              "item_code": "5234",
+              "quantity": 100,
+              "weight": 3699200,
+              "cbm": 0,
+              "size": {
+                "length": 39.7,
+                "width": 26.7,
+                "height": 21.8
+              }
+            }
+          ],
+          "weight": 22280245,
+          "cbm": 0
+        }
+      ]
+    }
+  ]
+}
