@@ -1,0 +1,204 @@
+{
+    "vehicle_categories": [{
+            "type_by_capacity": "1.5T",
+            "capacity": 1500000,
+            "cbm": 11957765,
+            "size": {
+                "length": 365,
+                "height": 181,
+                "width": 181
+            }
+        },
+        {
+            "type_by_capacity": "2T",
+            "capacity": 2000000,
+            "cbm": 13230000,
+            "size": {
+                "length": 420,
+                "height": 180,
+                "width": 175
+            }
+        },
+        {
+            "type_by_capacity": "2.5T",
+            "capacity": 2500000,
+            "cbm": 16340000,
+            "size": {
+                "length": 430,
+                "height": 200,
+                "width": 190
+            }
+        },
+        {
+            "type_by_capacity": "5T",
+            "capacity": 5000000,
+            "cbm": 31680000,
+            "size": {
+                "length": 600,
+                "height": 240,
+                "width": 220
+            }
+        },
+        {
+            "type_by_capacity": "7.5T",
+            "capacity": 7500000,
+            "cbm": 44209920,
+            "size": {
+                "length": 794,
+                "height": 240,
+                "width": 232
+            }
+        },
+        {
+            "type_by_capacity": "8T",
+            "capacity": 8000000,
+            "cbm": 47808000,
+            "size": {
+                "length": 830,
+                "height": 240,
+                "width": 240
+            }
+        },
+        {
+            "type_by_capacity": "10T",
+            "capacity": 10000000,
+            "cbm": 58200000,
+            "size": {
+                "length": 970,
+                "height": 250,
+                "width": 240
+            }
+        },
+        {
+            "type_by_capacity": "15T",
+            "capacity": 15000000,
+            "cbm": 76917120,
+            "size": {
+                "length": 970,
+                "height": 236,
+                "width": 336
+            }
+        }
+    ],
+    "vehicle_type": {
+        "typeOfVehicleByMultipleTrips": [
+            "1C",
+            "2C",
+            "3C"
+        ],
+        "typeOfVehicleToItemRule": [
+            "XE LANH",
+            "XE DONG"
+        ],
+        "typeOfVehicleByLimitedHour": [
+            "fobbidenVehA",
+            "fobbidenVehB",
+            "fobbidenVehC"
+        ],
+        "typeOfVehicleByLimits": [
+            "typeA",
+            "typeB",
+            "typeC",
+            "typeD"
+        ],
+        "typeOfVehicleByCostToDeploy": [
+            "costA",
+            "costB",
+            "costC",
+            "costD",
+            "costE"
+        ],
+        "typeOfVehicleByPricePerKm": [
+            "ppkA",
+            "ppkB",
+            "ppkC",
+            "ppkD",
+            "ppkE"
+        ]
+
+    },
+    "depot_type": {},
+    "customer_type": {
+        "typeOfCustomerByLimitedHour": [
+            "fobbidenCusA",
+            "fobbidenCusB",
+            "fobbidenCusC"
+        ],
+        "typeOfCustomerByTimeSync": ["lessThan10m", "lessThan20m", "lessThan30m"]
+    },
+    "item_type": {
+        "typeOfItemByVehicle": [
+            "LANH",
+            "DONG"
+        ]
+    },
+    "matrix_outline": {
+        "VD": {},
+        "VC": {},
+        "VV": {
+            "multipleTrips": {
+                "referenceType": {
+                    "vehicleType": "typeOfVehicleByMultipleTrips"
+                },
+                "base_value": 1
+            },
+            "maximumDistancePerRoute": {
+                "referenceType": {
+                    "vehicleType": "typeOfVehicleByLimits"
+                },
+                "base_value": 1000
+            },
+            "maximumDistancePerDay": {
+                "referenceType": {
+                    "vehicleType": "typeOfVehicleByLimits"
+                },
+                "base_value": 2000
+            },
+            "maximumCustomerPerRoute": {
+                "referenceType": {
+                    "vehicleType": "typeOfVehicleByLimits"
+                },
+                "base_value": 5
+            },
+            "maximumCustomerPerDay": {
+                "referenceType": {
+                    "vehicleType": "typeOfVehicleByLimits"
+                },
+                "base_value": 10
+            },
+            "costToDeploy": {
+                "referenceType": {
+                    "vehicleType": "typeOfVehicleByCostToDeploy"
+                },
+                "base_value": 1000000
+            },
+            "pricePerKm": {
+                "referenceType": {
+                    "vehicleType": "typeOfVehicleByPricePerKm"
+                },
+                "base_value": 10000
+            }
+        },
+        "DD": {},
+        "DC": {},
+        "DV": {},
+        "CV": {
+            "itemToVehicleRule": {
+                "referenceType": {
+                    "itemType": "typeOfItemByVehicle",
+                    "vehicleType": "typeOfVehicleToItemRule"
+                },
+                "base_value": 10
+            }
+        },
+        "CD": {},
+        "CC": {
+            "timeSync": {
+                "referenceType": {
+                    "customerType": "typeOfCustomerByTimeSync"
+                },
+                "base_value": 10
+            }
+        }
+    }
+}
