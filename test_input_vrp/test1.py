@@ -2793,4 +2793,4 @@ for i in range(20):
     depot_code = get_prop_by_identifier(len(dep_list), dep_list, "locationCode", pickuploc_code, "depotCode")
     customer_code = get_prop_by_identifier(len(cus_list), cus_list, "locationCode", deliveryloc_code, "customerCode")
     print('--------', 'pickuploc_code', 'deliveryloc_code','depot_code', 'customer_code')
-    print(pickuploc_code, deliveryloc_code, depot_code, customer_code)
+    # print(pickuploc_code, deliveryloc_code, depot_code, customer_code)
