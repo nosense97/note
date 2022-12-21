@@ -1,2089 +1,2751 @@
 data1 = {
-    "customers": [{
-            "customerCode": "0001004238",
-            "locationCode": "0001004238",
-            "district": "707",
-            "fixedUnloadTime": 720,
-            "unloadTimePerTon": 360,
-            "unloadTimePerCbm": 360,
-            "workingTime": {
-                "start": "2022-11-18 08:00:00",
-                "end": "2022-11-18 18:00:00"
-            },
-            "breakTimes": [],
-            "cType": {
-                "typeOfCustomerByArea": "72",
-                "typeOfCustomerByLimitedWeight": "no value"
-            }
-        },
+  "customers": [
+    {
+      "locationCode": "3",
+      "customerCode": "customer_fk0",
+      "district": "bgujbysvt",
+      "fixedUnloadTime": 16,
+      "unloadTimePerTon": 49,
+      "unloadTimePerCbm": 42,
+      "workingTime": {
+        "start": "2021-08-03 08:00:00",
+        "end": "2021-08-03 18:00:00"
+      },
+      "breakTimes": [
         {
-            "customerCode": "0001004448",
-            "locationCode": "0001004448",
-            "district": "710",
-            "fixedUnloadTime": 1000,
-            "unloadTimePerTon": 360,
-            "unloadTimePerCbm": 200,
-            "workingTime": {
-                "start": "2022-11-18 08:00:00",
-                "end": "2022-11-18 18:00:00"
-            },
-            "breakTimes": [],
-            "cType": {
-                "typeOfCustomerByArea": "72",
-                "typeOfCustomerByLimitedWeight": "no value"
-            }
-        },
-        {
-            "customerCode": "0001002472",
-            "locationCode": "0003000441",
-            "district": "772",
-            "fixedUnloadTime": 720,
-            "unloadTimePerTon": 360,
-            "unloadTimePerCbm": 360,
-            "workingTime": {
-                "start": "2022-11-18 08:00:00",
-                "end": "2022-11-18 18:00:00"
-            },
-            "breakTimes": [],
-            "cType": {
-                "typeOfCustomerByArea": "79",
-                "typeOfCustomerByLimitedWeight": "no value"
-            }
-        },
-        {
-            "customerCode": "0001003008",
-            "locationCode": "0001003008",
-            "district": "731",
-            "fixedUnloadTime": 720,
-            "unloadTimePerTon": 360,
-            "unloadTimePerCbm": 360,
-            "workingTime": {
-                "start": "2022-11-18 08:00:00",
-                "end": "2022-11-18 18:00:00"
-            },
-            "breakTimes": [],
-            "cType": {
-                "typeOfCustomerByArea": "75",
-                "typeOfCustomerByLimitedWeight": "no value"
-            }
-        },
-        {
-            "customerCode": "0001000554",
-            "locationCode": "0001000554",
-            "district": "731",
-            "fixedUnloadTime": 720,
-            "unloadTimePerTon": 360,
-            "unloadTimePerCbm": 360,
-            "workingTime": {
-                "start": "2022-11-18 08:00:00",
-                "end": "2022-11-18 18:00:00"
-            },
-            "breakTimes": [],
-            "cType": {
-                "typeOfCustomerByArea": "75",
-                "typeOfCustomerByLimitedWeight": "no value"
-            }
-        },
-        {
-            "customerCode": "0001004440",
-            "locationCode": "0001004440",
-            "district": "762",
-            "fixedUnloadTime": 720,
-            "unloadTimePerTon": 360,
-            "unloadTimePerCbm": 360,
-            "workingTime": {
-                "start": "2022-11-18 08:00:00",
-                "end": "2022-11-18 18:00:00"
-            },
-            "breakTimes": [],
-            "cType": {
-                "typeOfCustomerByArea": "79",
-                "typeOfCustomerByLimitedWeight": "3T"
-            }
-        },
-        {
-            "customerCode": "0001004624",
-            "locationCode": "0001004624",
-            "district": "731",
-            "fixedUnloadTime": 720,
-            "unloadTimePerTon": 360,
-            "unloadTimePerCbm": 360,
-            "workingTime": {
-                "start": "2022-11-18 08:00:00",
-                "end": "2022-11-18 18:00:00"
-            },
-            "breakTimes": [],
-            "cType": {
-                "typeOfCustomerByArea": "75",
-                "typeOfCustomerByLimitedWeight": "no value"
-            }
-        },
-        {
-            "customerCode": "0001000116",
-            "locationCode": "0001000116",
-            "district": "663",
-            "fixedUnloadTime": 720,
-            "unloadTimePerTon": 360,
-            "unloadTimePerCbm": 360,
-            "workingTime": {
-                "start": "2022-11-18 08:00:00",
-                "end": "2022-11-18 18:00:00"
-            },
-            "breakTimes": [],
-            "cType": {
-                "typeOfCustomerByArea": "67",
-                "typeOfCustomerByLimitedWeight": "no value"
-            }
-        },
-        {
-            "customerCode": "0001003008",
-            "locationCode": "0003000430",
-            "district": "731",
-            "fixedUnloadTime": 720,
-            "unloadTimePerTon": 360,
-            "unloadTimePerCbm": 360,
-            "workingTime": {
-                "start": "2022-11-18 08:00:00",
-                "end": "2022-11-18 18:00:00"
-            },
-            "breakTimes": [],
-            "cType": {
-                "typeOfCustomerByArea": "75",
-                "typeOfCustomerByLimitedWeight": "no value"
-            }
+          "start": "2021-08-03 12:00:00",
+          "end": "2021-08-03 13:00:00"
         }
-    ],
-    "requests": [{
-            "orderCode": "0000989130",
-            "depotCode": "4000",
-            "customerCode": "0001004238",
-            "pickupLocationCode": "4000",
-            "deliveryLocationCode": "0001004238",
-            "items": [{
-                    "itemCode": "4783",
-                    "quantity": 30,
-                    "weight": 460770,
-                    "cbm": 0,
-                    "size": {
-                        "width": 24.7,
-                        "length": 37.3,
-                        "height": 19.2
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                },
-                {
-                    "itemCode": "4784",
-                    "quantity": 48,
-                    "weight": 757440,
-                    "cbm": 0,
-                    "size": {
-                        "width": 24.7,
-                        "length": 37.3,
-                        "height": 19.2
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                },
-                {
-                    "itemCode": "4785",
-                    "quantity": 14,
-                    "weight": 220920,
-                    "cbm": 0,
-                    "size": {
-                        "width": 24.7,
-                        "length": 37.3,
-                        "height": 19.2
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                },
-                {
-                    "itemCode": "4786",
-                    "quantity": 14,
-                    "weight": 257740,
-                    "cbm": 0,
-                    "size": {
-                        "width": 26.7,
-                        "length": 39.7,
-                        "height": 21.8
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                },
-                {
-                    "itemCode": "4791",
-                    "quantity": 1,
-                    "weight": 12140,
-                    "cbm": 0,
-                    "size": {
-                        "width": 26.7,
-                        "length": 39.7,
-                        "height": 21.8
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                }
-            ]
-        },
-        {
-            "orderCode": "0000989211",
-            "depotCode": "4000",
-            "customerCode": "0001004448",
-            "pickupLocationCode": "4000",
-            "deliveryLocationCode": "0001004448",
-            "items": [{
-                    "itemCode": "4792",
-                    "quantity": 1,
-                    "weight": 60940,
-                    "cbm": 0,
-                    "size": {
-                        "width": 24.7,
-                        "length": 37.3,
-                        "height": 19.2
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                },
-                {
-                    "itemCode": "4794",
-                    "quantity": 1,
-                    "weight": 111330,
-                    "cbm": 0,
-                    "size": {
-                        "width": 26.7,
-                        "length": 39.7,
-                        "height": 21.8
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                },
-                {
-                    "itemCode": "4796",
-                    "quantity": 22,
-                    "weight": 405020,
-                    "cbm": 0,
-                    "size": {
-                        "width": 26.7,
-                        "length": 39.7,
-                        "height": 21.8
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                },
-                {
-                    "itemCode": "4798",
-                    "quantity": 30,
-                    "weight": 473400,
-                    "cbm": 0,
-                    "size": {
-                        "width": 24.7,
-                        "length": 37.3,
-                        "height": 19.2
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                },
-                {
-                    "itemCode": "4800",
-                    "quantity": 30,
-                    "weight": 460770,
-                    "cbm": 0,
-                    "size": {
-                        "width": 24.7,
-                        "length": 37.3,
-                        "height": 19.2
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                }
-            ]
-        },
-        {
-            "orderCode": "0000834319",
-            "depotCode": "4000",
-            "customerCode": "0001002472",
-            "pickupLocationCode": "4000",
-            "deliveryLocationCode": "0003000441",
-            "items": [{
-                    "itemCode": "4972",
-                    "quantity": 100,
-                    "weight": 1214000,
-                    "cbm": 0,
-                    "size": {
-                        "width": 26.7,
-                        "length": 39.7,
-                        "height": 21.8
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                },
-                {
-                    "itemCode": "4973",
-                    "quantity": 50,
-                    "weight": 1237000,
-                    "cbm": 0,
-                    "size": {
-                        "width": 26.7,
-                        "length": 39.7,
-                        "height": 21.8
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                }
-            ]
-        },
-        {
-            "orderCode": "0000834326",
-            "depotCode": "4000",
-            "customerCode": "0001003008",
-            "pickupLocationCode": "4000",
-            "deliveryLocationCode": "0001003008",
-            "items": [{
-                    "itemCode": "5000",
-                    "quantity": 100,
-                    "weight": 1835300,
-                    "cbm": 0,
-                    "size": {
-                        "width": 26.7,
-                        "length": 39.7,
-                        "height": 21.8
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                },
-                {
-                    "itemCode": "5002",
-                    "quantity": 50,
-                    "weight": 445000,
-                    "cbm": 0,
-                    "size": {
-                        "width": 24.7,
-                        "length": 37.3,
-                        "height": 19.2
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                },
-                {
-                    "itemCode": "5003",
-                    "quantity": 50,
-                    "weight": 377000,
-                    "cbm": 0,
-                    "size": {
-                        "width": 23.5,
-                        "length": 35.1,
-                        "height": 17.7
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                }
-            ]
-        },
-        {
-            "orderCode": "0000834313",
-            "depotCode": "4000",
-            "customerCode": "0001000554",
-            "pickupLocationCode": "4000",
-            "deliveryLocationCode": "0001000554",
-            "items": [{
-                    "itemCode": "5035",
-                    "quantity": 60,
-                    "weight": 728400,
-                    "cbm": 0,
-                    "size": {
-                        "width": 26.7,
-                        "length": 39.7,
-                        "height": 21.8
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                },
-                {
-                    "itemCode": "5036",
-                    "quantity": 40,
-                    "weight": 301600,
-                    "cbm": 0,
-                    "size": {
-                        "width": 23.5,
-                        "length": 35.1,
-                        "height": 17.7
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                },
-                {
-                    "itemCode": "5037",
-                    "quantity": 40,
-                    "weight": 989600,
-                    "cbm": 0,
-                    "size": {
-                        "width": 26.7,
-                        "length": 39.7,
-                        "height": 21.8
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                }
-            ]
-        },
-        {
-            "orderCode": "0000989195",
-            "depotCode": "4000",
-            "customerCode": "0001004440",
-            "pickupLocationCode": "4000",
-            "deliveryLocationCode": "0001004440",
-            "items": [{
-                    "itemCode": "5056",
-                    "quantity": 100,
-                    "weight": 627000,
-                    "cbm": 6000000,
-                    "size": {
-                        "width": 25,
-                        "length": 40,
-                        "height": 35
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                },
-                {
-                    "itemCode": "5057",
-                    "quantity": 10,
-                    "weight": 62700,
-                    "cbm": 5000000,
-                    "size": {
-                        "width": 25,
-                        "length": 40,
-                        "height": 35
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                },
-                {
-                    "itemCode": "5058",
-                    "quantity": 10,
-                    "weight": 121400,
-                    "cbm": 5000000,
-                    "size": {
-                        "width": 26.7,
-                        "length": 39.7,
-                        "height": 21.8
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                },
-                {
-                    "itemCode": "5059",
-                    "quantity": 10,
-                    "weight": 62700,
-                    "cbm": 5000000,
-                    "size": {
-                        "width": 25,
-                        "length": 40,
-                        "height": 35
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                },
-                {
-                    "itemCode": "5060",
-                    "quantity": 10,
-                    "weight": 95100,
-                    "cbm": 5000000,
-                    "size": {
-                        "width": 24.7,
-                        "length": 37.3,
-                        "height": 19.2
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                },
-                {
-                    "itemCode": "5061",
-                    "quantity": 30,
-                    "weight": 188100,
-                    "cbm": 3000000,
-                    "size": {
-                        "width": 25,
-                        "length": 40,
-                        "height": 35
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                },
-                {
-                    "itemCode": "5062",
-                    "quantity": 30,
-                    "weight": 272670,
-                    "cbm": 3000000,
-                    "size": {
-                        "width": 24.7,
-                        "length": 37.3,
-                        "height": 19.2
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                }
-            ]
-        },
-        {
-            "orderCode": "0000989948",
-            "depotCode": "4000",
-            "customerCode": "0001004624",
-            "pickupLocationCode": "4000",
-            "deliveryLocationCode": "0001004624",
-            "items": [{
-                    "itemCode": "5070",
-                    "quantity": 30,
-                    "weight": 463680,
-                    "cbm": 1200000,
-                    "size": {
-                        "width": 28.1,
-                        "length": 42,
-                        "height": 27
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                },
-                {
-                    "itemCode": "5074",
-                    "quantity": 6,
-                    "weight": 91620,
-                    "cbm": 0,
-                    "size": {
-                        "width": 28.1,
-                        "length": 42,
-                        "height": 27
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                },
-                {
-                    "itemCode": "5078",
-                    "quantity": 12,
-                    "weight": 144960,
-                    "cbm": 0,
-                    "size": {
-                        "width": 26.7,
-                        "length": 39.7,
-                        "height": 21.8
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                },
-                {
-                    "itemCode": "5080",
-                    "quantity": 20,
-                    "weight": 242800,
-                    "cbm": 0,
-                    "size": {
-                        "width": 26.7,
-                        "length": 39.7,
-                        "height": 21.8
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                },
-                {
-                    "itemCode": "5082",
-                    "quantity": 16,
-                    "weight": 145424,
-                    "cbm": 0,
-                    "size": {
-                        "width": 24.7,
-                        "length": 37.3,
-                        "height": 19.2
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                }
-            ]
-        },
-        {
-            "orderCode": "0000834341",
-            "depotCode": "4000",
-            "customerCode": "0001000116",
-            "pickupLocationCode": "4000",
-            "deliveryLocationCode": "0001000116",
-            "items": [{
-                    "itemCode": "5087",
-                    "quantity": 25,
-                    "weight": 7945650,
-                    "cbm": 0,
-                    "size": {
-                        "width": 28.1,
-                        "length": 42,
-                        "height": 27
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                },
-                {
-                    "itemCode": "5088",
-                    "quantity": 300,
-                    "weight": 2262000,
-                    "cbm": 0,
-                    "size": {
-                        "width": 23.5,
-                        "length": 35.1,
-                        "height": 17.7
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                }
-            ]
-        },
-        {
-            "orderCode": "0000834342",
-            "depotCode": "4000",
-            "customerCode": "0001003008",
-            "pickupLocationCode": "4000",
-            "deliveryLocationCode": "0003000430",
-            "items": [{
-                    "itemCode": "5089",
-                    "quantity": 100,
-                    "weight": 1835300,
-                    "cbm": 0,
-                    "size": {
-                        "width": 26.7,
-                        "length": 39.7,
-                        "height": 21.8
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                },
-                {
-                    "itemCode": "5091",
-                    "quantity": 100,
-                    "weight": 1527000,
-                    "cbm": 0,
-                    "size": {
-                        "width": 28.1,
-                        "length": 42,
-                        "height": 27
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                }
-            ]
-        },
-        {
-            "orderCode": "0000993552_test",
-            "depotCode": "4000",
-            "customerCode": "0001004448",
-            "pickupLocationCode": "4000",
-            "deliveryLocationCode": "0001004448",
-            "items": [{
-                    "itemCode": "5141",
-                    "quantity": 1,
-                    "weight": 60940,
-                    "cbm": 0,
-                    "size": {
-                        "width": 24.7,
-                        "length": 37.3,
-                        "height": 19.2
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                },
-                {
-                    "itemCode": "5143",
-                    "quantity": 1,
-                    "weight": 111330,
-                    "cbm": 0,
-                    "size": {
-                        "width": 26.7,
-                        "length": 39.7,
-                        "height": 21.8
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                },
-                {
-                    "itemCode": "5145",
-                    "quantity": 16,
-                    "weight": 294560,
-                    "cbm": 0,
-                    "size": {
-                        "width": 26.7,
-                        "length": 39.7,
-                        "height": 21.8
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                },
-                {
-                    "itemCode": "5147",
-                    "quantity": 1,
-                    "weight": 81620,
-                    "cbm": 0,
-                    "size": {
-                        "width": 23.5,
-                        "length": 35.1,
-                        "height": 17.7
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                },
-                {
-                    "itemCode": "5149",
-                    "quantity": 20,
-                    "weight": 315600,
-                    "cbm": 0,
-                    "size": {
-                        "width": 24.7,
-                        "length": 37.3,
-                        "height": 19.2
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                },
-                {
-                    "itemCode": "5151",
-                    "quantity": 20,
-                    "weight": 307180,
-                    "cbm": 0,
-                    "size": {
-                        "width": 24.7,
-                        "length": 37.3,
-                        "height": 19.2
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                },
-                {
-                    "itemCode": "5153",
-                    "quantity": 24,
-                    "weight": 378720,
-                    "cbm": 0,
-                    "size": {
-                        "width": 24.7,
-                        "length": 37.3,
-                        "height": 19.2
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                }
-            ]
-        },
-        {
-            "orderCode": "0000993556_test",
-            "depotCode": "4000",
-            "customerCode": "0001004238",
-            "pickupLocationCode": "4000",
-            "deliveryLocationCode": "0001004238",
-            "items": [{
-                    "itemCode": "5157",
-                    "quantity": 28,
-                    "weight": 430052,
-                    "cbm": 0,
-                    "size": {
-                        "width": 24.7,
-                        "length": 37.3,
-                        "height": 19.2
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                },
-                {
-                    "itemCode": "5159",
-                    "quantity": 52,
-                    "weight": 820560,
-                    "cbm": 0,
-                    "size": {
-                        "width": 24.7,
-                        "length": 37.3,
-                        "height": 19.2
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                },
-                {
-                    "itemCode": "5160",
-                    "quantity": 12,
-                    "weight": 189360,
-                    "cbm": 0,
-                    "size": {
-                        "width": 24.7,
-                        "length": 37.3,
-                        "height": 19.2
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                },
-                {
-                    "itemCode": "5162",
-                    "quantity": 12,
-                    "weight": 220920,
-                    "cbm": 0,
-                    "size": {
-                        "width": 26.7,
-                        "length": 39.7,
-                        "height": 21.8
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                },
-                {
-                    "itemCode": "5165",
-                    "quantity": 1,
-                    "weight": 9510,
-                    "cbm": 0,
-                    "size": {
-                        "width": 24.7,
-                        "length": 37.3,
-                        "height": 19.2
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                }
-            ]
-        },
-        {
-            "orderCode": "0000993836_test",
-            "depotCode": "4000",
-            "customerCode": "0001004624",
-            "pickupLocationCode": "4000",
-            "deliveryLocationCode": "0001004624",
-            "items": [{
-                    "itemCode": "5188",
-                    "quantity": 2,
-                    "weight": 160040,
-                    "cbm": 0,
-                    "size": {
-                        "width": 26.7,
-                        "length": 39.7,
-                        "height": 21.8
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                },
-                {
-                    "itemCode": "5190",
-                    "quantity": 24,
-                    "weight": 441840,
-                    "cbm": 0,
-                    "size": {
-                        "width": 26.7,
-                        "length": 39.7,
-                        "height": 21.8
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                },
-                {
-                    "itemCode": "5192",
-                    "quantity": 16,
-                    "weight": 245744,
-                    "cbm": 0,
-                    "size": {
-                        "width": 24.7,
-                        "length": 37.3,
-                        "height": 19.2
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                },
-                {
-                    "itemCode": "5194",
-                    "quantity": 6,
-                    "weight": 94680,
-                    "cbm": 0,
-                    "size": {
-                        "width": 24.7,
-                        "length": 37.3,
-                        "height": 19.2
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                }
-            ]
-        },
-        {
-            "orderCode": "0000834347",
-            "depotCode": "4000",
-            "customerCode": "0001000116",
-            "pickupLocationCode": "4000",
-            "deliveryLocationCode": "0001000116",
-            "items": [{
-                    "itemCode": "5206",
-                    "quantity": 100,
-                    "weight": 3699200,
-                    "cbm": 0,
-                    "size": {
-                        "width": 26.7,
-                        "length": 39.7,
-                        "height": 21.8
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                },
-                {
-                    "itemCode": "5208",
-                    "quantity": 15,
-                    "weight": 4674195,
-                    "cbm": 0,
-                    "size": {
-                        "width": 28.1,
-                        "length": 42,
-                        "height": 27
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                },
-                {
-                    "itemCode": "5218",
-                    "quantity": 100,
-                    "weight": 4913200,
-                    "cbm": 0,
-                    "size": {
-                        "width": 26.7,
-                        "length": 39.7,
-                        "height": 21.8
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                },
-                {
-                    "itemCode": "5234",
-                    "quantity": 100,
-                    "weight": 3699200,
-                    "cbm": 0,
-                    "size": {
-                        "width": 26.7,
-                        "length": 39.7,
-                        "height": 21.8
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                }
-            ]
-        },
-        {
-            "orderCode": "0000834316",
-            "depotCode": "4000",
-            "customerCode": "0001000554",
-            "pickupLocationCode": "4000",
-            "deliveryLocationCode": "0001000554",
-            "items": [{
-                    "itemCode": "5277",
-                    "quantity": 40,
-                    "weight": 494800,
-                    "cbm": 0,
-                    "size": {
-                        "width": 26.7,
-                        "length": 39.7,
-                        "height": 21.8
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                },
-                {
-                    "itemCode": "5278",
-                    "quantity": 50,
-                    "weight": 377000,
-                    "cbm": 0,
-                    "size": {
-                        "width": 23.5,
-                        "length": 35.1,
-                        "height": 17.7
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                },
-                {
-                    "itemCode": "5279",
-                    "quantity": 100,
-                    "weight": 1214000,
-                    "cbm": 0,
-                    "size": {
-                        "width": 26.7,
-                        "length": 39.7,
-                        "height": 21.8
-                    },
-                    "iType": {
-                        "typeOfItemByVehicle": "",
-                        "typeOfItemByPaymentMethods": ""
-                    }
-                }
-            ]
-        }
-    ],
-    "vehicles": [{
-            "vehicleCode": "61C-34783",
-            "cbm": 8000,
-            "capacity": 1000000,
-            "quantity": 1,
-            "size": {
-                "width": 0,
-                "length": 0,
-                "height": 0
-            },
-            "loadTimePerCbm": 32.4,
-            "unloadTimePerCbm": 32.4,
-            "loadTimePerTon": 900,
-            "unloadTimePerTon": 900,
-            "startLocationCode": "4000",
-            "startLocationType": "STATION",
-            "endLocationCode": "4000",
-            "endLocationType": "STATION",
-            "workingTime": {
-                "start": "2022-10-19 06:00:00",
-                "end": "2022-10-19 18:00:00"
-            },
-            "breakTimes": [{
-                "start": "2022-10-19 11:00:00",
-                "end": "2022-10-19 13:00:00"
-            }],
-            "vType": {
-                "typeOfVehicleByMultipleTrips": "NC",
-                "typeOfVehicleToItemRule": "Truck",
-                "typeOfVehicleByCostToDeploy": "160000035",
-                "typeOfVehicleByPricePerKm": "160000035",
-                "typeOfVehicleByLimits": "IH"
-            }
-        },
-        {
-            "vehicleCode": "61C-34871",
-            "cbm": 10000000,
-            "capacity": 1000000,
-            "quantity": 1,
-            "size": {
-                "width": 0,
-                "length": 0,
-                "height": 0
-            },
-            "loadTimePerCbm": 1620,
-            "unloadTimePerCbm": 1620,
-            "loadTimePerTon": 1800,
-            "unloadTimePerTon": 1800,
-            "startLocationCode": "4000",
-            "startLocationType": "STATION",
-            "endLocationCode": "4000",
-            "endLocationType": "STATION",
-            "workingTime": {
-                "start": "2022-10-19 06:00:00",
-                "end": "2022-10-19 18:00:00"
-            },
-            "breakTimes": [{
-                "start": "2022-10-19 12:00:00",
-                "end": "2022-10-19 13:00:00"
-            }],
-            "vType": {
-                "typeOfVehicleByMultipleTrips": "NC",
-                "typeOfVehicleToItemRule": "Truck",
-                "typeOfVehicleByCostToDeploy": "1T",
-                "typeOfVehicleByPricePerKm": "1T",
-                "typeOfVehicleByLimits": "IH"
-            }
-        },
-        {
-            "vehicleCode": "61C-34891",
-            "cbm": 60000000,
-            "capacity": 3500000,
-            "quantity": 1,
-            "size": {
-                "width": 0,
-                "length": 0,
-                "height": 0
-            },
-            "loadTimePerCbm": 1800,
-            "unloadTimePerCbm": 1800,
-            "loadTimePerTon": 1800,
-            "unloadTimePerTon": 900,
-            "startLocationCode": "4000",
-            "startLocationType": "STATION",
-            "endLocationCode": "4000",
-            "endLocationType": "STATION",
-            "workingTime": {
-                "start": "2022-10-19 06:00:00",
-                "end": "2022-10-19 18:00:00"
-            },
-            "breakTimes": [{
-                "start": "2022-10-19 12:00:00",
-                "end": "2022-10-19 13:00:00"
-            }],
-            "vType": {
-                "typeOfVehicleByMultipleTrips": "NC",
-                "typeOfVehicleToItemRule": "Truck",
-                "typeOfVehicleByCostToDeploy": "3T",
-                "typeOfVehicleByPricePerKm": "3T",
-                "typeOfVehicleByLimits": "IH"
-            }
-        },
-        {
-            "vehicleCode": "61C-34758",
-            "cbm": 60000000,
-            "capacity": 1000000,
-            "quantity": 1,
-            "size": {
-                "width": 0,
-                "length": 0,
-                "height": 0
-            },
-            "loadTimePerCbm": 900,
-            "unloadTimePerCbm": 900,
-            "loadTimePerTon": 1800,
-            "unloadTimePerTon": 1800,
-            "startLocationCode": "4000",
-            "startLocationType": "STATION",
-            "endLocationCode": "4000",
-            "endLocationType": "STATION",
-            "workingTime": {
-                "start": "2022-10-19 06:00:00",
-                "end": "2022-10-19 18:00:00"
-            },
-            "breakTimes": [{
-                "start": "2022-10-19 12:00:00",
-                "end": "2022-10-19 13:00:00"
-            }],
-            "vType": {
-                "typeOfVehicleByMultipleTrips": "NC",
-                "typeOfVehicleToItemRule": "Truck",
-                "typeOfVehicleByCostToDeploy": "160000035",
-                "typeOfVehicleByPricePerKm": "160000035",
-                "typeOfVehicleByLimits": "IH"
-            }
-        },
-        {
-            "vehicleCode": "54S-2514",
-            "cbm": 12000000,
-            "capacity": 5000000,
-            "quantity": 1,
-            "size": {
-                "width": 0,
-                "length": 0,
-                "height": 0
-            },
-            "loadTimePerCbm": 32.4,
-            "unloadTimePerCbm": 32.4,
-            "loadTimePerTon": 1800,
-            "unloadTimePerTon": 1800,
-            "startLocationCode": "4000",
-            "startLocationType": "STATION",
-            "endLocationCode": "4000",
-            "endLocationType": "STATION",
-            "workingTime": {
-                "start": "2022-10-19 00:01:00",
-                "end": "2022-10-19 23:59:00"
-            },
-            "breakTimes": [{
-                "start": "2022-10-19 12:00:00",
-                "end": "2022-10-19 13:00:00"
-            }],
-            "vType": {
-                "typeOfVehicleByMultipleTrips": "NC",
-                "typeOfVehicleToItemRule": "Truck",
-                "typeOfVehicleByCostToDeploy": "160000037",
-                "typeOfVehicleByPricePerKm": "160000037",
-                "typeOfVehicleByLimits": "IH"
-            }
-        }
-    ],
-    "depots": [{
-        "depotCode": "4000",
-        "locationCode": "4000",
-        "fixedLoadTime": 720,
-        "loadTimePerTon": 1800,
-        "loadTimePerCbm": 360,
-        "workingTime": {
-            "start": "2022-11-18 00:01:00",
-            "end": "2022-11-18 23:59:00"
-        },
-        "breakTimes": [{
-            "start": "2022-11-18 12:00:00",
-            "end": "2022-11-18 13:00:00"
-        }],
-        "dType": {
-            "typeOfDepotByCapacity": 1
-        }
-    }],
-    "distances": [{
-            "srcCode": "0001004624",
-            "destCode": "0003000430",
-            "distance": 12.9704,
-            "travelTime": 1882
-        },
-        {
-            "srcCode": "0003000430",
-            "destCode": "0001004624",
-            "distance": 12.711,
-            "travelTime": 1903
-        },
-        {
-            "srcCode": "0001003008",
-            "destCode": "0001004624",
-            "distance": 0.0675,
-            "travelTime": 14
-        },
-        {
-            "srcCode": "0001004624",
-            "destCode": "0001003008",
-            "distance": 0.0675,
-            "travelTime": 14
-        },
-        {
-            "srcCode": "0003000441",
-            "destCode": "4000",
-            "distance": 23.290200000000002,
-            "travelTime": 2619
-        },
-        {
-            "srcCode": "4000",
-            "destCode": "0001000116",
-            "distance": 290.462,
-            "travelTime": 23657
-        },
-        {
-            "srcCode": "4000",
-            "destCode": "0001004448",
-            "distance": 65.2825,
-            "travelTime": 6205
-        },
-        {
-            "srcCode": "0001004238",
-            "destCode": "4000",
-            "distance": 89.0625,
-            "travelTime": 8266
-        },
-        {
-            "srcCode": "0001004448",
-            "destCode": "4000",
-            "distance": 66.994,
-            "travelTime": 6439
-        },
-        {
-            "srcCode": "0001003008",
-            "destCode": "0001000554",
-            "distance": 10.3521,
-            "travelTime": 1209
-        },
-        {
-            "srcCode": "4000",
-            "destCode": "0003000430",
-            "distance": 25.2001,
-            "travelTime": 3522
-        },
-        {
-            "srcCode": "0003000430",
-            "destCode": "4000",
-            "distance": 28.119799999999998,
-            "travelTime": 3536
-        },
-        {
-            "srcCode": "0003000441",
-            "destCode": "0001004624",
-            "distance": 32.4418,
-            "travelTime": 3542
-        },
-        {
-            "srcCode": "0001004624",
-            "destCode": "0003000441",
-            "distance": 32.6133,
-            "travelTime": 3656
-        },
-        {
-            "srcCode": "0003000441",
-            "destCode": "0003000430",
-            "distance": 40.2656,
-            "travelTime": 4666
-        },
-        {
-            "srcCode": "0003000430",
-            "destCode": "0003000441",
-            "distance": 40.3389,
-            "travelTime": 4776
-        },
-        {
-            "srcCode": "4000",
-            "destCode": "0003000441",
-            "distance": 26.337400000000002,
-            "travelTime": 2670
-        },
-        {
-            "srcCode": "0003000441",
-            "destCode": "0001000116",
-            "distance": 306.495,
-            "travelTime": 25801
-        },
-        {
-            "srcCode": "0001000116",
-            "destCode": "0003000441",
-            "distance": 306.0378,
-            "travelTime": 25740
-        },
-        {
-            "srcCode": "0003000441",
-            "destCode": "0001003008",
-            "distance": 32.3743,
-            "travelTime": 3528
-        },
-        {
-            "srcCode": "4000",
-            "destCode": "0001004238",
-            "distance": 85.3386,
-            "travelTime": 8158
-        },
-        {
-            "srcCode": "0001004238",
-            "destCode": "0001004448",
-            "distance": 18.827099999999998,
-            "travelTime": 2826
-        },
-        {
-            "srcCode": "0001004448",
-            "destCode": "0001004238",
-            "distance": 18.8152,
-            "travelTime": 2824
-        },
-        {
-            "srcCode": "0001004238",
-            "destCode": "0001004440",
-            "distance": 100.52189999999999,
-            "travelTime": 9219
-        },
-        {
-            "srcCode": "0001004448",
-            "destCode": "0001004440",
-            "distance": 78.4533,
-            "travelTime": 7392
-        },
-        {
-            "srcCode": "0001004440",
-            "destCode": "0001004238",
-            "distance": 97.493,
-            "travelTime": 9209
-        },
-        {
-            "srcCode": "0001004440",
-            "destCode": "0001004448",
-            "distance": 77.4369,
-            "travelTime": 7257
-        },
-        {
-            "srcCode": "0001003008",
-            "destCode": "4000",
-            "distance": 20.3268,
-            "travelTime": 2402
-        },
-        {
-            "srcCode": "0001004448",
-            "destCode": "0001004624",
-            "distance": 81.06639999999999,
-            "travelTime": 7616
-        },
-        {
-            "srcCode": "0001004624",
-            "destCode": "0001004448",
-            "distance": 79.14389999999999,
-            "travelTime": 7456
-        },
-        {
-            "srcCode": "0001004624",
-            "destCode": "0001004440",
-            "distance": 19.3135,
-            "travelTime": 2494
-        },
-        {
-            "srcCode": "0001004238",
-            "destCode": "0001003008",
-            "distance": 103.0675,
-            "travelTime": 9429
-        },
-        {
-            "srcCode": "0001004448",
-            "destCode": "0001003008",
-            "distance": 80.99889999999999,
-            "travelTime": 7602
-        },
-        {
-            "srcCode": "0001003008",
-            "destCode": "0001004238",
-            "distance": 99.13260000000001,
-            "travelTime": 9395
-        },
-        {
-            "srcCode": "0001004238",
-            "destCode": "0003000441",
-            "distance": 81.0958,
-            "travelTime": 7711
-        },
-        {
-            "srcCode": "0001004448",
-            "destCode": "0001000554",
-            "distance": 86.80489999999999,
-            "travelTime": 7721
-        },
-        {
-            "srcCode": "0001000554",
-            "destCode": "0001004238",
-            "distance": 97.63380000000001,
-            "travelTime": 8933
-        },
-        {
-            "srcCode": "0001000554",
-            "destCode": "0001004448",
-            "distance": 77.5776,
-            "travelTime": 6980
-        },
-        {
-            "srcCode": "0003000441",
-            "destCode": "0001004238",
-            "distance": 79.5127,
-            "travelTime": 7890
-        },
-        {
-            "srcCode": "0001000116",
-            "destCode": "0001004448",
-            "distance": 283.8712,
-            "travelTime": 26977
-        },
-        {
-            "srcCode": "0001000116",
-            "destCode": "0001000554",
-            "distance": 308.2138,
-            "travelTime": 25599
-        },
-        {
-            "srcCode": "0001004238",
-            "destCode": "0001000116",
-            "distance": 273.5048,
-            "travelTime": 25375
-        },
-        {
-            "srcCode": "0001004448",
-            "destCode": "0001000116",
-            "distance": 283.8981,
-            "travelTime": 26957
-        },
-        {
-            "srcCode": "0001003008",
-            "destCode": "0001000116",
-            "distance": 301.88559999999995,
-            "travelTime": 25202
-        },
-        {
-            "srcCode": "0001000116",
-            "destCode": "0003000430",
-            "distance": 306.92040000000003,
-            "travelTime": 26344
-        },
-        {
-            "srcCode": "0003000430",
-            "destCode": "0001000116",
-            "distance": 306.8015,
-            "travelTime": 26321
-        },
-        {
-            "srcCode": "0003000430",
-            "destCode": "0001000554",
-            "distance": 20.9414,
-            "travelTime": 2847
-        },
-        {
-            "srcCode": "0001000554",
-            "destCode": "0003000430",
-            "distance": 20.778,
-            "travelTime": 2591
-        },
-        {
-            "srcCode": "0001003008",
-            "destCode": "0003000430",
-            "distance": 12.903,
-            "travelTime": 1867
-        },
-        {
-            "srcCode": "0003000430",
-            "destCode": "0001003008",
-            "distance": 12.6435,
-            "travelTime": 1888
-        },
-        {
-            "srcCode": "0003000430",
-            "destCode": "0001004448",
-            "distance": 86.8695,
-            "travelTime": 8577
-        },
-        {
-            "srcCode": "0003000430",
-            "destCode": "0001004238",
-            "distance": 106.9256,
-            "travelTime": 10529
-        },
-        {
-            "srcCode": "0001000554",
-            "destCode": "0001003008",
-            "distance": 8.6768,
-            "travelTime": 1106
-        },
-        {
-            "srcCode": "0001003008",
-            "destCode": "0003000441",
-            "distance": 32.5458,
-            "travelTime": 3642
-        },
-        {
-            "srcCode": "0001004448",
-            "destCode": "0003000430",
-            "distance": 88.8902,
-            "travelTime": 8740
-        },
-        {
-            "srcCode": "0001000116",
-            "destCode": "0001004238",
-            "distance": 273.466,
-            "travelTime": 25380
-        },
-        {
-            "srcCode": "0001000116",
-            "destCode": "0001003008",
-            "distance": 301.9055,
-            "travelTime": 25222
-        },
-        {
-            "srcCode": "0001000554",
-            "destCode": "0001000116",
-            "distance": 301.6063,
-            "travelTime": 24980
-        },
-        {
-            "srcCode": "0001004238",
-            "destCode": "0003000430",
-            "distance": 110.9588,
-            "travelTime": 10567
-        },
-        {
-            "srcCode": "0001003008",
-            "destCode": "0001004440",
-            "distance": 19.246,
-            "travelTime": 2480
-        },
-        {
-            "srcCode": "0001004440",
-            "destCode": "0001003008",
-            "distance": 20.748900000000003,
-            "travelTime": 2610
-        },
-        {
-            "srcCode": "0001004440",
-            "destCode": "0003000430",
-            "distance": 29.003400000000003,
-            "travelTime": 3902
-        },
-        {
-            "srcCode": "0003000430",
-            "destCode": "0001004440",
-            "distance": 28.525,
-            "travelTime": 3834
-        },
-        {
-            "srcCode": "0001004238",
-            "destCode": "0001004624",
-            "distance": 103.135,
-            "travelTime": 9443
-        },
-        {
-            "srcCode": "0001004624",
-            "destCode": "0001004238",
-            "distance": 99.2001,
-            "travelTime": 9409
-        },
-        {
-            "srcCode": "0001004440",
-            "destCode": "0001004624",
-            "distance": 20.8164,
-            "travelTime": 2624
-        },
-        {
-            "srcCode": "0003000441",
-            "destCode": "0001000554",
-            "distance": 35.6397,
-            "travelTime": 3415
-        },
-        {
-            "srcCode": "0001003008",
-            "destCode": "0001004448",
-            "distance": 79.0765,
-            "travelTime": 7442
-        },
-        {
-            "srcCode": "0001004448",
-            "destCode": "0003000441",
-            "distance": 59.027300000000004,
-            "travelTime": 5884
-        },
-        {
-            "srcCode": "0001004238",
-            "destCode": "0001000554",
-            "distance": 108.8735,
-            "travelTime": 9548
-        },
-        {
-            "srcCode": "0003000441",
-            "destCode": "0001004448",
-            "distance": 59.4566,
-            "travelTime": 5937
-        },
-        {
-            "srcCode": "4000",
-            "destCode": "0001004440",
-            "distance": 18.3825,
-            "travelTime": 2265
-        },
-        {
-            "srcCode": "0001004440",
-            "destCode": "4000",
-            "distance": 18.6872,
-            "travelTime": 2216
-        },
-        {
-            "srcCode": "0001000554",
-            "destCode": "0003000441",
-            "distance": 29.0777,
-            "travelTime": 2973
-        },
-        {
-            "srcCode": "0003000441",
-            "destCode": "0001004440",
-            "distance": 25.6668,
-            "travelTime": 2940
-        },
-        {
-            "srcCode": "0001004440",
-            "destCode": "0003000441",
-            "distance": 29.265099999999997,
-            "travelTime": 3068
-        },
-        {
-            "srcCode": "0001000116",
-            "destCode": "0001004440",
-            "distance": 310.63340000000005,
-            "travelTime": 25579
-        },
-        {
-            "srcCode": "0001000116",
-            "destCode": "0001004624",
-            "distance": 301.973,
-            "travelTime": 25236
-        },
-        {
-            "srcCode": "0001000554",
-            "destCode": "0001004440",
-            "distance": 14.4843,
-            "travelTime": 1685
-        },
-        {
-            "srcCode": "0001000554",
-            "destCode": "0001004624",
-            "distance": 8.744299999999999,
-            "travelTime": 1120
-        },
-        {
-            "srcCode": "0001004440",
-            "destCode": "0001000116",
-            "distance": 311.40790000000004,
-            "travelTime": 25557
-        },
-        {
-            "srcCode": "0001004440",
-            "destCode": "0001000554",
-            "distance": 21.133599999999998,
-            "travelTime": 2273
-        },
-        {
-            "srcCode": "0001004624",
-            "destCode": "0001000116",
-            "distance": 301.95320000000004,
-            "travelTime": 25217
-        },
-        {
-            "srcCode": "0001004624",
-            "destCode": "0001000554",
-            "distance": 10.4196,
-            "travelTime": 1224
-        },
-        {
-            "srcCode": "0001000116",
-            "destCode": "4000",
-            "distance": 290.4875,
-            "travelTime": 23675
-        },
-        {
-            "srcCode": "4000",
-            "destCode": "0001004624",
-            "distance": 17.3762,
-            "travelTime": 2398
-        },
-        {
-            "srcCode": "0001004624",
-            "destCode": "4000",
-            "distance": 20.394299999999998,
-            "travelTime": 2416
-        },
-        {
-            "srcCode": "4000",
-            "destCode": "0001000554",
-            "distance": 26.734099999999998,
-            "travelTime": 2593
-        },
-        {
-            "srcCode": "0001000554",
-            "destCode": "4000",
-            "distance": 18.827900000000003,
-            "travelTime": 1940
-        },
-        {
-            "srcCode": "4000",
-            "destCode": "0001003008",
-            "distance": 17.3087,
-            "travelTime": 2384
-        }
-    ],
-    "locations": [{
-            "locationCode": "4000",
-            "lat": 10.893504702706572,
-            "lng": 106.71531425540617,
-            "lTypes": [
-                "STATION",
-                "DEPOT"
-            ]
-        },
-        {
-            "locationCode": "0001004238",
-            "lat": 11.2378193,
-            "lng": 106.2508913,
-            "lTypes": [
-                "CUSTOMER"
-            ]
-        },
-        {
-            "locationCode": "0001004448",
-            "lat": 11.1300763,
-            "lng": 106.3436311,
-            "lTypes": [
-                "CUSTOMER"
-            ]
-        },
-        {
-            "locationCode": "0003000441",
-            "lat": 10.779271,
-            "lng": 106.6581369,
-            "lTypes": [
-                "CUSTOMER"
-            ]
-        },
-        {
-            "locationCode": "0001003008",
-            "lat": 10.9480339,
-            "lng": 106.8305392,
-            "lTypes": [
-                "CUSTOMER"
-            ]
-        },
-        {
-            "locationCode": "0001000554",
-            "lat": 10.9056093,
-            "lng": 106.8482451,
-            "lTypes": [
-                "CUSTOMER"
-            ]
-        },
-        {
-            "locationCode": "0001004440",
-            "lat": 10.821663,
-            "lng": 106.8065024,
-            "lTypes": [
-                "CUSTOMER"
-            ]
-        },
-        {
-            "locationCode": "0001004624",
-            "lat": 10.9486312,
-            "lng": 106.8304091,
-            "lTypes": [
-                "CUSTOMER"
-            ]
-        },
-        {
-            "locationCode": "0001000116",
-            "lat": 12.4454452,
-            "lng": 107.6219523,
-            "lTypes": [
-                "CUSTOMER"
-            ]
-        },
-        {
-            "locationCode": "0003000430",
-            "lat": 11.0161803,
-            "lng": 106.8024292,
-            "lTypes": [
-                "CUSTOMER"
-            ]
-        }
-    ],
-    "matrixConfig": {
-        "VD": {},
-        "VC": {
-            "limitedWeight": {
-                "referenceType": {
-                    "customerType": "typeOfCustomerByLimitedWeight"
-                },
-                "matrix": [{
-                        "typeOfCustomer": "no value",
-                        "value": -1
-                    },
-                    {
-                        "typeOfCustomer": "3T",
-                        "value": 3
-                    }
-                ]
-            }
-        },
-        "VV": {
-            "multipleTrips": {
-                "referenceType": {
-                    "vehicleType": "typeOfVehicleByMultipleTrips"
-                },
-                "matrix": [{
-                        "typeOfVehicle": "NC",
-                        "value": -1
-                    },
-                    {
-                        "typeOfVehicle": "1C",
-                        "value": 1
-                    }
-                ]
-            },
-            "maximumCustomerPerRoute": {
-                "referenceType": {
-                    "vehicleType": "typeOfVehicleByLimits"
-                },
-                "matrix": [{
-                        "typeOfVehicle": "IH",
-                        "value": 1000
-                    },
-                    {
-                        "typeOfVehicle": "VD",
-                        "value": 1000
-                    }
-                ]
-            }
-        },
-        "DD": {},
-        "DC": {},
-        "DV": {},
-        "CV": {},
-        "CD": {},
-        "CC": {
-            "customerConflict": {
-                "referenceType": {
-                    "customerType": "typeOfCustomerByArea"
-                },
-                "matrix": [{
-                        "typeOfCustomer1": "72",
-                        "typeOfCustomer2": "72",
-                        "value": 0
-                    },
-                    {
-                        "typeOfCustomer1": "72",
-                        "typeOfCustomer2": "79",
-                        "value": 1
-                    },
-                    {
-                        "typeOfCustomer1": "72",
-                        "typeOfCustomer2": "75",
-                        "value": 1
-                    },
-                    {
-                        "typeOfCustomer1": "72",
-                        "typeOfCustomer2": "67",
-                        "value": 1
-                    },
-                    {
-                        "typeOfCustomer1": "79",
-                        "typeOfCustomer2": "72",
-                        "value": 1
-                    },
-                    {
-                        "typeOfCustomer1": "79",
-                        "typeOfCustomer2": "79",
-                        "value": 0
-                    },
-                    {
-                        "typeOfCustomer1": "79",
-                        "typeOfCustomer2": "75",
-                        "value": 1
-                    },
-                    {
-                        "typeOfCustomer1": "79",
-                        "typeOfCustomer2": "67",
-                        "value": 1
-                    },
-                    {
-                        "typeOfCustomer1": "75",
-                        "typeOfCustomer2": "72",
-                        "value": 1
-                    },
-                    {
-                        "typeOfCustomer1": "75",
-                        "typeOfCustomer2": "79",
-                        "value": 1
-                    },
-                    {
-                        "typeOfCustomer1": "75",
-                        "typeOfCustomer2": "75",
-                        "value": 0
-                    },
-                    {
-                        "typeOfCustomer1": "75",
-                        "typeOfCustomer2": "67",
-                        "value": 1
-                    },
-                    {
-                        "typeOfCustomer1": "67",
-                        "typeOfCustomer2": "72",
-                        "value": 1
-                    },
-                    {
-                        "typeOfCustomer1": "67",
-                        "typeOfCustomer2": "79",
-                        "value": 1
-                    },
-                    {
-                        "typeOfCustomer1": "67",
-                        "typeOfCustomer2": "75",
-                        "value": 1
-                    },
-                    {
-                        "typeOfCustomer1": "67",
-                        "typeOfCustomer2": "67",
-                        "value": 0
-                    }
-                ]
-            }
-        }
+      ],
+      "cType": {
+        "typeOfCustomerByLimitedHour": "fobbidenCusA",
+        "typeOfCustomerByTimeSync": "lessThan30m"
+      }
     },
-    "algoParams": {
-        "objective": {
-            "minimizeTotalDistance": 'false',
-            "minimizeNumberVehicle": 'false',
-            "maximizeFullFillRate": 'false'
+    {
+      "customerCode": "customer_fk1",
+      "locationCode": "5",
+      "district": "zagpylsuz",
+      "fixedUnloadTime": 9,
+      "unloadTimePerTon": 41,
+      "unloadTimePerCbm": 70,
+      "workingTime": {
+        "start": "2021-08-03 08:00:00",
+        "end": "2021-08-03 18:00:00"
+      },
+      "breakTimes": [
+        {
+          "start": "2021-08-03 12:00:00",
+          "end": "2021-08-03 13:00:00"
         }
+      ],
+      "cType": {
+        "typeOfCustomerByLimitedHour": "fobbidenCusA",
+        "typeOfCustomerByTimeSync": "lessThan20m"
+      }
     }
-}
+  ],
+  "requests": [
+    {
+      "orderCode": "req_fk0",
+      "depotCode": "depot_fk0",
+      "customerCode": "customer_fk1",
+      "deliveryLocationCode": "5",
+      "pickupLocationCode": "0",
+      "items": [
+        {
+          "itemCode": "item_fk43",
+          "quantity": 1,
+          "weight": 35343,
+          "cbm": 207900,
+          "size": {
+            "length": 28,
+            "height": 99,
+            "width": 75
+          },
+          "iType": {
+            "typeOfItemByVehicle": "LANH"
+          }
+        },
+        {
+          "itemCode": "item_fk94",
+          "quantity": 45,
+          "weight": 70085,
+          "cbm": 350427,
+          "size": {
+            "length": 111,
+            "height": 77,
+            "width": 41
+          },
+          "iType": {
+            "typeOfItemByVehicle": "DONG"
+          }
+        },
+        {
+          "itemCode": "item_fk70",
+          "quantity": 6,
+          "weight": 64585,
+          "cbm": 56161,
+          "size": {
+            "length": 71,
+            "height": 7,
+            "width": 113
+          },
+          "iType": {
+            "typeOfItemByVehicle": "LANH"
+          }
+        },
+        {
+          "itemCode": "item_fk18",
+          "quantity": 1,
+          "weight": 65637,
+          "cbm": 59670,
+          "size": {
+            "length": 51,
+            "height": 30,
+            "width": 39
+          },
+          "iType": {
+            "typeOfItemByVehicle": "LANH"
+          }
+        },
+        {
+          "itemCode": "item_fk23",
+          "quantity": 49,
+          "weight": 73433,
+          "cbm": 564876,
+          "size": {
+            "length": 71,
+            "height": 117,
+            "width": 68
+          },
+          "iType": {
+            "typeOfItemByVehicle": "DONG"
+          }
+        },
+        {
+          "itemCode": "item_fk57",
+          "quantity": 40,
+          "weight": 233587,
+          "cbm": 278080,
+          "size": {
+            "length": 32,
+            "height": 79,
+            "width": 110
+          },
+          "iType": {
+            "typeOfItemByVehicle": "DONG"
+          }
+        },
+        {
+          "itemCode": "item_fk49",
+          "quantity": 27,
+          "weight": 46819,
+          "cbm": 44590,
+          "size": {
+            "length": 49,
+            "height": 26,
+            "width": 35
+          },
+          "iType": {
+            "typeOfItemByVehicle": "DONG"
+          }
+        },
+        {
+          "itemCode": "item_fk75",
+          "quantity": 24,
+          "weight": 158135,
+          "cbm": 142464,
+          "size": {
+            "length": 64,
+            "height": 106,
+            "width": 21
+          },
+          "iType": {
+            "typeOfItemByVehicle": "DONG"
+          }
+        }
+      ]
+    },
+    {
+      "orderCode": "req_fk1",
+      "depotCode": "depot_fk0",
+      "customerCode": "customer_fk0",
+      "deliveryLocationCode": "3",
+      "pickupLocationCode": "0",
+      "items": [
+        {
+          "itemCode": "item_fk65",
+          "quantity": 36,
+          "weight": 113769,
+          "cbm": 258566,
+          "size": {
+            "length": 46,
+            "height": 77,
+            "width": 73
+          },
+          "iType": {
+            "typeOfItemByVehicle": "LANH"
+          }
+        },
+        {
+          "itemCode": "item_fk62",
+          "quantity": 48,
+          "weight": 4121,
+          "cbm": 51516,
+          "size": {
+            "length": 27,
+            "height": 106,
+            "width": 18
+          },
+          "iType": {
+            "typeOfItemByVehicle": "DONG"
+          }
+        }
+      ]
+    },
+    {
+      "orderCode": "req_fk2",
+      "depotCode": "depot_fk0",
+      "customerCode": "customer_fk1",
+      "deliveryLocationCode": "5",
+      "pickupLocationCode": "0",
+      "items": [
+        {
+          "itemCode": "item_fk31",
+          "quantity": 29,
+          "weight": 55216,
+          "cbm": 157760,
+          "size": {
+            "length": 85,
+            "height": 16,
+            "width": 116
+          },
+          "iType": {
+            "typeOfItemByVehicle": "LANH"
+          }
+        },
+        {
+          "itemCode": "item_fk35",
+          "quantity": 27,
+          "weight": 59690,
+          "cbm": 62832,
+          "size": {
+            "length": 33,
+            "height": 119,
+            "width": 16
+          },
+          "iType": {
+            "typeOfItemByVehicle": "LANH"
+          }
+        },
+        {
+          "itemCode": "item_fk3",
+          "quantity": 6,
+          "weight": 296826,
+          "cbm": 361984,
+          "size": {
+            "length": 101,
+            "height": 56,
+            "width": 64
+          },
+          "iType": {
+            "typeOfItemByVehicle": "LANH"
+          }
+        },
+        {
+          "itemCode": "item_fk25",
+          "quantity": 45,
+          "weight": 160061,
+          "cbm": 363776,
+          "size": {
+            "length": 64,
+            "height": 58,
+            "width": 98
+          },
+          "iType": {
+            "typeOfItemByVehicle": "LANH"
+          }
+        }
+      ]
+    },
+    {
+      "orderCode": "req_fk3",
+      "depotCode": "depot_fk0",
+      "customerCode": "customer_fk0",
+      "deliveryLocationCode": "3",
+      "pickupLocationCode": "0",
+      "items": [
+        {
+          "itemCode": "item_fk80",
+          "quantity": 10,
+          "weight": 84374,
+          "cbm": 179520,
+          "size": {
+            "length": 34,
+            "height": 55,
+            "width": 96
+          },
+          "iType": {
+            "typeOfItemByVehicle": "LANH"
+          }
+        },
+        {
+          "itemCode": "item_fk78",
+          "quantity": 18,
+          "weight": 201152,
+          "cbm": 558756,
+          "size": {
+            "length": 99,
+            "height": 68,
+            "width": 83
+          },
+          "iType": {
+            "typeOfItemByVehicle": "LANH"
+          }
+        },
+        {
+          "itemCode": "item_fk3",
+          "quantity": 6,
+          "weight": 296826,
+          "cbm": 361984,
+          "size": {
+            "length": 101,
+            "height": 56,
+            "width": 64
+          },
+          "iType": {
+            "typeOfItemByVehicle": "LANH"
+          }
+        },
+        {
+          "itemCode": "item_fk17",
+          "quantity": 49,
+          "weight": 15985,
+          "cbm": 51566,
+          "size": {
+            "length": 59,
+            "height": 23,
+            "width": 38
+          },
+          "iType": {
+            "typeOfItemByVehicle": "DONG"
+          }
+        }
+      ]
+    },
+    {
+      "orderCode": "req_fk4",
+      "depotCode": "depot_fk0",
+      "customerCode": "customer_fk0",
+      "deliveryLocationCode": "3",
+      "pickupLocationCode": "0",
+      "items": [
+        {
+          "itemCode": "item_fk85",
+          "quantity": 21,
+          "weight": 6870,
+          "cbm": 23693,
+          "size": {
+            "length": 29,
+            "height": 43,
+            "width": 19
+          },
+          "iType": {
+            "typeOfItemByVehicle": "LANH"
+          }
+        },
+        {
+          "itemCode": "item_fk2",
+          "quantity": 15,
+          "weight": 31693,
+          "cbm": 150920,
+          "size": {
+            "length": 77,
+            "height": 70,
+            "width": 28
+          },
+          "iType": {
+            "typeOfItemByVehicle": "LANH"
+          }
+        },
+        {
+          "itemCode": "item_fk17",
+          "quantity": 49,
+          "weight": 15985,
+          "cbm": 51566,
+          "size": {
+            "length": 59,
+            "height": 23,
+            "width": 38
+          },
+          "iType": {
+            "typeOfItemByVehicle": "DONG"
+          }
+        },
+        {
+          "itemCode": "item_fk82",
+          "quantity": 24,
+          "weight": 7361,
+          "cbm": 8560,
+          "size": {
+            "length": 16,
+            "height": 107,
+            "width": 5
+          },
+          "iType": {
+            "typeOfItemByVehicle": "DONG"
+          }
+        },
+        {
+          "itemCode": "item_fk62",
+          "quantity": 48,
+          "weight": 4121,
+          "cbm": 51516,
+          "size": {
+            "length": 27,
+            "height": 106,
+            "width": 18
+          },
+          "iType": {
+            "typeOfItemByVehicle": "DONG"
+          }
+        },
+        {
+          "itemCode": "item_fk27",
+          "quantity": 7,
+          "weight": 29481,
+          "cbm": 113390,
+          "size": {
+            "length": 85,
+            "height": 58,
+            "width": 23
+          },
+          "iType": {
+            "typeOfItemByVehicle": "LANH"
+          }
+        }
+      ]
+    },
+    {
+      "orderCode": "req_fk5",
+      "depotCode": "depot_fk0",
+      "customerCode": "customer_fk0",
+      "deliveryLocationCode": "3",
+      "pickupLocationCode": "0",
+      "items": [
+        {
+          "itemCode": "item_fk52",
+          "quantity": 46,
+          "weight": 3652,
+          "cbm": 9612,
+          "size": {
+            "length": 6,
+            "height": 89,
+            "width": 18
+          },
+          "iType": {
+            "typeOfItemByVehicle": "DONG"
+          }
+        },
+        {
+          "itemCode": "item_fk1",
+          "quantity": 11,
+          "weight": 95630,
+          "cbm": 233244,
+          "size": {
+            "length": 62,
+            "height": 57,
+            "width": 66
+          },
+          "iType": {
+            "typeOfItemByVehicle": "LANH"
+          }
+        },
+        {
+          "itemCode": "item_fk26",
+          "quantity": 20,
+          "weight": 364240,
+          "cbm": 449680,
+          "size": {
+            "length": 56,
+            "height": 110,
+            "width": 73
+          },
+          "iType": {
+            "typeOfItemByVehicle": "DONG"
+          }
+        },
+        {
+          "itemCode": "item_fk69",
+          "quantity": 5,
+          "weight": 28350,
+          "cbm": 37800,
+          "size": {
+            "length": 36,
+            "height": 70,
+            "width": 15
+          },
+          "iType": {
+            "typeOfItemByVehicle": "LANH"
+          }
+        },
+        {
+          "itemCode": "item_fk99",
+          "quantity": 2,
+          "weight": 498827,
+          "cbm": 656352,
+          "size": {
+            "length": 106,
+            "height": 72,
+            "width": 86
+          },
+          "iType": {
+            "typeOfItemByVehicle": "DONG"
+          }
+        },
+        {
+          "itemCode": "item_fk46",
+          "quantity": 14,
+          "weight": 356,
+          "cbm": 17808,
+          "size": {
+            "length": 48,
+            "height": 7,
+            "width": 53
+          },
+          "iType": {
+            "typeOfItemByVehicle": "DONG"
+          }
+        },
+        {
+          "itemCode": "item_fk45",
+          "quantity": 19,
+          "weight": 31387,
+          "cbm": 44840,
+          "size": {
+            "length": 118,
+            "height": 38,
+            "width": 10
+          },
+          "iType": {
+            "typeOfItemByVehicle": "LANH"
+          }
+        },
+        {
+          "itemCode": "item_fk42",
+          "quantity": 42,
+          "weight": 8359,
+          "cbm": 104490,
+          "size": {
+            "length": 15,
+            "height": 81,
+            "width": 86
+          },
+          "iType": {
+            "typeOfItemByVehicle": "DONG"
+          }
+        }
+      ]
+    },
+    {
+      "orderCode": "req_fk6",
+      "depotCode": "depot_fk0",
+      "customerCode": "customer_fk0",
+      "deliveryLocationCode": "3",
+      "pickupLocationCode": "0",
+      "items": [
+        {
+          "itemCode": "item_fk80",
+          "quantity": 10,
+          "weight": 84374,
+          "cbm": 179520,
+          "size": {
+            "length": 34,
+            "height": 55,
+            "width": 96
+          },
+          "iType": {
+            "typeOfItemByVehicle": "LANH"
+          }
+        },
+        {
+          "itemCode": "item_fk30",
+          "quantity": 15,
+          "weight": 194842,
+          "cbm": 249798,
+          "size": {
+            "length": 62,
+            "height": 51,
+            "width": 79
+          },
+          "iType": {
+            "typeOfItemByVehicle": "DONG"
+          }
+        },
+        {
+          "itemCode": "item_fk69",
+          "quantity": 5,
+          "weight": 28350,
+          "cbm": 37800,
+          "size": {
+            "length": 36,
+            "height": 70,
+            "width": 15
+          },
+          "iType": {
+            "typeOfItemByVehicle": "LANH"
+          }
+        },
+        {
+          "itemCode": "item_fk0",
+          "quantity": 9,
+          "weight": 2177,
+          "cbm": 12096,
+          "size": {
+            "length": 18,
+            "height": 7,
+            "width": 96
+          },
+          "iType": {
+            "typeOfItemByVehicle": "DONG"
+          }
+        },
+        {
+          "itemCode": "item_fk57",
+          "quantity": 40,
+          "weight": 233587,
+          "cbm": 278080,
+          "size": {
+            "length": 32,
+            "height": 79,
+            "width": 110
+          },
+          "iType": {
+            "typeOfItemByVehicle": "DONG"
+          }
+        },
+        {
+          "itemCode": "item_fk68",
+          "quantity": 35,
+          "weight": 4435,
+          "cbm": 6720,
+          "size": {
+            "length": 10,
+            "height": 8,
+            "width": 84
+          },
+          "iType": {
+            "typeOfItemByVehicle": "DONG"
+          }
+        },
+        {
+          "itemCode": "item_fk33",
+          "quantity": 1,
+          "weight": 15998,
+          "cbm": 319968,
+          "size": {
+            "length": 101,
+            "height": 72,
+            "width": 44
+          },
+          "iType": {
+            "typeOfItemByVehicle": "DONG"
+          }
+        },
+        {
+          "itemCode": "item_fk26",
+          "quantity": 20,
+          "weight": 364240,
+          "cbm": 449680,
+          "size": {
+            "length": 56,
+            "height": 110,
+            "width": 73
+          },
+          "iType": {
+            "typeOfItemByVehicle": "DONG"
+          }
+        }
+      ]
+    },
+    {
+      "orderCode": "req_fk7",
+      "depotCode": "depot_fk0",
+      "customerCode": "customer_fk0",
+      "deliveryLocationCode": "3",
+      "pickupLocationCode": "0",
+      "items": [
+        {
+          "itemCode": "item_fk21",
+          "quantity": 35,
+          "weight": 945703,
+          "cbm": 1006068,
+          "size": {
+            "length": 87,
+            "height": 118,
+            "width": 98
+          },
+          "iType": {
+            "typeOfItemByVehicle": "DONG"
+          }
+        },
+        {
+          "itemCode": "item_fk1",
+          "quantity": 11,
+          "weight": 95630,
+          "cbm": 233244,
+          "size": {
+            "length": 62,
+            "height": 57,
+            "width": 66
+          },
+          "iType": {
+            "typeOfItemByVehicle": "LANH"
+          }
+        },
+        {
+          "itemCode": "item_fk29",
+          "quantity": 22,
+          "weight": 44853,
+          "cbm": 345030,
+          "size": {
+            "length": 93,
+            "height": 106,
+            "width": 35
+          },
+          "iType": {
+            "typeOfItemByVehicle": "DONG"
+          }
+        },
+        {
+          "itemCode": "item_fk50",
+          "quantity": 31,
+          "weight": 504306,
+          "cbm": 514598,
+          "size": {
+            "length": 98,
+            "height": 59,
+            "width": 89
+          },
+          "iType": {
+            "typeOfItemByVehicle": "DONG"
+          }
+        },
+        {
+          "itemCode": "item_fk70",
+          "quantity": 6,
+          "weight": 64585,
+          "cbm": 56161,
+          "size": {
+            "length": 71,
+            "height": 7,
+            "width": 113
+          },
+          "iType": {
+            "typeOfItemByVehicle": "LANH"
+          }
+        }
+      ]
+    },
+    {
+      "orderCode": "req_fk8",
+      "depotCode": "depot_fk0",
+      "customerCode": "customer_fk0",
+      "deliveryLocationCode": "3",
+      "pickupLocationCode": "0",
+      "items": [
+        {
+          "itemCode": "item_fk32",
+          "quantity": 14,
+          "weight": 8812,
+          "cbm": 110160,
+          "size": {
+            "length": 20,
+            "height": 108,
+            "width": 51
+          },
+          "iType": {
+            "typeOfItemByVehicle": "DONG"
+          }
+        }
+      ]
+    },
+    {
+      "orderCode": "req_fk9",
+      "depotCode": "depot_fk0",
+      "customerCode": "customer_fk0",
+      "deliveryLocationCode": "3",
+      "pickupLocationCode": "0",
+      "items": [
+        {
+          "itemCode": "item_fk84",
+          "quantity": 50,
+          "weight": 39567,
+          "cbm": 123648,
+          "size": {
+            "length": 46,
+            "height": 64,
+            "width": 42
+          },
+          "iType": {
+            "typeOfItemByVehicle": "LANH"
+          }
+        },
+        {
+          "itemCode": "item_fk11",
+          "quantity": 38,
+          "weight": 101315,
+          "cbm": 92950,
+          "size": {
+            "length": 13,
+            "height": 65,
+            "width": 110
+          },
+          "iType": {
+            "typeOfItemByVehicle": "LANH"
+          }
+        }
+      ]
+    },
+    {
+      "orderCode": "req_fk10",
+      "depotCode": "depot_fk0",
+      "customerCode": "customer_fk1",
+      "deliveryLocationCode": "5",
+      "pickupLocationCode": "0",
+      "items": [
+        {
+          "itemCode": "item_fk1",
+          "quantity": 11,
+          "weight": 95630,
+          "cbm": 233244,
+          "size": {
+            "length": 62,
+            "height": 57,
+            "width": 66
+          },
+          "iType": {
+            "typeOfItemByVehicle": "LANH"
+          }
+        },
+        {
+          "itemCode": "item_fk88",
+          "quantity": 45,
+          "weight": 23025,
+          "cbm": 22140,
+          "size": {
+            "length": 30,
+            "height": 41,
+            "width": 18
+          },
+          "iType": {
+            "typeOfItemByVehicle": "DONG"
+          }
+        },
+        {
+          "itemCode": "item_fk97",
+          "quantity": 6,
+          "weight": 27696,
+          "cbm": 35970,
+          "size": {
+            "length": 33,
+            "height": 109,
+            "width": 10
+          },
+          "iType": {
+            "typeOfItemByVehicle": "LANH"
+          }
+        },
+        {
+          "itemCode": "item_fk83",
+          "quantity": 34,
+          "weight": 8459,
+          "cbm": 38454,
+          "size": {
+            "length": 87,
+            "height": 17,
+            "width": 26
+          },
+          "iType": {
+            "typeOfItemByVehicle": "DONG"
+          }
+        },
+        {
+          "itemCode": "item_fk99",
+          "quantity": 2,
+          "weight": 498827,
+          "cbm": 656352,
+          "size": {
+            "length": 106,
+            "height": 72,
+            "width": 86
+          },
+          "iType": {
+            "typeOfItemByVehicle": "DONG"
+          }
+        },
+        {
+          "itemCode": "item_fk75",
+          "quantity": 24,
+          "weight": 158135,
+          "cbm": 142464,
+          "size": {
+            "length": 64,
+            "height": 106,
+            "width": 21
+          },
+          "iType": {
+            "typeOfItemByVehicle": "DONG"
+          }
+        }
+      ]
+    },
+    {
+      "orderCode": "req_fk11",
+      "depotCode": "depot_fk0",
+      "customerCode": "customer_fk0",
+      "deliveryLocationCode": "3",
+      "pickupLocationCode": "0",
+      "items": [
+        {
+          "itemCode": "item_fk79",
+          "quantity": 39,
+          "weight": 5838,
+          "cbm": 145962,
+          "size": {
+            "length": 53,
+            "height": 34,
+            "width": 81
+          },
+          "iType": {
+            "typeOfItemByVehicle": "LANH"
+          }
+        },
+        {
+          "itemCode": "item_fk66",
+          "quantity": 26,
+          "weight": 2171,
+          "cbm": 31020,
+          "size": {
+            "length": 33,
+            "height": 10,
+            "width": 94
+          },
+          "iType": {
+            "typeOfItemByVehicle": "LANH"
+          }
+        },
+        {
+          "itemCode": "item_fk92",
+          "quantity": 1,
+          "weight": 13674,
+          "cbm": 27348,
+          "size": {
+            "length": 6,
+            "height": 86,
+            "width": 53
+          },
+          "iType": {
+            "typeOfItemByVehicle": "DONG"
+          }
+        },
+        {
+          "itemCode": "item_fk31",
+          "quantity": 29,
+          "weight": 55216,
+          "cbm": 157760,
+          "size": {
+            "length": 85,
+            "height": 16,
+            "width": 116
+          },
+          "iType": {
+            "typeOfItemByVehicle": "LANH"
+          }
+        },
+        {
+          "itemCode": "item_fk48",
+          "quantity": 18,
+          "weight": 126774,
+          "cbm": 106533,
+          "size": {
+            "length": 19,
+            "height": 89,
+            "width": 63
+          },
+          "iType": {
+            "typeOfItemByVehicle": "DONG"
+          }
+        }
+      ]
+    },
+    {
+      "orderCode": "req_fk12",
+      "depotCode": "depot_fk0",
+      "customerCode": "customer_fk0",
+      "deliveryLocationCode": "3",
+      "pickupLocationCode": "0",
+      "items": [
+        {
+          "itemCode": "item_fk12",
+          "quantity": 22,
+          "weight": 221814,
+          "cbm": 382439,
+          "size": {
+            "length": 47,
+            "height": 79,
+            "width": 103
+          },
+          "iType": {
+            "typeOfItemByVehicle": "LANH"
+          }
+        },
+        {
+          "itemCode": "item_fk81",
+          "quantity": 21,
+          "weight": 332799,
+          "cbm": 354042,
+          "size": {
+            "length": 39,
+            "height": 89,
+            "width": 102
+          },
+          "iType": {
+            "typeOfItemByVehicle": "DONG"
+          }
+        },
+        {
+          "itemCode": "item_fk86",
+          "quantity": 42,
+          "weight": 29925,
+          "cbm": 110837,
+          "size": {
+            "length": 23,
+            "height": 79,
+            "width": 61
+          },
+          "iType": {
+            "typeOfItemByVehicle": "LANH"
+          }
+        },
+        {
+          "itemCode": "item_fk40",
+          "quantity": 48,
+          "weight": 110352,
+          "cbm": 125400,
+          "size": {
+            "length": 88,
+            "height": 19,
+            "width": 75
+          },
+          "iType": {
+            "typeOfItemByVehicle": "LANH"
+          }
+        },
+        {
+          "itemCode": "item_fk87",
+          "quantity": 30,
+          "weight": 17920,
+          "cbm": 44800,
+          "size": {
+            "length": 100,
+            "height": 8,
+            "width": 56
+          },
+          "iType": {
+            "typeOfItemByVehicle": "LANH"
+          }
+        }
+      ]
+    },
+    {
+      "orderCode": "req_fk13",
+      "depotCode": "depot_fk0",
+      "customerCode": "customer_fk1",
+      "deliveryLocationCode": "5",
+      "pickupLocationCode": "0",
+      "items": [
+        {
+          "itemCode": "item_fk42",
+          "quantity": 42,
+          "weight": 8359,
+          "cbm": 104490,
+          "size": {
+            "length": 15,
+            "height": 81,
+            "width": 86
+          },
+          "iType": {
+            "typeOfItemByVehicle": "DONG"
+          }
+        },
+        {
+          "itemCode": "item_fk55",
+          "quantity": 4,
+          "weight": 167307,
+          "cbm": 315675,
+          "size": {
+            "length": 115,
+            "height": 61,
+            "width": 45
+          },
+          "iType": {
+            "typeOfItemByVehicle": "DONG"
+          }
+        },
+        {
+          "itemCode": "item_fk62",
+          "quantity": 48,
+          "weight": 4121,
+          "cbm": 51516,
+          "size": {
+            "length": 27,
+            "height": 106,
+            "width": 18
+          },
+          "iType": {
+            "typeOfItemByVehicle": "DONG"
+          }
+        },
+        {
+          "itemCode": "item_fk17",
+          "quantity": 49,
+          "weight": 15985,
+          "cbm": 51566,
+          "size": {
+            "length": 59,
+            "height": 23,
+            "width": 38
+          },
+          "iType": {
+            "typeOfItemByVehicle": "DONG"
+          }
+        },
+        {
+          "itemCode": "item_fk53",
+          "quantity": 43,
+          "weight": 11082,
+          "cbm": 29952,
+          "size": {
+            "length": 96,
+            "height": 52,
+            "width": 6
+          },
+          "iType": {
+            "typeOfItemByVehicle": "LANH"
+          }
+        },
+        {
+          "itemCode": "item_fk96",
+          "quantity": 33,
+          "weight": 345720,
+          "cbm": 320112,
+          "size": {
+            "length": 108,
+            "height": 52,
+            "width": 57
+          },
+          "iType": {
+            "typeOfItemByVehicle": "DONG"
+          }
+        },
+        {
+          "itemCode": "item_fk98",
+          "quantity": 3,
+          "weight": 1674,
+          "cbm": 7280,
+          "size": {
+            "length": 7,
+            "height": 40,
+            "width": 26
+          },
+          "iType": {
+            "typeOfItemByVehicle": "DONG"
+          }
+        }
+      ]
+    },
+    {
+      "orderCode": "req_fk14",
+      "depotCode": "depot_fk0",
+      "customerCode": "customer_fk1",
+      "deliveryLocationCode": "5",
+      "pickupLocationCode": "0",
+      "items": [
+        {
+          "itemCode": "item_fk49",
+          "quantity": 27,
+          "weight": 46819,
+          "cbm": 44590,
+          "size": {
+            "length": 49,
+            "height": 26,
+            "width": 35
+          },
+          "iType": {
+            "typeOfItemByVehicle": "DONG"
+          }
+        },
+        {
+          "itemCode": "item_fk54",
+          "quantity": 39,
+          "weight": 6773,
+          "cbm": 42336,
+          "size": {
+            "length": 14,
+            "height": 108,
+            "width": 28
+          },
+          "iType": {
+            "typeOfItemByVehicle": "DONG"
+          }
+        }
+      ]
+    },
+    {
+      "orderCode": "req_fk15",
+      "depotCode": "depot_fk0",
+      "customerCode": "customer_fk0",
+      "deliveryLocationCode": "3",
+      "pickupLocationCode": "0",
+      "items": [
+        {
+          "itemCode": "item_fk65",
+          "quantity": 36,
+          "weight": 113769,
+          "cbm": 258566,
+          "size": {
+            "length": 46,
+            "height": 77,
+            "width": 73
+          },
+          "iType": {
+            "typeOfItemByVehicle": "LANH"
+          }
+        }
+      ]
+    },
+    {
+      "orderCode": "req_fk16",
+      "depotCode": "depot_fk0",
+      "customerCode": "customer_fk0",
+      "deliveryLocationCode": "3",
+      "pickupLocationCode": "0",
+      "items": [
+        {
+          "itemCode": "item_fk87",
+          "quantity": 30,
+          "weight": 17920,
+          "cbm": 44800,
+          "size": {
+            "length": 100,
+            "height": 8,
+            "width": 56
+          },
+          "iType": {
+            "typeOfItemByVehicle": "LANH"
+          }
+        },
+        {
+          "itemCode": "item_fk4",
+          "quantity": 12,
+          "weight": 35193,
+          "cbm": 439920,
+          "size": {
+            "length": 90,
+            "height": 94,
+            "width": 52
+          },
+          "iType": {
+            "typeOfItemByVehicle": "LANH"
+          }
+        },
+        {
+          "itemCode": "item_fk93",
+          "quantity": 32,
+          "weight": 385560,
+          "cbm": 481950,
+          "size": {
+            "length": 119,
+            "height": 45,
+            "width": 90
+          },
+          "iType": {
+            "typeOfItemByVehicle": "DONG"
+          }
+        },
+        {
+          "itemCode": "item_fk79",
+          "quantity": 39,
+          "weight": 5838,
+          "cbm": 145962,
+          "size": {
+            "length": 53,
+            "height": 34,
+            "width": 81
+          },
+          "iType": {
+            "typeOfItemByVehicle": "LANH"
+          }
+        }
+      ]
+    },
+    {
+      "orderCode": "req_fk17",
+      "depotCode": "depot_fk0",
+      "customerCode": "customer_fk0",
+      "deliveryLocationCode": "3",
+      "pickupLocationCode": "0",
+      "items": [
+        {
+          "itemCode": "item_fk48",
+          "quantity": 18,
+          "weight": 126774,
+          "cbm": 106533,
+          "size": {
+            "length": 19,
+            "height": 89,
+            "width": 63
+          },
+          "iType": {
+            "typeOfItemByVehicle": "DONG"
+          }
+        }
+      ]
+    },
+    {
+      "orderCode": "req_fk18",
+      "depotCode": "depot_fk0",
+      "customerCode": "customer_fk1",
+      "deliveryLocationCode": "5",
+      "pickupLocationCode": "0",
+      "items": [
+        {
+          "itemCode": "item_fk29",
+          "quantity": 22,
+          "weight": 44853,
+          "cbm": 345030,
+          "size": {
+            "length": 93,
+            "height": 106,
+            "width": 35
+          },
+          "iType": {
+            "typeOfItemByVehicle": "DONG"
+          }
+        },
+        {
+          "itemCode": "item_fk41",
+          "quantity": 6,
+          "weight": 14826,
+          "cbm": 57024,
+          "size": {
+            "length": 81,
+            "height": 64,
+            "width": 11
+          },
+          "iType": {
+            "typeOfItemByVehicle": "LANH"
+          }
+        },
+        {
+          "itemCode": "item_fk25",
+          "quantity": 45,
+          "weight": 160061,
+          "cbm": 363776,
+          "size": {
+            "length": 64,
+            "height": 58,
+            "width": 98
+          },
+          "iType": {
+            "typeOfItemByVehicle": "LANH"
+          }
+        },
+        {
+          "itemCode": "item_fk42",
+          "quantity": 42,
+          "weight": 8359,
+          "cbm": 104490,
+          "size": {
+            "length": 15,
+            "height": 81,
+            "width": 86
+          },
+          "iType": {
+            "typeOfItemByVehicle": "DONG"
+          }
+        },
+        {
+          "itemCode": "item_fk44",
+          "quantity": 15,
+          "weight": 446019,
+          "cbm": 782491,
+          "size": {
+            "length": 103,
+            "height": 71,
+            "width": 107
+          },
+          "iType": {
+            "typeOfItemByVehicle": "LANH"
+          }
+        },
+        {
+          "itemCode": "item_fk63",
+          "quantity": 12,
+          "weight": 154552,
+          "cbm": 643968,
+          "size": {
+            "length": 104,
+            "height": 86,
+            "width": 72
+          },
+          "iType": {
+            "typeOfItemByVehicle": "LANH"
+          }
+        },
+        {
+          "itemCode": "item_fk57",
+          "quantity": 40,
+          "weight": 233587,
+          "cbm": 278080,
+          "size": {
+            "length": 32,
+            "height": 79,
+            "width": 110
+          },
+          "iType": {
+            "typeOfItemByVehicle": "DONG"
+          }
+        }
+      ]
+    },
+    {
+      "orderCode": "req_fk19",
+      "depotCode": "depot_fk0",
+      "customerCode": "customer_fk0",
+      "deliveryLocationCode": "3",
+      "pickupLocationCode": "0",
+      "items": [
+        {
+          "itemCode": "item_fk22",
+          "quantity": 41,
+          "weight": 3914,
+          "cbm": 3591,
+          "size": {
+            "length": 27,
+            "height": 7,
+            "width": 19
+          },
+          "iType": {
+            "typeOfItemByVehicle": "LANH"
+          }
+        },
+        {
+          "itemCode": "item_fk88",
+          "quantity": 45,
+          "weight": 23025,
+          "cbm": 22140,
+          "size": {
+            "length": 30,
+            "height": 41,
+            "width": 18
+          },
+          "iType": {
+            "typeOfItemByVehicle": "DONG"
+          }
+        }
+      ]
+    }
+  ],
+  "vehicles": [
+    {
+      "vehicleCode": "vehicle_fk0",
+      "cbm": 11957765,
+      "capacity": 1500000,
+      "quantity": 1,
+      "size": {
+        "length": 365,
+        "height": 181,
+        "width": 181
+      },
+      "loadTimePerTon": 68,
+      "unloadTimePerTon": 21,
+      "loadTimePerCbm": 49,
+      "unloadTimePerCbm": 34,
+      "startLocationCode": "0",
+      "startLocationType": "DEPOT",
+      "endLocationCode": "0",
+      "endLocationType": "DEPOT",
+      "workingTime": {
+        "start": "2021-08-03 08:00:00",
+        "end": "2021-08-03 18:00:00"
+      },
+      "breakTimes": [
 
+      ],
+      "vType": {
+        "typeOfVehicleByMultipleTrips": "1C",
+        "typeOfVehicleToItemRule": "XE DONG",
+        "typeOfVehicleByLimitedHour": "fobbidenVehB",
+        "typeOfVehicleByLimits": "typeC",
+        "typeOfVehicleByCostToDeploy": "costE",
+        "typeOfVehicleByPricePerKm": "ppkD"
+      }
+    },
+    {
+      "vehicleCode": "vehicle_fk1",
+      "cbm": 31680000,
+      "capacity": 5000000,
+      "quantity": 1,
+      "size": {
+        "length": 600,
+        "height": 240,
+        "width": 220
+      },
+      "loadTimePerTon": 30,
+      "unloadTimePerTon": 37,
+      "loadTimePerCbm": 34,
+      "unloadTimePerCbm": 49,
+      "startLocationCode": "0",
+      "startLocationType": "DEPOT",
+      "endLocationCode": "0",
+      "endLocationType": "DEPOT",
+      "workingTime": {
+        "start": "2021-08-03 08:00:00",
+        "end": "2021-08-03 18:00:00"
+      },
+      "breakTimes": [
+
+      ],
+      "vType": {
+        "typeOfVehicleByMultipleTrips": "1C",
+        "typeOfVehicleToItemRule": "XE LANH",
+        "typeOfVehicleByLimitedHour": "fobbidenVehC",
+        "typeOfVehicleByLimits": "typeD",
+        "typeOfVehicleByCostToDeploy": "costA",
+        "typeOfVehicleByPricePerKm": "ppkC"
+      }
+    },
+    {
+      "vehicleCode": "vehicle_fk2",
+      "cbm": 76917120,
+      "capacity": 15000000,
+      "quantity": 1,
+      "size": {
+        "length": 970,
+        "height": 236,
+        "width": 336
+      },
+      "loadTimePerTon": 26,
+      "unloadTimePerTon": 58,
+      "loadTimePerCbm": 35,
+      "unloadTimePerCbm": 31,
+      "startLocationCode": "0",
+      "startLocationType": "DEPOT",
+      "endLocationCode": "0",
+      "endLocationType": "DEPOT",
+      "workingTime": {
+        "start": "2021-08-03 08:00:00",
+        "end": "2021-08-03 18:00:00"
+      },
+      "breakTimes": [
+
+      ],
+      "vType": {
+        "typeOfVehicleByMultipleTrips": "3C",
+        "typeOfVehicleToItemRule": "XE DONG",
+        "typeOfVehicleByLimitedHour": "fobbidenVehA",
+        "typeOfVehicleByLimits": "typeC",
+        "typeOfVehicleByCostToDeploy": "costB",
+        "typeOfVehicleByPricePerKm": "ppkB"
+      }
+    },
+    {
+      "vehicleCode": "vehicle_fk3",
+      "cbm": 76917120,
+      "capacity": 15000000,
+      "quantity": 1,
+      "size": {
+        "length": 970,
+        "height": 236,
+        "width": 336
+      },
+      "loadTimePerTon": 67,
+      "unloadTimePerTon": 76,
+      "loadTimePerCbm": 45,
+      "unloadTimePerCbm": 42,
+      "startLocationCode": "0",
+      "startLocationType": "DEPOT",
+      "endLocationCode": "0",
+      "endLocationType": "DEPOT",
+      "workingTime": {
+        "start": "2021-08-03 08:00:00",
+        "end": "2021-08-03 18:00:00"
+      },
+      "breakTimes": [
+
+      ],
+      "vType": {
+        "typeOfVehicleByMultipleTrips": "2C",
+        "typeOfVehicleToItemRule": "XE DONG",
+        "typeOfVehicleByLimitedHour": "fobbidenVehC",
+        "typeOfVehicleByLimits": "typeC",
+        "typeOfVehicleByCostToDeploy": "costC",
+        "typeOfVehicleByPricePerKm": "ppkA"
+      }
+    },
+    {
+      "vehicleCode": "vehicle_fk4",
+      "cbm": 16340000,
+      "capacity": 2500000,
+      "quantity": 1,
+      "size": {
+        "length": 430,
+        "height": 200,
+        "width": 190
+      },
+      "loadTimePerTon": 89,
+      "unloadTimePerTon": 79,
+      "loadTimePerCbm": 38,
+      "unloadTimePerCbm": 48,
+      "startLocationCode": "0",
+      "startLocationType": "DEPOT",
+      "endLocationCode": "0",
+      "endLocationType": "DEPOT",
+      "workingTime": {
+        "start": "2021-08-03 08:00:00",
+        "end": "2021-08-03 18:00:00"
+      },
+      "breakTimes": [
+
+      ],
+      "vType": {
+        "typeOfVehicleByMultipleTrips": "3C",
+        "typeOfVehicleToItemRule": "XE DONG",
+        "typeOfVehicleByLimitedHour": "fobbidenVehB",
+        "typeOfVehicleByLimits": "typeA",
+        "typeOfVehicleByCostToDeploy": "costA",
+        "typeOfVehicleByPricePerKm": "ppkE"
+      }
+    },
+    {
+      "vehicleCode": "vehicle_fk5",
+      "cbm": 31680000,
+      "capacity": 5000000,
+      "quantity": 1,
+      "size": {
+        "length": 600,
+        "height": 240,
+        "width": 220
+      },
+      "loadTimePerTon": 61,
+      "unloadTimePerTon": 39,
+      "loadTimePerCbm": 29,
+      "unloadTimePerCbm": 30,
+      "startLocationCode": "0",
+      "startLocationType": "DEPOT",
+      "endLocationCode": "0",
+      "endLocationType": "DEPOT",
+      "workingTime": {
+        "start": "2021-08-03 08:00:00",
+        "end": "2021-08-03 18:00:00"
+      },
+      "breakTimes": [
+
+      ],
+      "vType": {
+        "typeOfVehicleByMultipleTrips": "2C",
+        "typeOfVehicleToItemRule": "XE DONG",
+        "typeOfVehicleByLimitedHour": "fobbidenVehA",
+        "typeOfVehicleByLimits": "typeA",
+        "typeOfVehicleByCostToDeploy": "costC",
+        "typeOfVehicleByPricePerKm": "ppkC"
+      }
+    },
+    {
+      "vehicleCode": "vehicle_fk6",
+      "cbm": 16340000,
+      "capacity": 2500000,
+      "quantity": 1,
+      "size": {
+        "length": 430,
+        "height": 200,
+        "width": 190
+      },
+      "loadTimePerTon": 28,
+      "unloadTimePerTon": 80,
+      "loadTimePerCbm": 47,
+      "unloadTimePerCbm": 40,
+      "startLocationCode": "0",
+      "startLocationType": "DEPOT",
+      "endLocationCode": "0",
+      "endLocationType": "DEPOT",
+      "workingTime": {
+        "start": "2021-08-03 08:00:00",
+        "end": "2021-08-03 18:00:00"
+      },
+      "breakTimes": [
+
+      ],
+      "vType": {
+        "typeOfVehicleByMultipleTrips": "2C",
+        "typeOfVehicleToItemRule": "XE DONG",
+        "typeOfVehicleByLimitedHour": "fobbidenVehB",
+        "typeOfVehicleByLimits": "typeB",
+        "typeOfVehicleByCostToDeploy": "costA",
+        "typeOfVehicleByPricePerKm": "ppkA"
+      }
+    },
+    {
+      "vehicleCode": "vehicle_fk7",
+      "cbm": 13230000,
+      "capacity": 2000000,
+      "quantity": 1,
+      "size": {
+        "length": 420,
+        "height": 180,
+        "width": 175
+      },
+      "loadTimePerTon": 31,
+      "unloadTimePerTon": 48,
+      "loadTimePerCbm": 47,
+      "unloadTimePerCbm": 25,
+      "startLocationCode": "0",
+      "startLocationType": "DEPOT",
+      "endLocationCode": "0",
+      "endLocationType": "DEPOT",
+      "workingTime": {
+        "start": "2021-08-03 08:00:00",
+        "end": "2021-08-03 18:00:00"
+      },
+      "breakTimes": [
+
+      ],
+      "vType": {
+        "typeOfVehicleByMultipleTrips": "1C",
+        "typeOfVehicleToItemRule": "XE DONG",
+        "typeOfVehicleByLimitedHour": "fobbidenVehA",
+        "typeOfVehicleByLimits": "typeA",
+        "typeOfVehicleByCostToDeploy": "costC",
+        "typeOfVehicleByPricePerKm": "ppkA"
+      }
+    },
+    {
+      "vehicleCode": "vehicle_fk8",
+      "cbm": 47808000,
+      "capacity": 8000000,
+      "quantity": 1,
+      "size": {
+        "length": 830,
+        "height": 240,
+        "width": 240
+      },
+      "loadTimePerTon": 50,
+      "unloadTimePerTon": 61,
+      "loadTimePerCbm": 40,
+      "unloadTimePerCbm": 49,
+      "startLocationCode": "0",
+      "startLocationType": "DEPOT",
+      "endLocationCode": "0",
+      "endLocationType": "DEPOT",
+      "workingTime": {
+        "start": "2021-08-03 08:00:00",
+        "end": "2021-08-03 18:00:00"
+      },
+      "breakTimes": [
+
+      ],
+      "vType": {
+        "typeOfVehicleByMultipleTrips": "1C",
+        "typeOfVehicleToItemRule": "XE LANH",
+        "typeOfVehicleByLimitedHour": "fobbidenVehB",
+        "typeOfVehicleByLimits": "typeB",
+        "typeOfVehicleByCostToDeploy": "costD",
+        "typeOfVehicleByPricePerKm": "ppkA"
+      }
+    },
+    {
+      "vehicleCode": "vehicle_fk9",
+      "cbm": 11957765,
+      "capacity": 1500000,
+      "quantity": 1,
+      "size": {
+        "length": 365,
+        "height": 181,
+        "width": 181
+      },
+      "loadTimePerTon": 34,
+      "unloadTimePerTon": 38,
+      "loadTimePerCbm": 24,
+      "unloadTimePerCbm": 35,
+      "startLocationCode": "0",
+      "startLocationType": "DEPOT",
+      "endLocationCode": "0",
+      "endLocationType": "DEPOT",
+      "workingTime": {
+        "start": "2021-08-03 08:00:00",
+        "end": "2021-08-03 18:00:00"
+      },
+      "breakTimes": [
+
+      ],
+      "vType": {
+        "typeOfVehicleByMultipleTrips": "1C",
+        "typeOfVehicleToItemRule": "XE LANH",
+        "typeOfVehicleByLimitedHour": "fobbidenVehA",
+        "typeOfVehicleByLimits": "typeA",
+        "typeOfVehicleByCostToDeploy": "costC",
+        "typeOfVehicleByPricePerKm": "ppkA"
+      }
+    }
+  ],
+  "depots": [
+    {
+      "depotCode": "depot_fk0",
+      "locationCode": "0",
+      "fixedLoadTime": 9,
+      "loadTimePerTon": 63,
+      "loadTimePerCbm": 49,
+      "workingTime": {
+        "start": "2021-08-03 08:00:00",
+        "end": "2021-08-03 18:00:00"
+      },
+      "breakTimes": [
+        {
+          "start": "2021-08-03 12:00:00",
+          "end": "2021-08-03 13:00:00"
+        }
+      ],
+      "dType": {
+
+      }
+    }
+  ],
+  "distances": [
+    {
+      "srcCode": "0",
+      "destCode": "0",
+      "distance": 0,
+      "travelTime": 246
+    },
+    {
+      "srcCode": "0",
+      "destCode": "1",
+      "distance": 124.09613717478771,
+      "travelTime": 7571
+    },
+    {
+      "srcCode": "0",
+      "destCode": "2",
+      "distance": 88.59901371307534,
+      "travelTime": 5490
+    },
+    {
+      "srcCode": "0",
+      "destCode": "3",
+      "distance": 58.12341587733137,
+      "travelTime": 3240
+    },
+    {
+      "srcCode": "0",
+      "destCode": "4",
+      "distance": 48.934670372817976,
+      "travelTime": 2728
+    },
+    {
+      "srcCode": "0",
+      "destCode": "5",
+      "distance": 79.85970987567451,
+      "travelTime": 4969
+    },
+    {
+      "srcCode": "0",
+      "destCode": "6",
+      "distance": 100.03299898500346,
+      "travelTime": 6138
+    },
+    {
+      "srcCode": "0",
+      "destCode": "7",
+      "distance": 116.01056745208551,
+      "travelTime": 6716
+    },
+    {
+      "srcCode": "0",
+      "destCode": "8",
+      "distance": 87.41238160223746,
+      "travelTime": 5511
+    },
+    {
+      "srcCode": "0",
+      "destCode": "9",
+      "distance": 73.18740583636877,
+      "travelTime": 4862
+    },
+    {
+      "srcCode": "1",
+      "destCode": "0",
+      "distance": 124.09613717478771,
+      "travelTime": 7774
+    },
+    {
+      "srcCode": "1",
+      "destCode": "1",
+      "distance": 0,
+      "travelTime": 60
+    },
+    {
+      "srcCode": "1",
+      "destCode": "2",
+      "distance": 78.08435826357021,
+      "travelTime": 4522
+    },
+    {
+      "srcCode": "1",
+      "destCode": "3",
+      "distance": 100.26320676090435,
+      "travelTime": 6438
+    },
+    {
+      "srcCode": "1",
+      "destCode": "4",
+      "distance": 80.86761237767185,
+      "travelTime": 5340
+    },
+    {
+      "srcCode": "1",
+      "destCode": "5",
+      "distance": 89.37155947197064,
+      "travelTime": 5127
+    },
+    {
+      "srcCode": "1",
+      "destCode": "6",
+      "distance": 42.05647513872848,
+      "travelTime": 3061
+    },
+    {
+      "srcCode": "1",
+      "destCode": "7",
+      "distance": 23.481932076064,
+      "travelTime": 1450
+    },
+    {
+      "srcCode": "1",
+      "destCode": "8",
+      "distance": 61.5008555198392,
+      "travelTime": 3956
+    },
+    {
+      "srcCode": "1",
+      "destCode": "9",
+      "distance": 72.39454288211473,
+      "travelTime": 4585
+    },
+    {
+      "srcCode": "2",
+      "destCode": "0",
+      "distance": 88.59901371307534,
+      "travelTime": 5352
+    },
+    {
+      "srcCode": "2",
+      "destCode": "1",
+      "distance": 78.08435826357021,
+      "travelTime": 5052
+    },
+    {
+      "srcCode": "2",
+      "destCode": "2",
+      "distance": 0,
+      "travelTime": -154
+    },
+    {
+      "srcCode": "2",
+      "destCode": "3",
+      "distance": 35.16565574552382,
+      "travelTime": 2568
+    },
+    {
+      "srcCode": "2",
+      "destCode": "4",
+      "distance": 44.015601263204836,
+      "travelTime": 3185
+    },
+    {
+      "srcCode": "2",
+      "destCode": "5",
+      "distance": 13.682660422776706,
+      "travelTime": 1287
+    },
+    {
+      "srcCode": "2",
+      "destCode": "6",
+      "distance": 89.91684457941626,
+      "travelTime": 5356
+    },
+    {
+      "srcCode": "2",
+      "destCode": "7",
+      "distance": 56.48439435908391,
+      "travelTime": 3342
+    },
+    {
+      "srcCode": "2",
+      "destCode": "8",
+      "distance": 17.40073675353346,
+      "travelTime": 1517
+    },
+    {
+      "srcCode": "2",
+      "destCode": "9",
+      "distance": 93.73358229052678,
+      "travelTime": 6016
+    },
+    {
+      "srcCode": "3",
+      "destCode": "0",
+      "distance": 58.12341587733137,
+      "travelTime": 4033
+    },
+    {
+      "srcCode": "3",
+      "destCode": "1",
+      "distance": 100.26320676090435,
+      "travelTime": 6034
+    },
+    {
+      "srcCode": "3",
+      "destCode": "2",
+      "distance": 35.16565574552382,
+      "travelTime": 2644
+    },
+    {
+      "srcCode": "3",
+      "destCode": "3",
+      "distance": 0,
+      "travelTime": 373
+    },
+    {
+      "srcCode": "3",
+      "destCode": "4",
+      "distance": 29.699078060790683,
+      "travelTime": 2365
+    },
+    {
+      "srcCode": "3",
+      "destCode": "5",
+      "distance": 23.218256768525748,
+      "travelTime": 1194
+    },
+    {
+      "srcCode": "3",
+      "destCode": "6",
+      "distance": 97.57473473578418,
+      "travelTime": 6098
+    },
+    {
+      "srcCode": "3",
+      "destCode": "7",
+      "distance": 82.78030764955741,
+      "travelTime": 5298
+    },
+    {
+      "srcCode": "3",
+      "destCode": "8",
+      "distance": 42.865591429058746,
+      "travelTime": 2435
+    },
+    {
+      "srcCode": "3",
+      "destCode": "9",
+      "distance": 88.67195224830024,
+      "travelTime": 5409
+    },
+    {
+      "srcCode": "4",
+      "destCode": "0",
+      "distance": 48.934670372817976,
+      "travelTime": 2968
+    },
+    {
+      "srcCode": "4",
+      "destCode": "1",
+      "distance": 80.86761237767185,
+      "travelTime": 4835
+    },
+    {
+      "srcCode": "4",
+      "destCode": "2",
+      "distance": 44.01560126320484,
+      "travelTime": 2799
+    },
+    {
+      "srcCode": "4",
+      "destCode": "3",
+      "distance": 29.699078060790683,
+      "travelTime": 2215
+    },
+    {
+      "srcCode": "4",
+      "destCode": "4",
+      "distance": 0,
+      "travelTime": 213
+    },
+    {
+      "srcCode": "4",
+      "destCode": "5",
+      "distance": 40.288457002548675,
+      "travelTime": 2234
+    },
+    {
+      "srcCode": "4",
+      "destCode": "6",
+      "distance": 69.92035397126382,
+      "travelTime": 4025
+    },
+    {
+      "srcCode": "4",
+      "destCode": "7",
+      "distance": 68.7632398785766,
+      "travelTime": 4693
+    },
+    {
+      "srcCode": "4",
+      "destCode": "8",
+      "distance": 38.95750453946806,
+      "travelTime": 2922
+    },
+    {
+      "srcCode": "4",
+      "destCode": "9",
+      "distance": 59.002839322592536,
+      "travelTime": 4097
+    },
+    {
+      "srcCode": "5",
+      "destCode": "0",
+      "distance": 79.85970987567451,
+      "travelTime": 4625
+    },
+    {
+      "srcCode": "5",
+      "destCode": "1",
+      "distance": 89.37155947197064,
+      "travelTime": 5465
+    },
+    {
+      "srcCode": "5",
+      "destCode": "2",
+      "distance": 13.682660422776706,
+      "travelTime": 803
+    },
+    {
+      "srcCode": "5",
+      "destCode": "3",
+      "distance": 23.218256768525748,
+      "travelTime": 1930
+    },
+    {
+      "srcCode": "5",
+      "destCode": "4",
+      "distance": 40.288457002548675,
+      "travelTime": 2152
+    },
+    {
+      "srcCode": "5",
+      "destCode": "5",
+      "distance": 0,
+      "travelTime": -188
+    },
+    {
+      "srcCode": "5",
+      "destCode": "6",
+      "distance": 96.49294455550712,
+      "travelTime": 5529
+    },
+    {
+      "srcCode": "5",
+      "destCode": "7",
+      "distance": 68.7523044722335,
+      "travelTime": 3891
+    },
+    {
+      "srcCode": "5",
+      "destCode": "8",
+      "distance": 27.8976921960454,
+      "travelTime": 1867
+    },
+    {
+      "srcCode": "5",
+      "destCode": "9",
+      "distance": 95.67552686887107,
+      "travelTime": 6070
+    },
+    {
+      "srcCode": "6",
+      "destCode": "0",
+      "distance": 100.03299898500346,
+      "travelTime": 6544
+    },
+    {
+      "srcCode": "6",
+      "destCode": "1",
+      "distance": 42.05647513872848,
+      "travelTime": 2527
+    },
+    {
+      "srcCode": "6",
+      "destCode": "2",
+      "distance": 89.91684457941626,
+      "travelTime": 5150
+    },
+    {
+      "srcCode": "6",
+      "destCode": "3",
+      "distance": 97.57473473578418,
+      "travelTime": 6137
+    },
+    {
+      "srcCode": "6",
+      "destCode": "4",
+      "distance": 69.92035397126382,
+      "travelTime": 3945
+    },
+    {
+      "srcCode": "6",
+      "destCode": "5",
+      "distance": 96.49294455550712,
+      "travelTime": 5578
+    },
+    {
+      "srcCode": "6",
+      "destCode": "6",
+      "distance": 0,
+      "travelTime": 211
+    },
+    {
+      "srcCode": "6",
+      "destCode": "7",
+      "distance": 55.12991705117888,
+      "travelTime": 3129
+    },
+    {
+      "srcCode": "6",
+      "destCode": "8",
+      "distance": 73.00891575039167,
+      "travelTime": 4088
+    },
+    {
+      "srcCode": "6",
+      "destCode": "9",
+      "distance": 33.566660263461046,
+      "travelTime": 1775
+    },
+    {
+      "srcCode": "7",
+      "destCode": "0",
+      "distance": 116.01056745208551,
+      "travelTime": 7076
+    },
+    {
+      "srcCode": "7",
+      "destCode": "1",
+      "distance": 23.481932076064,
+      "travelTime": 1984
+    },
+    {
+      "srcCode": "7",
+      "destCode": "2",
+      "distance": 56.48439435908391,
+      "travelTime": 3864
+    },
+    {
+      "srcCode": "7",
+      "destCode": "3",
+      "distance": 82.78030764955741,
+      "travelTime": 4785
+    },
+    {
+      "srcCode": "7",
+      "destCode": "4",
+      "distance": 68.7632398785766,
+      "travelTime": 4624
+    },
+    {
+      "srcCode": "7",
+      "destCode": "5",
+      "distance": 68.7523044722335,
+      "travelTime": 3853
+    },
+    {
+      "srcCode": "7",
+      "destCode": "6",
+      "distance": 55.12991705117889,
+      "travelTime": 3605
+    },
+    {
+      "srcCode": "7",
+      "destCode": "7",
+      "distance": 0,
+      "travelTime": 191
+    },
+    {
+      "srcCode": "7",
+      "destCode": "8",
+      "distance": 41.12212611953232,
+      "travelTime": 3022
+    },
+    {
+      "srcCode": "7",
+      "destCode": "9",
+      "distance": 78.55599710080054,
+      "travelTime": 4781
+    },
+    {
+      "srcCode": "8",
+      "destCode": "0",
+      "distance": 87.41238160223746,
+      "travelTime": 5284
+    },
+    {
+      "srcCode": "8",
+      "destCode": "1",
+      "distance": 61.5008555198392,
+      "travelTime": 3484
+    },
+    {
+      "srcCode": "8",
+      "destCode": "2",
+      "distance": 17.40073675353346,
+      "travelTime": 1463
+    },
+    {
+      "srcCode": "8",
+      "destCode": "3",
+      "distance": 42.865591429058746,
+      "travelTime": 3019
+    },
+    {
+      "srcCode": "8",
+      "destCode": "4",
+      "distance": 38.95750453946806,
+      "travelTime": 2149
+    },
+    {
+      "srcCode": "8",
+      "destCode": "5",
+      "distance": 27.8976921960454,
+      "travelTime": 1919
+    },
+    {
+      "srcCode": "8",
+      "destCode": "6",
+      "distance": 73.00891575039168,
+      "travelTime": 4883
+    },
+    {
+      "srcCode": "8",
+      "destCode": "7",
+      "distance": 41.12212611953232,
+      "travelTime": 2712
+    },
+    {
+      "srcCode": "8",
+      "destCode": "8",
+      "distance": 0,
+      "travelTime": 235
+    },
+    {
+      "srcCode": "8",
+      "destCode": "9",
+      "distance": 79.74844217749789,
+      "travelTime": 5146
+    },
+    {
+      "srcCode": "9",
+      "destCode": "0",
+      "distance": 73.18740583636877,
+      "travelTime": 4604
+    },
+    {
+      "srcCode": "9",
+      "destCode": "1",
+      "distance": 72.39454288211473,
+      "travelTime": 4673
+    },
+    {
+      "srcCode": "9",
+      "destCode": "2",
+      "distance": 93.73358229052678,
+      "travelTime": 5355
+    },
+    {
+      "srcCode": "9",
+      "destCode": "3",
+      "distance": 88.67195224830024,
+      "travelTime": 5049
+    },
+    {
+      "srcCode": "9",
+      "destCode": "4",
+      "distance": 59.002839322592536,
+      "travelTime": 3410
+    },
+    {
+      "srcCode": "9",
+      "destCode": "5",
+      "distance": 95.67552686887109,
+      "travelTime": 6055
+    },
+    {
+      "srcCode": "9",
+      "destCode": "6",
+      "distance": 33.566660263461046,
+      "travelTime": 2510
+    },
+    {
+      "srcCode": "9",
+      "destCode": "7",
+      "distance": 78.55599710080054,
+      "travelTime": 5289
+    },
+    {
+      "srcCode": "9",
+      "destCode": "8",
+      "distance": 79.74844217749786,
+      "travelTime": 4804
+    },
+    {
+      "srcCode": "9",
+      "destCode": "9",
+      "distance": 0,
+      "travelTime": -188
+    }
+  ],
+  "locations": [
+    {
+      "locationCode": "0",
+      "lat": 21.854743166695126,
+      "lng": 105.97831518174796,
+      "lTypes": [
+        "DEPOT"
+      ]
+    },
+    {
+      "locationCode": "1",
+      "lat": 21.01271062508153,
+      "lng": 105.19143014390782,
+      "lTypes": [
+        "CUSTOMER"
+      ]
+    },
+    {
+      "locationCode": "2",
+      "lat": 21.712897311784747,
+      "lng": 105.13395618156599,
+      "lTypes": [
+        "CUSTOMER"
+      ]
+    },
+    {
+      "locationCode": "3",
+      "lat": 21.889769805454307,
+      "lng": 105.4163189998177,
+      "lTypes": [
+        "CUSTOMER"
+      ]
+    },
+    {
+      "locationCode": "4",
+      "lat": 21.656051470028622,
+      "lng": 105.55552866402736,
+      "lTypes": [
+        "CUSTOMER"
+      ]
+    },
+    {
+      "locationCode": "5",
+      "lat": 21.81633832104581,
+      "lng": 105.20571648012539,
+      "lTypes": [
+        "CUSTOMER"
+      ]
+    },
+    {
+      "locationCode": "6",
+      "lat": 21.028388644304613,
+      "lng": 105.59626944653536,
+      "lTypes": [
+        "CUSTOMER"
+      ]
+    },
+    {
+      "locationCode": "7",
+      "lat": 21.205903945163918,
+      "lng": 105.100016680133,
+      "lTypes": [
+        "CUSTOMER"
+      ]
+    },
+    {
+      "locationCode": "8",
+      "lat": 21.565801106027408,
+      "lng": 105.19140322051327,
+      "lTypes": [
+        "CUSTOMER"
+      ]
+    },
+    {
+      "locationCode": "9",
+      "lat": 21.206170129087464,
+      "lng": 105.85780121284917,
+      "lTypes": [
+        "CUSTOMER"
+      ]
+    }
+  ],
+  "matrixConfig": {
+    "VD": {
+
+    },
+    "VC": {
+
+    },
+    "VV": {
+      "multipleTrips": {
+        "referenceType": {
+          "vehicleType": "typeOfVehicleByMultipleTrips"
+        },
+        "matrix": [
+          {
+            "typeOfVehicle": "1C",
+            "value": 1
+          },
+          {
+            "typeOfVehicle": "2C",
+            "value": 2
+          },
+          {
+            "typeOfVehicle": "3C",
+            "value": 4
+          }
+        ]
+      },
+      "maximumDistancePerRoute": {
+        "referenceType": {
+          "vehicleType": "typeOfVehicleByLimits"
+        },
+        "matrix": [
+          {
+            "typeOfVehicle": "typeA",
+            "value": 1000
+          },
+          {
+            "typeOfVehicle": "typeB",
+            "value": 1320
+          },
+          {
+            "typeOfVehicle": "typeC",
+            "value": 1928
+          },
+          {
+            "typeOfVehicle": "typeD",
+            "value": 3278
+          }
+        ]
+      },
+      "maximumDistancePerDay": {
+        "referenceType": {
+          "vehicleType": "typeOfVehicleByLimits"
+        },
+        "matrix": [
+          {
+            "typeOfVehicle": "typeA",
+            "value": 2000
+          },
+          {
+            "typeOfVehicle": "typeB",
+            "value": 3200
+          },
+          {
+            "typeOfVehicle": "typeC",
+            "value": 5184
+          },
+          {
+            "typeOfVehicle": "typeD",
+            "value": 8450
+          }
+        ]
+      },
+      "maximumCustomerPerRoute": {
+        "referenceType": {
+          "vehicleType": "typeOfVehicleByLimits"
+        },
+        "matrix": [
+          {
+            "typeOfVehicle": "typeA",
+            "value": 5
+          },
+          {
+            "typeOfVehicle": "typeB",
+            "value": 8
+          },
+          {
+            "typeOfVehicle": "typeC",
+            "value": 12
+          },
+          {
+            "typeOfVehicle": "typeD",
+            "value": 21
+          }
+        ]
+      },
+      "maximumCustomerPerDay": {
+        "referenceType": {
+          "vehicleType": "typeOfVehicleByLimits"
+        },
+        "matrix": [
+          {
+            "typeOfVehicle": "typeA",
+            "value": 10
+          },
+          {
+            "typeOfVehicle": "typeB",
+            "value": 13
+          },
+          {
+            "typeOfVehicle": "typeC",
+            "value": 23
+          },
+          {
+            "typeOfVehicle": "typeD",
+            "value": 42
+          }
+        ]
+      },
+      "costToDeploy": {
+        "referenceType": {
+          "vehicleType": "typeOfVehicleByCostToDeploy"
+        },
+        "matrix": [
+          {
+            "typeOfVehicle": "costA",
+            "value": 1000000
+          },
+          {
+            "typeOfVehicle": "costB",
+            "value": 1740000
+          },
+          {
+            "typeOfVehicle": "costC",
+            "value": 2314200
+          },
+          {
+            "typeOfVehicle": "costD",
+            "value": 3077886
+          },
+          {
+            "typeOfVehicle": "costE",
+            "value": 4955397
+          }
+        ]
+      },
+      "pricePerKm": {
+        "referenceType": {
+          "vehicleType": "typeOfVehicleByPricePerKm"
+        },
+        "matrix": [
+          {
+            "typeOfVehicle": "ppkA",
+            "value": 10000
+          },
+          {
+            "typeOfVehicle": "ppkB",
+            "value": 15500
+          },
+          {
+            "typeOfVehicle": "ppkC",
+            "value": 20770
+          },
+          {
+            "typeOfVehicle": "ppkD",
+            "value": 36556
+          },
+          {
+            "typeOfVehicle": "ppkE",
+            "value": 59221
+          }
+        ]
+      }
+    },
+    "DD": {
+
+    },
+    "DC": {
+
+    },
+    "DV": {
+
+    },
+    "CV": {
+      "itemToVehicleRule": {
+        "referenceType": {
+          "itemType": "typeOfItemByVehicle",
+          "vehicleType": "typeOfVehicleToItemRule"
+        },
+        "matrix": [
+          {
+            "typeOfItem": "LANH",
+            "typeOfVehicle": "XE LANH",
+            "value": 10
+          },
+          {
+            "typeOfItem": "LANH",
+            "typeOfVehicle": "XE DONG",
+            "value": 250
+          },
+          {
+            "typeOfItem": "DONG",
+            "typeOfVehicle": "XE LANH",
+            "value": 260
+          },
+          {
+            "typeOfItem": "DONG",
+            "typeOfVehicle": "XE DONG",
+            "value": 10
+          }
+        ]
+      }
+    },
+    "CD": {
+
+    },
+    "CC": {
+      "timeSync": {
+        "referenceType": {
+          "customerType": "typeOfCustomerByTimeSync"
+        },
+        "matrix": [
+          {
+            "typeOfCustomer": "lessThan10m",
+            "value": 10
+          },
+          {
+            "typeOfCustomer": "lessThan20m",
+            "value": 13
+          },
+          {
+            "typeOfCustomer": "lessThan30m",
+            "value": 24
+          }
+        ]
+      }
+    }
+  }
+}
 import uuid
 import json
 from random import choice
@@ -2091,34 +2753,44 @@ import random
 import datetime
 import math
 import random as rd
+from core import *
 
 
-def get_prop_by_identifier(nb_of_obj, obj_list, obj_code_name, obj_code, prop_name):
-    for i in range(int(nb_of_obj)):
-        if (obj_list[i][obj_code_name] == obj_code):
-            return obj_list[i][prop_name]
 
-def get_location_type(location_code, locationList):
-    result = str(get_prop_by_identifier(len(locationList), locationList, "locationCode", location_code, "lTypes"))
-    result = result.lstrip('[')
-    result = result.lstrip('\'')
-    result = result.rstrip(']')
-    result = result.rstrip('\'')
+'''test 1'''
+
+location_list = data1['locations'] 
+# print('location_list', location_list)
+print('----------------')
+cus_list = data1['customers'] 
+dep_list = data1['depots'] 
+
+
+# lấy ra location code từ các list thành phần
+'''
+
+''' 
+def get_code(_list):
+    result = []
+    for i in range(len(_list)):
+        result.append(_list[i]['locationCode'])
+
     return result
 
-def location_code_by_lType(locationList, locationTypeName):
-    return [locationList[i]["locationCode"] for i in range(len(locationList)) if(locationList[i]["lTypes"] == [locationTypeName])]
+# get_code(dep_list)
+print(get_code(cus_list))
 
-def distance_between_coordinates(lat1, lon1, lat2, lon2):     
-    R = 6371
-    d_lat = (lat2 - lat1) * (math.pi / 180)
-    d_lon = (lon2 - lon1) * (math.pi / 180)
-    lat1_to_rad = lat1 * (math.pi / 180)
-    lat2_to_rad = lat2 * (math.pi / 180)
-    a = math.sin(d_lat / 2) * math.sin(d_lat / 2) + math.cos(lat1_to_rad) * math.cos(lat2_to_rad) * math.sin(d_lon / 2) * math.sin(d_lon / 2)
-    c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
-    d = R * c
-    return d
+for i in range(20):
 
-location_list = data1['locations']
-print( distance_between_coordinates(lat1 = 21.0369023, lon1 = 105.832478, lat2 = 21.0272877, lon2 = 105.8339036) )
+    depot_code_list =  get_code(dep_list) #location_code_by_lType(dep_list, "DEPOT")
+    customer_code_list = get_code(cus_list) #location_code_by_lType(cus_list, "CUSTOMER")
+    # print('depot_code_list', depot_code_list)
+    # print('customer_code_list', customer_code_list)
+
+    pickuploc_code = random_choice(choice_list = depot_code_list)
+    deliveryloc_code = random_choice(choice_list = customer_code_list)
+
+    depot_code = get_prop_by_identifier(len(dep_list), dep_list, "locationCode", pickuploc_code, "depotCode")
+    customer_code = get_prop_by_identifier(len(cus_list), cus_list, "locationCode", deliveryloc_code, "customerCode")
+    print('--------', 'pickuploc_code', 'deliveryloc_code','depot_code', 'customer_code')
+    print(pickuploc_code, deliveryloc_code, depot_code, customer_code)
