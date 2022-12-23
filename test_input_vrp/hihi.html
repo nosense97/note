@@ -25,29 +25,33 @@
                 <!-- Location -->
                 <div>
                     <tr>
-                        <td rowspan="2">Location</td>
-                        <td rowspan="1">Quantity</td>
+                        <td rowspan="2">
+                            <div class="col-1">Location</div>
+                        </td>
+                        <td rowspan="1">
+                            <div class="col-1">Quantity</div>
+                        </td>
                         <td>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="">Number Of Location</label>
-                                    <input type="text" class="form-control" id="numberOfLocation" placeholder="Number Of Location" required>
-                                    <div class="feedback"></div>
-                                </div>
+                            <div class="form-group col-md-6">
+                                <label for="">Number Of Location</label>
+                                <input type="text" class="form-control" id="numberOfLocation" placeholder="Number Of Location" required>
+                                <div class="feedback"></div>
                             </div>
                         </td>
                     </tr>
                     <tr>
-                        <td rowspan="1">Geographical location</td>
+                        <td rowspan="1">
+                            <div class="col">Geographical location</div>
+                        </td>
                         <td>
-                            <div class="form-row">
+                            <div style="display: flex;">
                                 <div class="form-group col-md-6">
                                     <label for="">Location Lat</label>
                                     <input type="text" class="form-control" id="locationLat" placeholder="Lat">
                                     <div class="feedback"></div>
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="">Location Ln7444g</label>
+                                    <label for="">Location Lng</label>
                                     <input type="text" class="form-control" id="locationLng" placeholder="Long">
                                     <div class="feedback"></div>
                                 </div>
@@ -57,13 +61,17 @@
                 </div>
 
                 <!-- Vehicle -->
-                <div>
+                <div style="display: flex;">
 
                     <tr>
-                        <td rowspan="10">Vehicle</td>
-                        <td rowspan="1">Number Of Vehicle</td>
+                        <td rowspan="10">
+                            <div class="col-md-1">Vehicle</div>
+                        </td>
+                        <td rowspan="1">
+                            <div class="col">Number Of Vehicle</div>
+                        </td>
                         <td>
-                            <div class="form-row">
+                            <div style="display: flex;">
                                 <div class="form-group col-md-6">
                                     <label for="">Number Of Vehicle</label>
                                     <input type="text" class="form-control" id="numberOfVehicle" placeholder="Number Of Vehicle" required>
@@ -74,9 +82,11 @@
                     </tr>
 
                     <tr>
-                        <td rowspan="1">Quantity</td>
+                        <td rowspan="1">
+                            <div class="col">Quantity</div>
+                        </td>
                         <td>
-                            <div class="form-row">
+                            <div style="display: flex;">
                                 <div class="form-group col-md-6">
                                     <label for="">Quantity Min</label>
                                     <input type="text" class="form-control" id="vehicleQuantityMin" placeholder="Quantity Min">
@@ -92,16 +102,18 @@
                     </tr>
 
                     <tr>
-                        <td rowspan="1">Load Time Per Cbm</td>
+                        <td rowspan="1">
+                            <div class="col">Load Time Per Cbm</div>
+                        </td>
                         <td>
-                            <div class="form-row">
+                            <div style="display: flex;">
                                 <div class="form-group col-md-6">
-                                    <label for="">Load Time Per Cbm Min</label>
+                                    <label for="">Load Time Min</label>
                                     <input type="text" class="form-control" id="vehicleLoadTimePerCbmMin" placeholder="Load Time Per Cbm Min">
                                     <div class="feedback"></div>
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="">Load Time Per Cbm Max</label>
+                                    <label for="">Load Time Max</label>
                                     <input type="text" class="form-control" id="vehicleLoadTimePerCbmMax" placeholder="Load Time Per Cbm Max">
                                     <div class="feedback"></div>
                                 </div>
@@ -110,16 +122,18 @@
                     </tr>
 
                     <tr>
-                        <td rowspan="1">Unload Time Per Cbm</td>
+                        <td rowspan="1">
+                            <div class="col">Unload Time Per Cbm</div>
+                        </td>
                         <td>
-                            <div class="form-row">
+                            <div style="display: flex;">
                                 <div class="form-group col-md-6">
-                                    <label for="">Unload Time Per Cbm Min</label>
+                                    <label for="">Unload Time Min</label>
                                     <input type="text" class="form-control" id="vehicleUnloadTimePerCbmMin" placeholder="Unload Time Per Cbm Min">
                                     <div class="feedback"></div>
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="">Unload Time Per Cbm Max</label>
+                                    <label for="">Unload Time Max</label>
                                     <input type="text" class="form-control" id="vehicleUnloadTimePerCbmMax" placeholder="Unload Time Per Cbm Max">
                                     <div class="feedback"></div>
                                 </div>
@@ -128,16 +142,18 @@
                     </tr>
 
                     <tr>
-                        <td rowspan="1">Load Time Per Ton</td>
+                        <td rowspan="1">
+                            <div class="col">Load Time Per Ton</div>
+                        </td>
                         <td>
-                            <div class="form-row">
+                            <div style="display: flex;">
                                 <div class="form-group col-md-6">
-                                    <label for="">Load Time Per Ton Min</label>
+                                    <label for="">Load Time Min</label>
                                     <input type="text" class="form-control" id="vehicleLoadTimePerTonMin" placeholder="Load Time Per Ton Min">
                                     <div class="feedback"></div>
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="">Load Time Per Ton Max</label>
+                                    <label for="">Load Time Max</label>
                                     <input type="text" class="form-control" id="vehicleLoadTimePerTonMax" placeholder="Load Time Per Ton Max">
                                     <div class="feedback"></div>
                                 </div>
@@ -146,9 +162,11 @@
                     </tr>
 
                     <tr>
-                        <td rowspan="1">Unload Time Per Ton</td>
+                        <td rowspan="1">
+                            <div class="col">Unload Time Per Ton</div>
+                        </td>
                         <td>
-                            <div class="form-row">
+                            <div style="display: flex;">
                                 <div class="form-group col-md-6">
                                     <label for="">Unload Time Per Ton Min</label>
                                     <input type="text" class="form-control" id="vehicleUnloadTimePerTonMin" placeholder="Unload Time Per Ton Min">
@@ -164,36 +182,50 @@
                     </tr>
 
                     <tr>
-                        <td>Is get day</td>
+                        <td rowspan="1">
+                            <div class="col">Is today</div>
+                        </td>
                         <td>
-                            <div class="form-group col-md-6">
-                                <label for="">Get Day</label>
-                                <input type="text" class="form-control" id="vehicleGetDay" placeholder="Get Day">
-                                <div class="feedback"></div>
+
+                            <div style="display: flex;">
+                                <div class="form-group mr-2 col-md-6">
+                                    <label for="">Get Day</label>
+                                    <input type="text" class="form-control" id="vehicleGetDay" placeholder="Get Day">
+                                </div>
+
+                                <div class="form-group mr-2 col-md-4">
+                                    <label for="">Choose today ?</label>
+                                    <button type="button" class="form-control btn btn-success">Yes, today !</button>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td rowspan="1">
+                            <div class="col">Working Time</div>
+                        </td>
+                        <td>
+                            <div style="display: flex;">
+                                <div class="form-group col-md-6">
+                                    <label for="">Time Start</label>
+                                    <input type="text" class="form-control" id="vehicleWorkingTimeStartChoiceList" placeholder="Working Time Start">
+                                    <div class="feedback"></div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="">Time End</label>
+                                    <input type="text" class="form-control" id="vehicleWorkingTimeEndChoiceList" placeholder="Working Time End">
+                                    <div class="feedback"></div>
+                                </div>
                             </div>
                         </td>
                     </tr>
 
                     <tr>
-                        <td>Working Time</td>
-                        <td>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="">Working Time Start Choice List</label>
-                                    <input type="text" class="form-control" id="vehicleWorkingTimeStartChoiceList" placeholder="Working Time Start Choice List">
-                                    <div class="feedback"></div>
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="">Working Time End Choice List</label>
-                                    <input type="text" class="form-control" id="vehicleWorkingTimeEndChoiceList" placeholder="Working Time End Choice List">
-                                    <div class="feedback"></div>
-                                </div>
-                            </div>
+                        <td rowspan="1">
+                            <div class="col">Number Of Break Time</div>
                         </td>
-                    </tr>
-
-                    <tr>
-                        <td>Number Of Break Time</td>
                         <td>
                             <div class="form-group col-md-6">
                                 <label for="">Number Of Break Time</label>
@@ -204,17 +236,19 @@
                     </tr>
 
                     <tr>
-                        <td rowspan="1">Break Time</td>
+                        <td rowspan="1">
+                            <div class="col">Break Time</div>
+                        </td>
                         <td>
-                            <div class="form-row">
+                            <div style="display: flex;">
                                 <div class="form-group col-md-6">
-                                    <label for="">Break Time Start Choice List</label>
-                                    <input type="text" class="form-control" id="vehicleBreakTimeStartChoiceList" placeholder="Break Time Start Choice List">
+                                    <label for="">Time Start</label>
+                                    <input type="text" class="form-control" id="vehicleBreakTimeStartChoiceList" placeholder="Break Time Start">
                                     <div class="feedback"></div>
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="">Break Time End Choice List</label>
-                                    <input type="text" class="form-control" id="vehicleBreakTimeEndChoiceList" placeholder="Break Time End Choice List">
+                                    <label for="">Time End</label>
+                                    <input type="text" class="form-control" id="vehicleBreakTimeEndChoiceList" placeholder="Break Time End">
                                     <div class="feedback"></div>
                                 </div>
                             </div>
@@ -227,21 +261,25 @@
                 <div>
 
                     <tr>
-                        <td rowspan="9">Customer</td>
-                        <td rowspan="1">Number Of Customer</td>
+                        <td rowspan="9">
+                            <div class="col">Customer</div>
+                        </td>
+                        <td rowspan="1">
+                            <div class="col">Number Of Customer</div>
+                        </td>
                         <td>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="">Number Of Customer</label>
-                                    <input type="text" class="form-control" id="numberOfCustomer" placeholder="Number Of Customer" required>
-                                    <div class="feedback"></div>
-                                </div>
+                            <div class="form-group col-md-6">
+                                <label for="">Number Of Customer</label>
+                                <input type="text" class="form-control" id="numberOfCustomer" placeholder="Number Of Customer" required>
+                                <div class="feedback"></div>
                             </div>
                         </td>
                     </tr>
 
                     <tr>
-                        <td rowspan="1">District</td>
+                        <td rowspan="1">
+                            <div class="col-md-6">District</div>
+                        </td>
                         <td>
                             <div class="form-group col-md-6">
                                 <label for="">District</label>
@@ -252,7 +290,9 @@
                     </tr>
 
                     <tr>
-                        <td rowspan="1">Fixed Unload Time</td>
+                        <td rowspan="1">
+                            <div class="col">Fixed Unload Time</div>
+                        </td>
                         <td>
                             <div class="form-group col-md-6">
                                 <label for="">Fixed Unload Time</label>
@@ -263,7 +303,9 @@
                     </tr>
 
                     <tr>
-                        <td rowspan="1">Unload Time Per Ton</td>
+                        <td rowspan="1">
+                            <div class="col">Unload Time Per Ton</div>
+                        </td>
                         <td>
                             <div class="form-group col-md-6">
                                 <label for="">Unload Time Per Ton</label>
@@ -274,7 +316,9 @@
                     </tr>
 
                     <tr>
-                        <td rowspan="1">Unload Time Per Cbm</td>
+                        <td rowspan="1">
+                            <div class="col">Unload Time Per Cbm</div>
+                        </td>
                         <td>
                             <div class="form-group col-md-6">
                                 <label for="">Unload Time Per Cbm</label>
@@ -285,36 +329,48 @@
                     </tr>
 
                     <tr>
-                        <td rowspan="1">Get Day</td>
-                        <td>
-                            <div class="form-group col-md-6">
-                                <label for="">Get Day</label>
-                                <input type="text" class="form-control" id="customerGetDay" placeholder="Get Day">
-                                <div class="feedback"></div>
-                            </div>
+                        <td rowspan="1">
+                            <div class="col">Get Day</div>
                         </td>
-                    </tr>
-
-                    <tr>
-                        <td rowspan="1">Working Time</td>
                         <td>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="">Working Time Start Choice List</label>
-                                    <input type="text" class="form-control" id="customerWorkingTimeStartChoiceList" placeholder="Working Time Start Choice List">
-                                    <div class="feedback"></div>
+                            <div style="display: flex;">
+                                <div class="form-group mr-2 col-md-6">
+                                    <label for="">Get Day</label>
+                                    <input type="text" class="form-control" id="vehicleGetDay" placeholder="Get Day">
                                 </div>
-                                <div class="form-group col-md-6">
-                                    <label for="">Working Time End Choice List</label>
-                                    <input type="text" class="form-control" id="customerWorkingTimeEndChoiceList" placeholder="Working Time End Choice List">
-                                    <div class="feedback"></div>
+
+                                <div class="form-group mr-2 col-md-4">
+                                    <label for="">Choose today ?</label>
+                                    <button type="button" class="form-control btn btn-success">Yes, today !</button>
                                 </div>
                             </div>
                         </td>
                     </tr>
 
                     <tr>
-                        <td rowspan="1">Number Of BreakTime</td>
+                        <td rowspan="1">
+                            <div class="col">Working Time</div>
+                        </td>
+                        <td>
+                            <div style="display: flex;">
+                                <div class="form-group col-md-6">
+                                    <label for="">Time Start</label>
+                                    <input type="text" class="form-control" id="customerWorkingTimeStartChoiceList" placeholder="Working Time Start">
+                                    <div class="feedback"></div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="">Time End</label>
+                                    <input type="text" class="form-control" id="customerWorkingTimeEndChoiceList" placeholder="Working Time End">
+                                    <div class="feedback"></div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td rowspan="1">
+                            <div class="col">Number Of BreakTime</div>
+                        </td>
                         <td>
                             <div class="form-group col-md-6">
                                 <label for="">Number Of BreakTime</label>
@@ -324,17 +380,19 @@
                         </td>
                     </tr>
                     <tr>
-                        <td rowspan="1">BreakTime</td>
+                        <td rowspan="1">
+                            <div class="col">BreakTime</div>
+                        </td>
                         <td>
-                            <div class="form-row">
+                            <div style="display: flex;">
                                 <div class="form-group col-md-6">
-                                    <label for="">BreakTime Start Choice List</label>
-                                    <input type="text" class="form-control" id="customerBreakTimeStartChoiceList" placeholder="BreakTime Start Choice List">
+                                    <label for="">Time Start</label>
+                                    <input type="text" class="form-control" id="customerBreakTimeStartChoiceList" placeholder="BreakTime Start">
                                     <div class="feedback"></div>
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="">BreakTime End Choice List</label>
-                                    <input type="text" class="form-control" id="customerBreakTimeEndChoiceList" placeholder="BreakTime End Choice List">
+                                    <label for="">Time End</label>
+                                    <input type="text" class="form-control" id="customerBreakTimeEndChoiceList" placeholder="BreakTime End">
                                     <div class="feedback"></div>
                                 </div>
                             </div>
@@ -346,8 +404,12 @@
                 <div>
 
                     <tr>
-                        <td rowspan="8">Depot</td>
-                        <td rowspan="1">Number Of Depot</td>
+                        <td rowspan="8">
+                            <div class="col">Depot</div>
+                        </td>
+                        <td rowspan="1">
+                            <div class="col">Number Of Depot</div>
+                        </td>
                         <td>
                             <div class="form-group col-md-6">
                                 <label for="">Number Of Depot</label>
@@ -358,9 +420,11 @@
                     </tr>
 
                     <tr>
-                        <td rowspan="1">Fixed Load Time</td>
+                        <td rowspan="1">
+                            <div class="col">Fixed Load Time</div>
+                        </td>
                         <td>
-                            <div class="form-row">
+                            <div style="display: flex;">
                                 <div class="form-group col-md-6">
                                     <label for="">Fixed Load Time Min</label>
                                     <input type="text" class="form-control" id="depotFixedLoadTimeMin" placeholder="Fixed Load Time Min">
@@ -376,16 +440,18 @@
                     </tr>
 
                     <tr>
-                        <td rowspan="1">Load Time Per Ton</td>
+                        <td rowspan="1">
+                            <div class="col">Load Time Per Ton</div>
+                        </td>
                         <td>
-                            <div class="form-row">
+                            <div style="display: flex;">
                                 <div class="form-group col-md-6">
-                                    <label for="">Load Time Per Ton Min</label>
+                                    <label for="">Load Time Min</label>
                                     <input type="text" class="form-control" id="depotLoadTimePerTonMin" placeholder="Load Time Per Ton Min">
                                     <div class="feedback"></div>
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="">Load Time Per Ton Max</label>
+                                    <label for="">Load Time Max</label>
                                     <input type="text" class="form-control" id="depotLoadTimePerTonMax" placeholder="Load Time Per Ton Max">
                                     <div class="feedback"></div>
                                 </div>
@@ -394,16 +460,18 @@
                     </tr>
 
                     <tr>
-                        <td rowspan="1">Load Time Per Cbm</td>
+                        <td rowspan="1">
+                            <div class="col">Load Time Per Cbm</div>
+                        </td>
                         <td>
-                            <div class="form-row">
+                            <div style="display: flex;">
                                 <div class="form-group col-md-6">
-                                    <label for="">Load Time Per Cbm Min</label>
+                                    <label for="">Load Time Min</label>
                                     <input type="text" class="form-control" id="depotLoadTimePerCbmMin" placeholder="Load Time Per Cbm Min">
                                     <div class="feedback"></div>
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="">Load Time Per Cbm Max</label>
+                                    <label for="">Load Time Max</label>
                                     <input type="text" class="form-control" id="depotLoadTimePerCbmMax" placeholder="Load Time Per Cbm Max">
                                     <div class="feedback"></div>
                                 </div>
@@ -412,36 +480,48 @@
                     </tr>
 
                     <tr>
-                        <td rowspan="1">Get Day</td>
-                        <td>
-                            <div class="form-group col-md-6">
-                                <label for="">Get Day</label>
-                                <input type="text" class="form-control" id="depotGetDay" placeholder="Get Day">
-                                <div class="feedback"></div>
-                            </div>
+                        <td rowspan="1">
+                            <div class="col">Get Day</div>
                         </td>
-                    </tr>
-
-                    <tr>
-                        <td rowspan="1">Working Time</td>
                         <td>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="">Working Time Start Choice List</label>
-                                    <input type="text" class="form-control" id="depotWorkingTimeStartChoiceList" placeholder="Working Time Start Choice List">
-                                    <div class="feedback"></div>
+                            <div style="display: flex;">
+                                <div class="form-group mr-2 col-md-6">
+                                    <label for="">Get Day</label>
+                                    <input type="text" class="form-control" id="vehicleGetDay" placeholder="Get Day">
                                 </div>
-                                <div class="form-group col-md-6">
-                                    <label for="">Working Time End Choice List</label>
-                                    <input type="text" class="form-control" id="depotWorkingTimeEndChoiceList" placeholder="Working Time End Choice List">
-                                    <div class="feedback"></div>
+
+                                <div class="form-group mr-2 col-md-4">
+                                    <label for="">Choose today ?</label>
+                                    <button type="button" class="form-control btn btn-success">Yes, today !</button>
                                 </div>
                             </div>
                         </td>
                     </tr>
 
                     <tr>
-                        <td rowspan="1">Number Of Break Time</td>
+                        <td rowspan="1">
+                            <div class="col">Working Time</div>
+                        </td>
+                        <td>
+                            <div style="display: flex;">
+                                <div class="form-group col-md-6">
+                                    <label for="">Time Start</label>
+                                    <input type="text" class="form-control" id="depotWorkingTimeStartChoiceList" placeholder="Working Time Start">
+                                    <div class="feedback"></div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="">Time End</label>
+                                    <input type="text" class="form-control" id="depotWorkingTimeEndChoiceList" placeholder="Working Time End">
+                                    <div class="feedback"></div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td rowspan="1">
+                            <div class="col">Number Of Break Time</div>
+                        </td>
                         <td>
                             <div class="form-group col-md-6">
                                 <label for="">Number Of Break Time</label>
@@ -452,17 +532,19 @@
                     </tr>
 
                     <tr>
-                        <td rowspan="1">BreakTime</td>
+                        <td rowspan="1">
+                            <div class="col">BreakTime</div>
+                        </td>
                         <td>
-                            <div class="form-row">
+                            <div style="display: flex;">
                                 <div class="form-group col-md-6">
-                                    <label for="">BreakTime Start Choice List</label>
-                                    <input type="text" class="form-control" id="depotBreakTimeStartChoiceList" placeholder="BreakTime Start Choice List">
+                                    <label for="">Time Start</label>
+                                    <input type="text" class="form-control" id="depotBreakTimeStartChoiceList" placeholder="BreakTime Start">
                                     <div class="feedback"></div>
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="">BreakTime End Choice List</label>
-                                    <input type="text" class="form-control" id="depotBreakTimeEndChoiceList" placeholder="BreakTime End Choice List">
+                                    <label for="">Time End</label>
+                                    <input type="text" class="form-control" id="depotBreakTimeEndChoiceList" placeholder="BreakTime End">
                                     <div class="feedback"></div>
                                 </div>
                             </div>
@@ -475,8 +557,12 @@
                 <div>
 
                     <tr>
-                        <td rowspan="7">Request</td>
-                        <td rowspan="1">Number Of Request</td>
+                        <td rowspan="7">
+                            <div class="col">Request</div>
+                        </td>
+                        <td rowspan="1">
+                            <div class="col">Number Of Request</div>
+                        </td>
                         <td>
                             <div class="form-group col-md-6">
                                 <label for="">Number Of Request</label>
@@ -487,9 +573,11 @@
                     </tr>
 
                     <tr>
-                        <td rowspan="1">Quantity Item</td>
+                        <td rowspan="1">
+                            <div class="col">Quantity Item</div>
+                        </td>
                         <td>
-                            <div class="form-row">
+                            <div style="display: flex;">
                                 <div class="form-group col-md-6">
                                     <label for="">Quantity Item Min</label>
                                     <input type="text" class="form-control" id="requestQuantityItemMin" placeholder="Quantity Item Min">
@@ -505,9 +593,11 @@
                     </tr>
 
                     <tr>
-                        <td rowspan="1">Weight Item</td>
+                        <td rowspan="1">
+                            <div class="col">Weight Item</div>
+                        </td>
                         <td>
-                            <div class="form-row">
+                            <div style="display: flex;">
                                 <div class="form-group col-md-6">
                                     <label for="">Weight Item Min</label>
                                     <input type="text" class="form-control" id="requestWeightItemMin" placeholder="Weight Item Min">
@@ -523,9 +613,11 @@
                     </tr>
 
                     <tr>
-                        <td rowspan="1">Cbm Item</td>
+                        <td rowspan="1">
+                            <div class="col">Cbm Item</div>
+                        </td>
                         <td>
-                            <div class="form-row">
+                            <div style="display: flex;">
                                 <div class="form-group col-md-6">
                                     <label for="">Cbm Item Min</label>
                                     <input type="text" class="form-control" id="requestCbmItemMin" placeholder="Cbm Item Min">
@@ -541,9 +633,11 @@
                     </tr>
 
                     <tr>
-                        <td rowspan="1">Width Size Item</td>
+                        <td rowspan="1">
+                            <div class="col">Width Size Item</div>
+                        </td>
                         <td>
-                            <div class="form-row">
+                            <div style="display: flex;">
                                 <div class="form-group col-md-6">
                                     <label for="">Width Size Item Min</label>
                                     <input type="text" class="form-control" id="requestWidthSizeItemMin" placeholder="Width Size Item Min">
@@ -559,9 +653,11 @@
                     </tr>
 
                     <tr>
-                        <td rowspan="1">Length Size Item</td>
+                        <td rowspan="1">
+                            <div class="col">Length Size Item</div>
+                        </td>
                         <td>
-                            <div class="form-row">
+                            <div style="display: flex;">
                                 <div class="form-group col-md-6">
                                     <label for="">Length Size Item Min</label>
                                     <input type="text" class="form-control" id="requestLengthSizeItemMin" placeholder="Length Size Item Min">
@@ -577,9 +673,11 @@
                     </tr>
 
                     <tr>
-                        <td rowspan="1">Height Size Item</td>
+                        <td rowspan="1">
+                            <div class="col">Height Size Item</div>
+                        </td>
                         <td>
-                            <div class="form-row">
+                            <div style="display: flex;">
                                 <div class="form-group col-md-6">
                                     <label for="">Height Size Item Min</label>
                                     <input type="text" class="form-control" id="requestHeightSizeItemMin" placeholder="Height Size Item Min">
@@ -594,18 +692,9 @@
                         </td>
                     </tr>
 
-                    <tr>
-                        <td rowspan="1"></td>
-                        <td></td>
-                    </tr>
                 </div>
 
             </table>
-    </div>
-
-    </table>
-    </form>
-    <p></p>
     </div>
 
     <script src="./main.js"></script>
